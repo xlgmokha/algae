@@ -42,11 +42,13 @@ DOC
 
 describe "word_ladder" do
   def match?(word, other, length: word.chars.size)
-    (word.chars & other.chars).count == length - 1
+    #(word.chars & other.chars).count == length - 1
+    transposed = [word.chars, other.chars].transpose
+    matching = transposed.find_all { |(x, y)| x == y }.count
+    matching >= length - 1
   end
 
   def word_ladder(words, begin_word:, end_word:)
-    puts [begin_word, end_word, words].inspect
     return 0 if words.empty?
     return 0 if begin_word == end_word
 
