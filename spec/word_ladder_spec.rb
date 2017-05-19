@@ -48,18 +48,16 @@ describe "word_ladder" do
     matching >= length - 1
   end
 
+  # use a queue to do a breadth (level) first search.
   def word_ladder(words, begin_word:, end_word:)
-    return 0 if words.empty?
-    return 0 if begin_word == end_word
+    queue = [word: begin_word, level: 1]
+    words.delete(begin_word)
+    until queue.empty?
+      top = queue.shift
+      return top[:level] if top[:word] == end_word
 
-    words.each do |word|
-      if begin_word == word
-        remaining = words - [begin_word]
-        return word_ladder(remaining, begin_word: word, end_word: end_word)
-      end
-      if match?(begin_word, word)
-        remaining = words - [begin_word]
-        return word_ladder(remaining, begin_word: word, end_word: end_word) + 1
+      words.each do |word|
+        queue.push(word: word, level: top[:level] + 1) if match?(top[:word], word)
       end
     end
     0
