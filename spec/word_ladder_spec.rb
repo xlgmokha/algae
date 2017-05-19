@@ -42,14 +42,11 @@ DOC
 
 describe "word_ladder" do
   def match?(word, other)
-    acceptable = 1
     failures = 0
     word.size.times do |n|
       if word[n] != other[n]
         failures += 1
-        if failures > acceptable
-          return false
-        end
+        return false if failures > 1
       end
     end
     true
