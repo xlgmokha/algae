@@ -41,11 +41,18 @@ An integer representing the length of the shortest transformation sequence from 
 DOC
 
 describe "word_ladder" do
-  def match?(word, other, length: word.chars.size)
-    #(word.chars & other.chars).count == length - 1
-    transposed = [word.chars, other.chars].transpose
-    matching = transposed.find_all { |(x, y)| x == y }.count
-    matching >= length - 1
+  def match?(word, other)
+    acceptable = 1
+    failures = 0
+    word.size.times do |n|
+      if word[n] != other[n]
+        failures += 1
+        if failures > acceptable
+          return false
+        end
+      end
+    end
+    true
   end
 
   # use a queue to do a breadth (level) first search.
@@ -107,5 +114,10 @@ describe "word_ladder" do
   it do
     words = ["peale", "wilts", "place", "fetch", "purer", "pooch", "peace", "poach", "berra", "teach", "rheum", "peach"]
     expect(word_ladder(words, begin_word: "teach", end_word: "place")).to eql(4)
+  end
+
+  it do
+    words = ['chai', 'chat', 'coat', 'cost', 'cast', 'case', 'came', 'tame']
+    expect(word_ladder(words, begin_word: "chai", end_word: "tame")).to eql(8)
   end
 end

@@ -14,6 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'byebug'
+require 'ruby-prof'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -98,4 +99,12 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  def with_profiler
+    result = RubyProf.profile do
+      yield
+    end
+    printer = RubyProf::GraphPrinter.new(result)
+    printer.print(STDOUT, {})
+  end
 end
