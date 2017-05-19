@@ -56,11 +56,19 @@ describe "word_ladder" do
       top = queue.shift
       return top[:level] if top[:word] == end_word
 
-      words.each do |word|
-        queue.push(word: word, level: top[:level] + 1) if match?(top[:word], word)
+      words.dup.each do |word|
+        if match?(top[:word], word)
+          queue.push(word: word, level: top[:level] + 1)
+          words.delete(word)
+        end
       end
     end
     0
+  end
+
+  it do
+    words = ["hot", "dot", "dog", "lot", "log"]
+    expect(word_ladder(words, begin_word: "hit", end_word: "cog")).to eql(0)
   end
 
   it do
