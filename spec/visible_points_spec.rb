@@ -152,4 +152,29 @@ describe "visible points" do
     points = [[1,1], [3,1], [3,2], [3,3], [1,3], [2,5], [1,5], [-1,-1], [-1,-2], [-2,-3], [-4,-4]]
     expect(visible_points(points)).to eql(6)
   end
+
+  it do
+    points = [[5,4]]
+    expect(visible_points(points)).to eql(1)
+  end
+
+  it do
+    points = [[3,0], [-2,2]]
+    expect(visible_points(points)).to eql(1)
+  end
+
+  it do
+    points = [[-2,2], [-2,-2], [-5,0]]
+    expect(visible_points(points)).to eql(2)
+  end
+
+  it do
+    points = [[3,3], [-4,4], [-2,-2], [1,-1], [10,-10]]
+    expect(visible_points(points)).to eql(2)
+  end
+
+  it do
+    points = [[27,-88], [76,56], [-82,62], [-5,48], [-85,60], [-86,6], [-100,-54], [-22,30], [58,47], [12,80]]
+    expect(visible_points(points)).to eql(3)
+  end
 end
