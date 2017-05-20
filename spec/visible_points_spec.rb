@@ -106,9 +106,19 @@ describe "visible points" do
     end
 
     def self.angle_for(x, y)
-      return -1 if x < 0
-      return -1 if y < 0
-      radians_to_degrees(Math.atan(y.to_f / x.to_f))
+      degrees = radians_to_degrees(Math.atan(y.abs.to_f / x.abs.to_f))
+      if x >= 0 && y >= 0
+        return degrees
+      end
+      if x < 0 && y > 0
+        return degrees + 90
+      end
+      if x < 0 && y <= 0
+        return degrees + 180
+      end
+      if x > 0 && y <= 0
+        return degrees + 270
+      end
     end
   end
 
@@ -126,7 +136,6 @@ describe "visible points" do
       next if x == 0 && y == 0
       next if x < 0 || y < 0
       angle = viewing_angle_for(x, y)
-      next if !angle.in_range?
       next if angles.include?(angle)
       angles.push(angle)
     end
@@ -176,5 +185,13 @@ describe "visible points" do
   it do
     points = [[27,-88], [76,56], [-82,62], [-5,48], [-85,60], [-86,6], [-100,-54], [-22,30], [58,47], [12,80]]
     expect(visible_points(points)).to eql(3)
+  end
+
+  it 'returns 135' do
+    expect(ViewingAngle.angle_for(-2, 2)).to eql(45.0 + 90.0)
+  end
+
+  it 'returns 135' do
+    expect(ViewingAngle.angle_for(-5, 0)).to eql(180.0)
   end
 end
