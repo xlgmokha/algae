@@ -129,8 +129,14 @@ describe "visible points" do
 
   def valid_viewing_angles_for(points)
     angles = [
-      ViewingAngle.new(top: 90.0, bottom: 45.0),
       ViewingAngle.new(top: 45.0, bottom: 0.0),
+      ViewingAngle.new(top: 90.0, bottom: 45.0),
+      ViewingAngle.new(top: 135.0, bottom: 90.0),
+      ViewingAngle.new(top: 180.0, bottom: 135.0),
+      ViewingAngle.new(top: 225.0, bottom: 180.0),
+      ViewingAngle.new(top: 270.0, bottom: 225.0),
+      ViewingAngle.new(top: 315.0, bottom: 270.0),
+      ViewingAngle.new(top: 360.0, bottom: 315.0),
     ]
     points.each do |(x, y)|
       next if x == 0 && y == 0
