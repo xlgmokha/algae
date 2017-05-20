@@ -76,12 +76,6 @@ describe "visible points" do
       @bottom = bottom
     end
 
-    def in_range?
-      return false if top < 0.0 || bottom < 0.0
-      return false if top > 90.0 || bottom > 90.0
-      true
-    end
-
     def visible?(points)
       points.find_all do |(x, y)|
         angle = self.class.angle_for(x, y)
@@ -140,7 +134,6 @@ describe "visible points" do
     ]
     points.each do |(x, y)|
       next if x == 0 && y == 0
-      next if x < 0 || y < 0
       angle = viewing_angle_for(x, y)
       next if angles.include?(angle)
       angles.push(angle)
