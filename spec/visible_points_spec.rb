@@ -68,33 +68,79 @@ Math.atan(35.0/65.0) * (180 / Math::PI)
 DOC
 
 describe "visible points" do
-  def radians_to_degrees(radians)
-    radians * (180 / Math::PI)
-  end
+  class ViewingAngle
+    attr_reader :top, :bottom
 
-  def degrees_to_radians(degrees)
-    degrees * (Math::PI / 180)
-  end
+    def initialize(top:, bottom:)
+      @top = top
+      @bottom = bottom
+    end
 
-  # function to find third point in angle
-  def angle_for(x, y)
-    radians_to_degrees(Math.atan(y.to_f / x.to_f))
-  end
+    def in_range?
+      return false if top < 0.0 || bottom < 0.0
+      return false if top > 90.0 || bottom > 90.0
+      true
+    end
 
-  def valid_angles_for(points)
-    points.inject([]) do |angles, (x, y)|
-      return angles if x == 0 && y == 0
-      return angles if x < 0 || y < 0
-      angle = angle_for(x, y)
-      return angles if angle > 45.0
-      angles.push(angle)
-      angles
+    def visible?(points)
+      points.find_all do |(x, y)|
+        angle = self.class.angle_for(x, y)
+        angle <= top && angle >= bottom
+      end.count
+    end
+
+    def inspect
+      [top, bottom].inspect
+    end
+
+    def ==(other)
+      top == other.top && bottom == other.bottom
+    end
+
+    def self.radians_to_degrees(radians)
+      radians * (180 / Math::PI)
+    end
+
+    def self.degrees_to_radians(degrees)
+      degrees * (Math::PI / 180)
+    end
+
+    def self.angle_for(x, y)
+      return -1 if x < 0
+      return -1 if y < 0
+      radians_to_degrees(Math.atan(y.to_f / x.to_f))
     end
   end
 
+  def viewing_angle_for(x, y)
+    lower_angle = ViewingAngle.angle_for(x, y)
+    ViewingAngle.new(top: lower_angle + 45, bottom: lower_angle)
+  end
+
+  def valid_viewing_angles_for(points)
+    angles = [
+      ViewingAngle.new(top: 90.0, bottom: 45.0),
+      ViewingAngle.new(top: 45.0, bottom: 0.0),
+    ]
+    points.each do |(x, y)|
+      next if x == 0 && y == 0
+      next if x < 0 || y < 0
+      angle = viewing_angle_for(x, y)
+      next if !angle.in_range?
+      next if angles.include?(angle)
+      angles.push(angle)
+    end
+    angles
+  end
+
   def visible_points(points)
-    angles = valid_angles_for(points)
-    puts angles.inspect
+    angles = valid_viewing_angles_for(points)
+    max = 0
+    angles.each do |viewing_angle|
+      count = viewing_angle.visible?(points)
+      max = count if count > max
+    end
+    max
   end
 
   it do
@@ -102,8 +148,8 @@ describe "visible points" do
     expect(visible_points(points)).to eql(6)
   end
 
-  #it do
-    #points = [[1,1], [3,1], [3,2], [3,3], [1,3], [2,5], [1,5], [-1,-1], [-1,-2], [-2,-3], [-4,-4]]
-    #expect(visible_points(points)).to eql(6)
-  #end
+  it do
+    points = [[1,1], [3,1], [3,2], [3,3], [1,3], [2,5], [1,5], [-1,-1], [-1,-2], [-2,-3], [-4,-4]]
+    expect(visible_points(points)).to eql(6)
+  end
 end
