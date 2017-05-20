@@ -101,18 +101,10 @@ describe "visible points" do
 
     def self.angle_for(x, y)
       degrees = radians_to_degrees(Math.atan(y.abs.to_f / x.abs.to_f))
-      if x >= 0 && y >= 0
-        return degrees
-      end
-      if x < 0 && y > 0
-        return degrees + 90
-      end
-      if x < 0 && y <= 0
-        return degrees + 180
-      end
-      if x > 0 && y <= 0
-        return degrees + 270
-      end
+      return degrees if x >= 0 && y >= 0
+      return degrees + 90 if x < 0 && y > 0
+      return degrees + 180 if x < 0 && y <= 0
+      return degrees + 270 if x > 0 && y <= 0
     end
   end
 
@@ -121,7 +113,7 @@ describe "visible points" do
     ViewingAngle.new(top: lower_angle + 45, bottom: lower_angle)
   end
 
-  def valid_viewing_angles_for(points)
+  def viewing_angles_for(points)
     angles = [
       ViewingAngle.new(top: 45.0, bottom: 0.0),
       ViewingAngle.new(top: 90.0, bottom: 45.0),
@@ -142,9 +134,8 @@ describe "visible points" do
   end
 
   def visible_points(points)
-    angles = valid_viewing_angles_for(points)
     max = 0
-    angles.each do |viewing_angle|
+    viewing_angles_for(points).each do |viewing_angle|
       count = viewing_angle.visible?(points)
       max = count if count > max
     end
