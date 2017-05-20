@@ -68,10 +68,10 @@ Math.atan(35.0/65.0) * (180 / Math::PI)
 DOC
 
 describe "visible points" do
-  def visible?(points, viewing_angle)
+  def visible?(points, top:, bottom:)
     points.find_all do |(x, y)|
       angle = angle_for(x, y)
-      angle <= viewing_angle[:top] && angle >= viewing_angle[:bottom]
+      angle <= top && angle >= bottom
     end.count
   end
 
@@ -119,7 +119,7 @@ describe "visible points" do
   def visible_points(points)
     max = 0
     viewing_angles_for(points).each do |viewing_angle|
-      count = visible?(points, viewing_angle)
+      count = visible?(points, top: viewing_angle[:top], bottom: viewing_angle[:bottom])
       max = count if count > max
     end
     max
