@@ -257,4 +257,15 @@ describe "visible points" do
       expect(angle_for(x, y)).to eql(expected)
     end
   end
+
+  it do
+    angles = Set.new
+    -100.upto(100) do |x|
+      -100.upto(100) do |y|
+        next if x == 0 && y == 0
+        angles << angle_for(x, y).floor
+      end
+    end
+    expect(angles.count).to eql(360)
+  end
 end
