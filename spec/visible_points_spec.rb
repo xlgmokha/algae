@@ -104,6 +104,8 @@ describe "visible points" do
     if x > 0 && y <= 0
       return degrees + 270
     end
+
+    raise [x, y].inspect
   end
 
   def viewing_angle_for(x, y)
@@ -239,5 +241,20 @@ describe "visible points" do
 
   it 'returns 270' do
     expect(angle_for(0, -1)).to eql(270.0)
+  end
+
+  it 'spec_name' do
+    [
+      [1, 0, 0.0],
+      [1, 1, 45.0],
+      [0, 1, 90.0],
+      [-1, 1, 135.0],
+      [-1, 0, 180.0],
+      [-1, -1, 225.0],
+      [0, -1, 270.0],
+      [1, -1, 315.0]
+    ].each do |(x, y, expected)|
+      expect(angle_for(x, y)).to eql(expected)
+    end
   end
 end
