@@ -156,7 +156,8 @@ describe "visible points" do
 
   def visible_points(points)
     # n + nlogn
-    angles = points.map { |(x, y)| angle_for(x, y).floor }.sort
+    angles = points.map { |(x, y)| angle_for(x, y) }.sort
+    viewing_angle = 45
 
     i = 0
     j = i + 1
@@ -165,18 +166,29 @@ describe "visible points" do
 
     until i >= angles.size
       current = angles[i]
-      max_angle = current + 45
+      max_angle = current + viewing_angle
       max_angle = max_angle - 360 if max_angle > 360
 
+      #puts [current, max_angle, angles[j]].inspect
       until j >= angles.size || angles[j] > max_angle
         j += 1
         counter += 1
       end
       max = counter if counter > max
       i += 1
-      counter -= 1
+      counter -= 1 if counter > 0
+      #j = 0 if j == (angles.size - 1)
     end
     max
+  end
+
+  it do
+    #points = [[1, 1], [1, -1], [1, 0]]
+    points = [
+      [29, 12], # 22.48 degrees
+      [36, -99], # 340.02 degrees (360 - 340.02 = 19.98)
+    ]
+    expect(visible_points(points)).to eql(2)
   end
 
   it do
@@ -263,7 +275,8 @@ describe "visible points" do
     -100.upto(100) do |x|
       -100.upto(100) do |y|
         next if x == 0 && y == 0
-        angles << angle_for(x, y).floor
+        angle = angle_for(x, y).floor
+        angles << angle
       end
     end
     expect(angles.count).to eql(360)
