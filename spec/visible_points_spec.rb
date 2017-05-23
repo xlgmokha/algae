@@ -93,20 +93,11 @@ describe "visible points" do
 
   def viewing_angle_for(x, y)
     lower_angle = angle_for(x, y)
-    { top: lower_angle + 45, bottom: lower_angle }
+    [ lower_angle, lower_angle + 45 ]
   end
 
   def viewing_angles_for(points)
-    angles = [
-      { top: 45.0, bottom: 0.0 },
-      { top: 90.0, bottom: 45.0 },
-      { top: 135.0, bottom: 90.0 },
-      { top: 180.0, bottom: 135.0 },
-      { top: 225.0, bottom: 180.0 },
-      { top: 270.0, bottom: 225.0 },
-      { top: 315.0, bottom: 270.0 },
-      { top: 360.0, bottom: 315.0 },
-    ]
+    angles = [ ]
     points.each do |(x, y)|
       next if x == 0 && y == 0
       angle = viewing_angle_for(x, y)
@@ -118,8 +109,28 @@ describe "visible points" do
 
   def visible_points(points)
     max = 0
-    viewing_angles_for(points).each do |viewing_angle|
-      count = visible?(points, top: viewing_angle[:top], bottom: viewing_angle[:bottom])
+    angles = viewing_angles_for(points).sort
+    angles.each do |viewing_angle|
+      count = visible?(points, top: viewing_angle[1], bottom: viewing_angle[0])
+      max = count if count > max
+    end
+    max
+  end
+
+  def visible_points(points)
+    angles = points.map { |(x,y)| angle_for(x, y).floor }.sort
+    size = angles.count
+    max = 0
+    angles.each_with_index do |min_angle, index|
+      count = 1
+      max_angle = min_angle + 45
+
+      (index+1).upto(size-1) do |i|
+        current = angles[i]
+        break if current > max_angle
+
+        count += 1 if current >= min_angle && current <= max_angle
+      end
       max = count if count > max
     end
     max
