@@ -154,22 +154,16 @@ describe "visible points" do
     max
   end
 
-  def visible_points(points)
+  def visible_points(points, viewing_angle: 45)
     # n + nlogn
     angles = points.map { |(x, y)| angle_for(x, y) }.sort
-    viewing_angle = 45
-
-    i = 0
-    j = i + 1
-    max = 0
-    counter = 1
+    counter = max = i = j = 0
 
     until i >= angles.size
       current = angles[i]
       max_angle = current + viewing_angle
       max_angle = max_angle - 360 if max_angle > 360
 
-      #puts [current, max_angle, angles[j]].inspect
       until j >= angles.size || angles[j] > max_angle
         j += 1
         counter += 1
@@ -177,7 +171,6 @@ describe "visible points" do
       max = counter if counter > max
       i += 1
       counter -= 1 if counter > 0
-      #j = 0 if j == (angles.size - 1)
     end
     max
   end
