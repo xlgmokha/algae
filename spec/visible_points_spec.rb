@@ -85,10 +85,25 @@ describe "visible points" do
 
   def angle_for(x, y)
     degrees = radians_to_degrees(Math.atan(y.abs.to_f / x.abs.to_f))
-    return degrees if x >= 0 && y >= 0
-    return degrees + 90 if x < 0 && y > 0
-    return degrees + 180 if x < 0 && y <= 0
-    return degrees + 270 if x > 0 && y <= 0
+    # quadrant 1
+    if x >= 0 && y >= 0
+      return degrees
+    end
+
+    # quadrant 2
+    if x < 0 && y > 0
+      return degrees + 90
+    end
+
+    # quadrant 3
+    if x <= 0 && y <= 0
+      return degrees + 180
+    end
+
+    # quadrant 4
+    if x > 0 && y <= 0
+      return degrees + 270
+    end
   end
 
   def viewing_angle_for(x, y)
@@ -124,6 +139,7 @@ describe "visible points" do
     angles.each_with_index do |min_angle, index|
       count = 1
       max_angle = min_angle + 45
+      max_angle = max_angle - 360 if max_angle > 360
 
       (index+1).upto(size-1) do |i|
         current = angles[i]
@@ -132,6 +148,31 @@ describe "visible points" do
         count += 1 if current >= min_angle && current <= max_angle
       end
       max = count if count > max
+    end
+    max
+  end
+
+  def visible_points(points)
+    # n + nlogn
+    angles = points.map { |(x, y)| angle_for(x, y).floor }.sort
+
+    i = 0
+    j = i + 1
+    max = 0
+    counter = 1
+
+    until i >= angles.size
+      current = angles[i]
+      max_angle = current + 45
+      max_angle = max_angle - 360 if max_angle > 360
+
+      until j >= angles.size || angles[j] > max_angle
+        j += 1
+        counter += 1
+      end
+      max = counter if counter > max
+      i += 1
+      counter -= 1
     end
     max
   end
@@ -171,11 +212,32 @@ describe "visible points" do
     expect(visible_points(points)).to eql(3)
   end
 
+  it do
+    points = [[1, 0], [0, 1], [-1, 0], [0, -1]]
+    expect(visible_points(points)).to eql(1)
+  end
+
   it 'returns 135' do
     expect(angle_for(-2, 2)).to eql(45.0 + 90.0)
   end
 
-  it 'returns 135' do
+  it 'returns 180' do
     expect(angle_for(-5, 0)).to eql(180.0)
+  end
+
+  it 'returns 0' do
+    expect(angle_for(1, 0)).to eql(0.0)
+  end
+
+  it 'returns 90' do
+    expect(angle_for(0, 1)).to eql(90.0)
+  end
+
+  it 'returns 180' do
+    expect(angle_for(-1, 0)).to eql(180.0)
+  end
+
+  it 'returns 270' do
+    expect(angle_for(0, -1)).to eql(270.0)
   end
 end
