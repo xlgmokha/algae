@@ -122,6 +122,33 @@ describe "visible points" do
     max
   end
 
+  def visible_points(points, viewing_angle: 45)
+    angles = points.map { |(x, y)| angle_for(x, y) }.sort
+    t = max = counter = 0
+    flag = false
+    angles.size.times do |h|
+      head = angles[h]
+      loop do
+        tail = angles[t]
+        tail += 360 if t < h
+
+        break if tail < head || tail > (head + viewing_angle)
+        break if t == h && flag
+
+        counter += 1
+        t += 1
+
+        if t == angles.size
+          t = 0
+          flag = true
+        end
+      end
+      max = counter if counter > max
+      counter -= 1
+    end
+    max
+  end
+
   it do
     #points = [[1, 1], [1, -1], [1, 0]]
     points = [
