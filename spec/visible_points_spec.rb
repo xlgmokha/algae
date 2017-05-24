@@ -68,13 +68,6 @@ Math.atan(35.0/65.0) * (180 / Math::PI)
 DOC
 
 describe "visible points" do
-  def visible?(points, top:, bottom:)
-    points.find_all do |(x, y)|
-      angle = angle_for(x, y)
-      angle <= top && angle >= bottom
-    end.count
-  end
-
   def radians_to_degrees(radians)
     radians * (180 / Math::PI)
   end
@@ -108,68 +101,22 @@ describe "visible points" do
     raise [x, y].inspect
   end
 
-  def viewing_angle_for(x, y)
-    lower_angle = angle_for(x, y)
-    [ lower_angle, lower_angle + 45 ]
-  end
-
-  def viewing_angles_for(points)
-    angles = [ ]
-    points.each do |(x, y)|
-      next if x == 0 && y == 0
-      angle = viewing_angle_for(x, y)
-      next if angles.include?(angle)
-      angles.push(angle)
-    end
-    angles
-  end
-
-  def visible_points(points)
-    max = 0
-    angles = viewing_angles_for(points).sort
-    angles.each do |viewing_angle|
-      count = visible?(points, top: viewing_angle[1], bottom: viewing_angle[0])
-      max = count if count > max
-    end
-    max
-  end
-
-  def visible_points(points)
-    angles = points.map { |(x,y)| angle_for(x, y).floor }.sort
-    size = angles.count
-    max = 0
-    angles.each_with_index do |min_angle, index|
-      count = 1
-      max_angle = min_angle + 45
-      max_angle = max_angle - 360 if max_angle > 360
-
-      (index+1).upto(size-1) do |i|
-        current = angles[i]
-        break if current > max_angle
-
-        count += 1 if current >= min_angle && current <= max_angle
-      end
-      max = count if count > max
-    end
-    max
-  end
-
   def visible_points(points, viewing_angle: 45)
     # n + nlogn
     angles = points.map { |(x, y)| angle_for(x, y) }.sort
-    counter = max = i = j = 0
+    counter = max = head = tail = 0
 
-    until i >= angles.size
-      current = angles[i]
+    until head >= angles.size
+      current = angles[head]
       max_angle = current + viewing_angle
       max_angle = max_angle - 360 if max_angle > 360
 
-      until j >= angles.size || angles[j] > max_angle
-        j += 1
+      until tail >= angles.size || angles[tail] > max_angle
+        tail += 1
         counter += 1
       end
       max = counter if counter > max
-      i += 1
+      head += 1
       counter -= 1 if counter > 0
     end
     max
