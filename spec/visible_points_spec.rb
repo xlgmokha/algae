@@ -78,48 +78,12 @@ describe "visible points" do
 
   def angle_for(x, y)
     degrees = radians_to_degrees(Math.atan(y.abs.to_f / x.abs.to_f))
-    # quadrant 1
-    if x >= 0 && y >= 0
-      return degrees
-    end
-
-    # quadrant 2
-    if x < 0 && y > 0
-      return degrees + 90
-    end
-
-    # quadrant 3
-    if x <= 0 && y <= 0
-      return degrees + 180
-    end
-
-    # quadrant 4
-    if x > 0 && y <= 0
-      return degrees + 270
-    end
+    return degrees if x >= 0 && y >= 0 # quadrant 1
+    return degrees + 90 if x < 0 && y > 0 # quadrant 2
+    return degrees + 180 if x <= 0 && y <= 0 # quadrant 3
+    return degrees + 270 if x > 0 && y <= 0 # quadrant 4
 
     raise [x, y].inspect
-  end
-
-  def visible_points(points, viewing_angle: 45)
-    # n + nlogn
-    angles = points.map { |(x, y)| angle_for(x, y) }.sort
-    counter = max = head = tail = 0
-
-    until head >= angles.size
-      current = angles[head]
-      max_angle = current + viewing_angle
-      max_angle = max_angle - 360 if max_angle > 360
-
-      until tail >= angles.size || angles[tail] > max_angle
-        tail += 1
-        counter += 1
-      end
-      max = counter if counter > max
-      head += 1
-      counter -= 1 if counter > 0
-    end
-    max
   end
 
   def visible_points(points, viewing_angle: 45)
@@ -150,7 +114,6 @@ describe "visible points" do
   end
 
   it do
-    #points = [[1, 1], [1, -1], [1, 0]]
     points = [
       [29, 12], # 22.48 degrees
       [36, -99], # 340.02 degrees (360 - 340.02 = 19.98)
