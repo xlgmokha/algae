@@ -51,11 +51,32 @@ describe "triplet sum" do
     false
   end
 
+  def bsearch_index(items, target)
+    n = items.size
+    return (target == items[0]) ? 0 : nil if n == 1
+    return 0 if n == 2 && target == items[0]
+    return 1 if n == 2 && target == items[1]
+    return nil if n == 2
+
+    mid = n / 2
+    result = target <=> items[mid]
+    if result == 0
+      return mid
+    elsif result > 0
+      result = bsearch_index(items[mid+1..n], target)
+      return mid + result if result
+    else
+      result = bsearch_index(items[0..mid], target)
+      return mid + result if result
+    end
+    nil
+  end
+
   def triplet_sum(target, items)
     # nlogn
     sorted = items.sort
     # logn
-    high_index = sorted.bsearch_index { |x| x > target }
+    high_index = bsearch_index(sorted, target)
     sorted = sorted[0..high_index] if high_index
     n = sorted.size
     # n
@@ -77,6 +98,10 @@ describe "triplet sum" do
     # nlogn ?
     false
   end
+
+  #def triplet_sum(target, items)
+    #items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
+  #end
 
   it do
     expect(triplet_sum(15, [14, 1, 2, 3, 8, 15, 3])).to be(false)
@@ -133,12 +158,14 @@ describe "triplet sum" do
   end
 
   xit 'plots the time for each' do
+    puts "\"n\",\"time (seconds)\""
     10.times do |n|
       items = Array.new((n + 1) * 1_000) { rand(100) }
       start_time = Time.now
       triplet_sum(rand(100), items)
       end_time = Time.now
-      puts "#{items.size} items: #{(end_time - start_time) * 1_000} seconds"
+      #puts "#{items.size} items: #{(end_time - start_time) * 1_000} seconds"
+      puts "\"#{items.size}\",\"#{(end_time - start_time) * 1_000}\""
     end
   end
 end
