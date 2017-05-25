@@ -36,27 +36,6 @@ DOC
 describe "triplet sum" do
   def triplet_sum(target, items)
     sorted = items.sort.find_all { |x| x < target }
-    head = 0
-    tail = sorted.size - 1
-
-    until head == sorted.size || head == tail || head + 1 == tail || tail < 0
-      if sorted[tail] > target
-        tail -= 1
-        next
-      end
-      result = sorted[head] + sorted[head + 1] + sorted[tail]
-      return true if result == target
-      if result > target
-        tail -= 1
-      else
-        head += 1
-      end
-    end
-    false
-  end
-
-  def triplet_sum(target, items)
-    sorted = items.sort
     n = sorted.size
     n.times do |i|
       head = sorted[i]
@@ -73,7 +52,6 @@ describe "triplet sum" do
 
   def triplet_sum(target, items)
     sorted = items.sort
-    puts [target, sorted].inspect
     n = sorted.size
     n.times do |i|
       head = sorted[i]
@@ -144,7 +122,7 @@ describe "triplet sum" do
   end
 
   xit 'plots the time for each' do
-    100.times do |n|
+    10.times do |n|
       items = Array.new((n + 1) * 1_000) { rand(100) }
       start_time = Time.now
       triplet_sum(rand(100), items)
