@@ -35,6 +35,7 @@ DOC
 
 describe "triplet sum" do
   def triplet_sum(target, items)
+    # n + nlogn
     sorted = items.sort.find_all { |x| x < target }
     n = sorted.size
     n.times do |i|
@@ -51,19 +52,29 @@ describe "triplet sum" do
   end
 
   def triplet_sum(target, items)
+    # nlogn
     sorted = items.sort
+    # logn
+    high_index = sorted.bsearch_index { |x| x > target }
+    sorted = sorted[0..high_index] if high_index
     n = sorted.size
+    # n
     n.times do |i|
       head = sorted[i]
+      # n - 1
       (i+1).upto(n - 1) do |j|
         middle = sorted[j]
         remaining = target - (head + middle)
         next if remaining <= 0
         next if remaining < middle
+        # logn
         result = sorted[j+1..n-1].bsearch { |x| x >= remaining }
         return true if result == remaining
       end
     end
+    # total: nlogn + logn + n + (n-1) + logn
+    # 2logn + nlogn + 2n
+    # nlogn ?
     false
   end
 
