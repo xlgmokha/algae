@@ -100,7 +100,7 @@ describe "triplet sum" do
   end
 
   #def triplet_sum(target, items)
-    #items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
+  #items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
   #end
 
   it do
@@ -157,15 +157,20 @@ describe "triplet sum" do
     end
   end
 
-  xit 'plots the time for each' do
-    puts "\"n\",\"time (seconds)\""
-    10.times do |n|
-      items = Array.new((n + 1) * 1_000) { rand(100) }
-      start_time = Time.now
-      triplet_sum(rand(100), items)
-      end_time = Time.now
-      #puts "#{items.size} items: #{(end_time - start_time) * 1_000} seconds"
-      puts "\"#{items.size}\",\"#{(end_time - start_time) * 1_000}\""
+  it 'plots the time for each' do
+    filename = "tmp/input.csv"
+    File.unlink(filename) if File.exist?(filename)
+    File.open(filename, "w") do |file|
+      500.times do |n|
+        total = (n + 1) * 1_000
+        items = Array.new(total) { rand(total) }
+        target = rand(100)
+        start_time = Time.now
+        triplet_sum(target, items)
+        end_time = Time.now
+        puts "#{(end_time - start_time) * 1_000},#{items.size}"
+        file.write("#{(end_time - start_time) * 1_000},#{items.size}\n")
+      end
     end
   end
 end
