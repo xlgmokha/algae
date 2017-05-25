@@ -99,9 +99,9 @@ describe "triplet sum" do
     false
   end
 
-  def triplet_sum(target, items)
-    items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
-  end
+  #def triplet_sum(target, items)
+    #items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
+  #end
 
   it do
     expect(triplet_sum(15, [14, 1, 2, 3, 8, 15, 3])).to be(false)
