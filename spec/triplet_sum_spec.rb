@@ -99,9 +99,9 @@ describe "triplet sum" do
     false
   end
 
-  #def triplet_sum(target, items)
-  #items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
-  #end
+  def triplet_sum(target, items)
+    items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
+  end
 
   it do
     expect(triplet_sum(15, [14, 1, 2, 3, 8, 15, 3])).to be(false)
@@ -161,10 +161,10 @@ describe "triplet sum" do
     filename = "tmp/input.csv"
     File.unlink(filename) if File.exist?(filename)
     File.open(filename, "w") do |file|
-      500.times do |n|
+      100.times do |n|
         total = (n + 1) * 1_000
         items = Array.new(total) { rand(total) }
-        target = rand(100)
+        target = rand(total)
         start_time = Time.now
         triplet_sum(target, items)
         end_time = Time.now

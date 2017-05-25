@@ -12,7 +12,8 @@ gnuplot << EOF
   set term png
   set output "tmp/graphs/$FILENAME.png"
   set datafile separator ","
-  plot 'tmp/input.csv'
+  set xrange [0:100]
+  plot 'tmp/input.csv' with line
 EOF
 
 echo "tmp/graphs/$FILENAME.png"
