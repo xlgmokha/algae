@@ -124,4 +124,14 @@ describe "triplet sum" do
       expect(triplet_sum(test[0], test[1])).to be(test[2])
     end
   end
+
+  it 'plots the time for each' do
+    100.times do |n|
+      items = Array.new((n + 1) * 1_000) { rand(100) }
+      start_time = Time.now
+      triplet_sum(rand(100), items)
+      end_time = Time.now
+      puts "#{items.size} items: #{(end_time - start_time) * 1_000} seconds"
+    end
+  end
 end
