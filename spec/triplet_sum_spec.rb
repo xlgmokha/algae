@@ -71,6 +71,24 @@ describe "triplet sum" do
     false
   end
 
+  def triplet_sum(target, items)
+    sorted = items.sort
+    puts [target, sorted].inspect
+    n = sorted.size
+    n.times do |i|
+      head = sorted[i]
+      (i+1).upto(n - 1) do |j|
+        middle = sorted[j]
+        remaining = target - (head + middle)
+        next if remaining <= 0
+        next if remaining < middle
+        result = sorted[j+1..n-1].bsearch { |x| x >= remaining }
+        return true if result == remaining
+      end
+    end
+    false
+  end
+
   it do
     expect(triplet_sum(15, [14, 1, 2, 3, 8, 15, 3])).to be(false)
   end
@@ -125,7 +143,7 @@ describe "triplet sum" do
     end
   end
 
-  it 'plots the time for each' do
+  xit 'plots the time for each' do
     100.times do |n|
       items = Array.new((n + 1) * 1_000) { rand(100) }
       start_time = Time.now
