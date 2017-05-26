@@ -161,7 +161,7 @@ describe "triplet sum" do
     filename = "tmp/input.csv"
     File.unlink(filename) if File.exist?(filename)
     File.open(filename, "w") do |file|
-      100.times do |n|
+      500.times do |n|
         total = (n + 1) * 1_000
         items = Array.new(total) { rand(total) }
         target = rand(total)
