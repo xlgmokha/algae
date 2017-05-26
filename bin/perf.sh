@@ -6,13 +6,13 @@ mkdir -p tmp/graphs
 
 gnuplot << EOF
   set title 'time analysis'
-  set xlabel "Time (seconds)"
-  set ylabel "Input size (n)"
+  set xlabel "Input size (n)"
+  set ylabel "Time (seconds)"
   set grid
   set term png
   set output "tmp/graphs/$FILENAME.png"
   set datafile separator ","
-  set xrange [0:100]
+  set yrange [0:100]
   plot 'tmp/input.csv' with line
 EOF
 

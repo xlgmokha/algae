@@ -168,8 +168,8 @@ describe "triplet sum" do
         start_time = Time.now
         triplet_sum(target, items)
         end_time = Time.now
-        puts "#{(end_time - start_time) * 1_000},#{items.size}"
-        file.write("#{(end_time - start_time) * 1_000},#{items.size}\n")
+        puts "#{items.size}: #{(end_time - start_time) * 1_000} seconds"
+        file.write("#{items.size},#{(end_time - start_time) * 1_000}\n")
       end
     end
   end
