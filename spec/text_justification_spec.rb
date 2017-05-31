@@ -65,9 +65,9 @@ describe "text_justification" do
     end
     until spaces <= 0
       (words.size - 1).times do |n|
-        break if spaces <= 0
         words[n] << " "
         spaces -= 1
+        break if spaces == 0
       end
     end
     words.join
@@ -75,13 +75,11 @@ describe "text_justification" do
 
   def text_justification(words, length)
     lines = []
-
     until words.empty?
       spaces, line = next_line(words, length)
       line = pad(line, spaces)
       lines.push(line)
     end
-
     lines
   end
 
