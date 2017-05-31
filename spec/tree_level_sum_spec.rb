@@ -102,10 +102,8 @@ describe "tree_level_sum" do
         level += 1
       elsif token == ")"
         level -= 1
-      else
-        if level == target
-          sum += token.to_i
-        end
+      elsif level == target
+        sum += token.to_i
       end
     end
     sum
@@ -135,10 +133,14 @@ describe "tree_level_sum" do
 level 2: tree[1][1][0] + tree[1][2][0] + tree[2][1][0] + tree[2][2][0] = 44
   EXAMPLE
   [
-    ["(0(5(6()())(14()(9()())))(7(1()())(23()())))", 2, 44],
-  ].each do |(tree, level, expected)|
+    {tree: "(0(5(6()())(14()(9()())))(7(1()())(23()())))", k: 2, expected: 44},
+    {tree: "(3(3()())(1()()))", k: 1, expected: 4},
+    {tree: "(0(5(6()())(4()(9()())))(7(1()())(3()())))", k: 2, expected: 14},
+    {tree: "(3()())", k: 0, expected: 3},
+    {tree: "(0(5()())())", k: 1, expected: 5},
+  ].each do |x|
     it do
-      expect(tree_level_sum(tree, level)).to eql(expected)
+      expect(tree_level_sum(x[:tree], x[:k])).to eql(x[:expected])
     end
   end
 end
