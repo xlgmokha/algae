@@ -43,5 +43,55 @@ Guaranteed constraints:
 The formatted text as an array containing lines of text, with each line having a length of l.
 DOC
 describe "text_justification" do
+  def next_line(words, length)
+    line = []
+    line_length = length
+    until words.empty?
+      word = words.shift
+      if (line_length - word.size) > 1
+        line.push(word)
+        line_length -= word.size
+      else
+        words.unshift(word)
+        break
+      end
+    end
+    [line_length, line]
+  end
 
+  def pad(words, spaces)
+    if words.size == 1
+      return words.join + (" " * spaces)
+    end
+    until spaces <= 0
+      (words.size - 1).times do |n|
+        break if spaces <= 0
+        words[n] << " "
+        spaces -= 1
+      end
+    end
+    words.join
+  end
+
+  def text_justification(words, length)
+    lines = []
+
+    until words.empty?
+      spaces, line = next_line(words, length)
+      line = pad(line, spaces)
+      lines.push(line)
+    end
+
+    lines
+  end
+
+  it do
+    words = ["This", "is", "an", "example", "of", "text", "justification."]
+    l = 16
+    expect(text_justification(words, l)).to contain_exactly(
+      "This    is    an",
+      "example  of text",
+      "justification.  "
+    )
+  end
 end
