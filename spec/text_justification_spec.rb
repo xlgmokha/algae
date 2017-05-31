@@ -85,13 +85,24 @@ describe "text_justification" do
     lines
   end
 
-  it do
-    words = ["This", "is", "an", "example", "of", "text", "justification."]
-    l = 16
-    expect(text_justification(words, l)).to contain_exactly(
-      "This    is    an",
-      "example  of text",
-      "justification.  "
-    )
+  [
+    { words: ["This", "is", "an", "example", "of", "text", "justification."], l: 16, expected: ["This    is    an", "example  of text", "justification.  "]},
+    { words: ["Two", "words."], l: 11, expected: ["Two words. "] },
+    { words: ["Two", "words."], l: 10, expected: ["Two words."] },
+    { words: ["Two", "words."], l: 9, expected: ["Two      ", "words.   "] },
+    { words: ["Looks", "like", "it", "can", "be", "a", "tricky", "test"], l: 25, expected: ["Looks  like  it  can be a", "tricky test              "] },
+    { words: ["a", "b", "b", "longword"], l: 8, expected: ["a   b  b", "longword"] },
+    { words: ["vba", "gaff", "ye", "gs", "cthj", "hf", "vetjj", "jm", "k", "f", "cgbf", "zzz"], l: 8, expected: ["vba gaff", "ye    gs", "cthj  hf", "vetjj jm", "k f cgbf", "zzz     "] },
+    { words: ["Given", "an", "array", "of", "words", "and", "a", "length"], l: 9, expected: ["Given  an", "array  of", "words and", "a length "] },
+    { words: ["Extra", "spaces", "between", "words", "should", "be", "distributed", "as", "evenly", "as", "possible"], l: 20, expected: ["Extra spaces between", "words    should   be", "distributed       as", "evenly as possible  "] },
+    { words: [""], l: 2, expected: ["  "] },
+    { words: ["a"], l: 1, expected: ["a"] },
+    { words: ["a"], l: 2, expected: ["a "] },
+    { words: ["a", "b", "c", "d", "e"], l: 1, expected: ["a", "b", "c", "d", "e"] },
+    { words: ["a", "b", "c", "d", "e"], l: 3, expected: ["a b", "c d", "e  "] },
+  ].each do |x|
+    it do
+      expect(text_justification(x[:words], x[:l])).to contain_exactly(*x[:expected])
+    end
   end
 end
