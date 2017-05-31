@@ -64,15 +64,13 @@ describe "tree_level_sum" do
 
   def tree_level_sum(tree, target)
     tree = build_tree(tree)
-    puts tree.inspect
     queue = [node: tree, level: 0]
-
+    sum = 0
     until queue.empty?
       top = queue.shift
 
       if top[:level] == target
-        puts top[:node].map { |x| x }.inspect
-        break
+        sum += top[:node][0]
       end
 
       left = top[:node][1]
@@ -84,9 +82,7 @@ describe "tree_level_sum" do
         queue.push(node: right, level: top[:level] + 1)
       end
     end
-    # 6 + 14 + 1  + 23
-    # tree[1][1][0] + tree[1][2][0] + tree[2][1][0] + tree[2][2][0]
-    0
+    sum
   end
 
   def tree_level_sum(tree, target)
