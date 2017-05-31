@@ -32,6 +32,8 @@ Guaranteed constraints:
 [output] integer
 
 The total sum of all the values at level k in a tree.
+
+https://en.wikipedia.org/wiki/S-expression
 DESC
 
 describe "tree_level_sum" do
@@ -60,9 +62,53 @@ describe "tree_level_sum" do
     tree[0]
   end
 
-  def tree_level_sum(tree, level)
+  def tree_level_sum(tree, target)
     tree = build_tree(tree)
-    tree[1][1][0] + tree[1][2][0] + tree[2][1][0] + tree[2][2][0]
+    puts tree.inspect
+    queue = [node: tree, level: 0]
+
+    until queue.empty?
+      top = queue.shift
+
+      if top[:level] == target
+        puts top[:node].map { |x| x }.inspect
+        break
+      end
+
+      left = top[:node][1]
+      right = top[:node][2]
+      if left.size > 0
+        queue.push(node: left, level: top[:level] + 1)
+      end
+      if right.size > 0
+        queue.push(node: right, level: top[:level] + 1)
+      end
+    end
+    # 6 + 14 + 1  + 23
+    # tree[1][1][0] + tree[1][2][0] + tree[2][1][0] + tree[2][2][0]
+    0
+  end
+
+  def tree_level_sum(tree, target)
+    # ( + level
+    # ) - level
+    # if level == target
+    #   add number to sum
+    level = -1
+    sum = 0
+    tokens = tree.gsub("(", " ( ").gsub(")", " ) ").split(" ")
+    tokens.each do |token|
+      if token == "("
+        level += 1
+      elsif token == ")"
+        level -= 1
+      else
+        if level == target
+          sum += token.to_i
+        end
+      end
+    end
+    sum
   end
 
   <<-EXAMPLE
