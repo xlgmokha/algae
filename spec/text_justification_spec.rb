@@ -48,7 +48,7 @@ describe "text_justification" do
     line_length = length
     until words.empty?
       word = words.shift
-      if (line_length - word.size) > 1
+      if (line_length - (word.size + 1)) > 1
         line.push(word)
         line_length -= word.size
       else
@@ -76,7 +76,7 @@ describe "text_justification" do
   def text_justification(words, length)
     lines = []
     until words.empty?
-      if words.size < 5 && words.join.size < length
+      if words.size < 5 && words.join.size <= length
         result = words.join(' ')
         lines.push(result + " " * (length - result.size))
         break
