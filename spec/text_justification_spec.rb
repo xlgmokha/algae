@@ -76,6 +76,11 @@ describe "text_justification" do
   def text_justification(words, length)
     lines = []
     until words.empty?
+      if words.size < 5 && words.join.size < length
+        result = words.join(' ')
+        lines.push(result + " " * (length - result.size))
+        break
+      end
       spaces, line = next_line(words, length)
       line = pad(line, spaces)
       lines.push(line)
