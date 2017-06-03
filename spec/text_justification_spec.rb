@@ -44,25 +44,24 @@ The formatted text as an array containing lines of text, with each line having a
 DOC
 describe "text_justification" do
   def next_line(words, length)
+    return [0, [words.shift]] if length == 1
+
     line = []
-    line_length = length
     until words.empty?
       word = words.shift
-      if (line_length - (word.size + 1)) > 1
+      if line.join(" ").size + (word.size + 1) <= length
         line.push(word)
-        line_length -= word.size
       else
         words.unshift(word)
         break
       end
     end
-    [line_length, line]
+    [length - line.join.size, line]
   end
 
   def pad(words, spaces)
-    if words.size == 1
-      return words.join + (" " * spaces)
-    end
+    return words.join + (" " * spaces) if words.size == 1
+
     until spaces <= 0
       (words.size - 1).times do |n|
         words[n] << " "
@@ -76,7 +75,7 @@ describe "text_justification" do
   def text_justification(words, length)
     lines = []
     until words.empty?
-      if words.size < 5 && words.join.size <= length
+      if words.size < 5 && words.join(" ").size <= length
         result = words.join(' ')
         lines.push(result + " " * (length - result.size))
         break
