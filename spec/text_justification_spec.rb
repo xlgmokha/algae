@@ -47,10 +47,13 @@ describe "text_justification" do
     return [0, [words.shift]] if length == 1
 
     line = []
+    line_length = 0
     until words.empty?
       word = words.shift
-      if line.join(" ").size + (word.size + 1) <= length
+      required_spaces = line.any? ? line.size : 0
+      if line_length + word.size + required_spaces <= length
         line.push(word)
+        line_length += word.size
       else
         words.unshift(word)
         break
@@ -59,8 +62,18 @@ describe "text_justification" do
     [length - line.join.size, line]
   end
 
-  def pad(words, spaces)
-    return words.join + (" " * spaces) if words.size == 1
+  def pad_right(words, spaces)
+    return words.join(' ') if spaces.zero?
+
+    before_spaces = words.sum(&:size)
+    words_with_spaces = words.join(' ')
+    after_spaces = words_with_spaces.size
+    added_spaces = after_spaces - before_spaces
+    words_with_spaces + (" " * (spaces - added_spaces))
+  end
+
+  def pad_center(words, spaces)
+    return pad_right(words, spaces) if words.size == 1
 
     until spaces <= 0
       (words.size - 1).times do |n|
@@ -75,14 +88,12 @@ describe "text_justification" do
   def text_justification(words, length)
     lines = []
     until words.empty?
-      if words.size < 5 && words.join(" ").size <= length
-        result = words.join(' ')
-        lines.push(result + " " * (length - result.size))
-        break
-      end
       spaces, line = next_line(words, length)
-      line = pad(line, spaces)
-      lines.push(line)
+      if words.empty?
+        lines.push(pad_right(line, spaces))
+      else
+        lines.push(pad_center(line, spaces))
+      end
     end
     lines
   end
@@ -104,7 +115,8 @@ describe "text_justification" do
     { words: ["a", "b", "c", "d", "e"], l: 3, expected: ["a b", "c d", "e  "] },
   ].each do |x|
     it do
-      expect(text_justification(x[:words], x[:l])).to contain_exactly(*x[:expected])
+      result = text_justification(x[:words], x[:l])
+      expect(result).to contain_exactly(*x[:expected])
     end
   end
 end
