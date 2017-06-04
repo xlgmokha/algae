@@ -44,10 +44,9 @@ The formatted text as an array containing lines of text, with each line having a
 DOC
 describe "text_justification" do
   def next_line(words, length)
-    return [0, [words.shift]] if length == 1
-
     line = []
     line_length = 0
+
     until words.empty?
       word = words.shift
       required_spaces = line.any? ? line.size : 0
@@ -59,7 +58,7 @@ describe "text_justification" do
         break
       end
     end
-    [length - line.join.size, line]
+    [length - line_length, line]
   end
 
   def pad_right(words, spaces)
