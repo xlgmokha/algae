@@ -1,12 +1,16 @@
 <<-DOC
-Given a string str and array of pairs that indicates which indices in the string can be swapped, return the lexicographically largest string that results from doing the allowed swaps. You can swap indices any number of times.
+Given a string str and array of pairs that indicates which indices in the string can be swapped, 
+return the lexicographically largest string that results from doing the allowed swaps.
+You can swap indices any number of times.
 
 Example
 
 For str = "abdc" and pairs = [[1, 4], [3, 4]], the output should be
 swapLexOrder(str, pairs) = "dbca".
 
-By swapping the given indices, you get the strings: "cbda", "cbad", "dbac", "dbca". The lexicographically largest string in this list is "dbca".
+By swapping the given indices, you get the strings: 
+"cbda", "cbad", "dbac", "dbca". 
+The lexicographically largest string in this list is "dbca".
 
 Input/Output
 
@@ -31,7 +35,28 @@ DOC
 
 describe "swap_lex_order" do
   def swap_lex_order(string, pairs)
-    string
+    queue = [string]
+    max_node = string
+
+    visited = {}
+    until queue.empty?
+      node = queue.shift
+      next if visited.key?(node)
+
+      if (node <=> max_node) > 0
+        max_node = node
+      end
+      visited[node] = true
+
+      pairs.each do |pair|
+        x, y = node[pair[0] - 1], node[pair[1] - 1]
+        duplicate = node.dup
+        duplicate[pair[1] - 1] = x
+        duplicate[pair[0] - 1] = y
+        queue.push(duplicate) unless visited.key?(duplicate)
+      end
+    end
+    max_node
   end
 
   [
