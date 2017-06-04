@@ -49,7 +49,7 @@ describe "text_justification" do
 
     until words.empty?
       word = words.shift
-      required_spaces = line.any? ? line.size : 0
+      required_spaces = line.size
       if line_length + word.size + required_spaces <= length
         line.push(word)
         line_length += word.size
@@ -62,9 +62,9 @@ describe "text_justification" do
   end
 
   def pad_right(words, spaces)
-    return words.join(' ') if spaces.zero?
+    return words.join(' ') if spaces == 0
 
-    before_spaces = words.sum(&:size)
+    before_spaces = words.map(&:size).inject(0, :+)
     words_with_spaces = words.join(' ')
     after_spaces = words_with_spaces.size
     added_spaces = after_spaces - before_spaces
@@ -72,8 +72,6 @@ describe "text_justification" do
   end
 
   def pad_center(words, spaces)
-    return pad_right(words, spaces) if words.size == 1
-
     until spaces <= 0
       (words.size - 1).times do |n|
         words[n] << " "
@@ -88,11 +86,8 @@ describe "text_justification" do
     lines = []
     until words.empty?
       spaces, line = next_line(words, length)
-      if words.empty?
-        lines.push(pad_right(line, spaces))
-      else
-        lines.push(pad_center(line, spaces))
-      end
+      right = words.empty? || line.size == 1
+      lines.push(right ? pad_right(line, spaces) : pad_center(line, spaces))
     end
     lines
   end
