@@ -37,11 +37,13 @@ describe "swap_lex_order" do
   def swap_lex_order(string, pairs)
     queue = [string]
     max_node = string
+    computed_max = string.chars.sort.reverse.join
 
     visited = {}
     until queue.empty?
       node = queue.shift
       next if visited.key?(node)
+      return node if node == computed_max
 
       if (node <=> max_node) > 0
         max_node = node
