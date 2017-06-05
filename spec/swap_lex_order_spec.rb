@@ -62,11 +62,11 @@ describe "swap_lex_order" do
   end
 
   def connected?(x, y)
-    (x & y).any?
+    (x & y).size > 0
   end
 
   def union(x, y)
-    (x + y).uniq!.sort!
+    (x + y)
   end
 
   def connected_components_in(pairs)
@@ -93,7 +93,7 @@ describe "swap_lex_order" do
       end
       connections.push(pair) unless connected
     end
-    connections.find_all(&:any?).sort { |x, y| (x[0] <=> y[0]) }
+    connections.find_all(&:any?).map(&:uniq).map(&:sort).sort { |x, y| (x[0] <=> y[0]) }
   end
 
   def swap_lex_order(string, pairs)
@@ -112,7 +112,7 @@ describe "swap_lex_order" do
     { pairs: [[1, 4], [7, 8]], expected: [[1, 4], [7, 8]] },
     { pairs: [[1, 3], [6, 8], [3, 8], [2, 7]], expected: [[1, 3, 6, 8], [2, 7]] },
     { pairs: [], expected: [] },
-    { pairs: [[1,2], [3,4], [6,5], [8,10]], expected: [[1, 2], [3, 4], [6, 5], [8, 10]] },
+    { pairs: [[1,2], [3,4], [6,5], [8,10]], expected: [[1, 2], [3, 4], [5, 6], [8, 10]] },
     { pairs: [[8,5], [10,8], [4,18], [20,12], [5,2], [17,2], [13,25], [29,12], [22,2], [17,11]], expected: [[2, 5, 8, 10, 11, 17, 22], [4, 18], [12, 20, 29], [13, 25]]
   },
   ].each do |x|
@@ -132,7 +132,9 @@ describe "swap_lex_order" do
     { str: "a", pairs: [], expected: "a" },
   ].each do |x|
     it do
-      result = swap_lex_order(x[:str], x[:pairs])
+      result = with_profiler do
+        swap_lex_order(x[:str], x[:pairs])
+      end
       expect(result).to eql(x[:expected])
     end
   end

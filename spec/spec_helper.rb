@@ -101,10 +101,12 @@ RSpec.configure do |config|
 =end
 
   def with_profiler
-    result = RubyProf.profile do
-      yield
+    result = nil
+    report = RubyProf.profile do
+      result = yield
     end
-    printer = RubyProf::GraphPrinter.new(result)
+    printer = RubyProf::GraphPrinter.new(report)
     printer.print(STDOUT, {})
+    result
   end
 end
