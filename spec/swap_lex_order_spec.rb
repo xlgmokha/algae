@@ -61,6 +61,66 @@ describe "swap_lex_order" do
     max_node
   end
 
+  def connected?(x, y)
+    (x & y).any?
+  end
+
+  def union(x, y)
+    (x + y).uniq!.sort!
+  end
+
+  def connected_components_in(pairs)
+    connections = []
+    connections.push(pairs.pop) if pairs.size > 0
+
+    until pairs.empty?
+      pair = pairs.pop
+      connected = false
+      connected_at = nil
+      connections.size.times do |n|
+        connection = connections[n]
+        if connected?(pair, connection)
+          if connected
+            connections[connected_at] = union(connections[connected_at], connection)
+            connections[connected_at] = union(connections[connected_at], pair)
+            connections[n].clear
+          else
+            connections[n] = union(pair, connection)
+            connected = true
+            connected_at = n
+          end
+        end
+      end
+      connections.push(pair) unless connected
+    end
+    connections.find_all(&:any?).sort { |x, y| (x[0] <=> y[0]) }
+  end
+
+  def swap_lex_order(string, pairs)
+    connections = connected_components_in(pairs)
+    result = string.dup
+    connections.each do |connection|
+      connection.sort!
+      letters = connection.map { |x| string[x - 1] }.sort { |x, y| y <=> x }
+      connection.each { |index| result[index - 1] = letters.shift }
+    end
+    result
+  end
+
+  [
+    { pairs: [[1, 4], [3, 4]], expected: [[1, 3, 4]] },
+    { pairs: [[1, 4], [7, 8]], expected: [[1, 4], [7, 8]] },
+    { pairs: [[1, 3], [6, 8], [3, 8], [2, 7]], expected: [[1, 3, 6, 8], [2, 7]] },
+    { pairs: [], expected: [] },
+    { pairs: [[1,2], [3,4], [6,5], [8,10]], expected: [[1, 2], [3, 4], [6, 5], [8, 10]] },
+    { pairs: [[8,5], [10,8], [4,18], [20,12], [5,2], [17,2], [13,25], [29,12], [22,2], [17,11]], expected: [[2, 5, 8, 10, 11, 17, 22], [4, 18], [12, 20, 29], [13, 25]]
+  },
+  ].each do |x|
+    it do
+      expect(connected_components_in(x[:pairs])).to eql(x[:expected])
+    end
+  end
+
   [
     { str: "abdc", pairs: [[1,4], [3,4]], expected: "dbca" },
     { str: "abcdefgh", pairs: [[1,4], [7,8]], expected: "dbcaefhg" },
