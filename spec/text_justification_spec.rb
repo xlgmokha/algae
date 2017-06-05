@@ -72,6 +72,8 @@ describe "text_justification" do
   end
 
   def pad_center(words, spaces)
+    return pad_right(words, spaces) if words.size == 1
+
     until spaces <= 0
       (words.size - 1).times do |n|
         words[n] << " "
@@ -90,6 +92,78 @@ describe "text_justification" do
       lines.push(right ? pad_right(line, spaces) : pad_center(line, spaces))
     end
     lines
+  end
+
+  def compute_cost(words, length)
+    cost_matrix = [words.size]
+    num_words = words.size
+    0.upto(num_words - 1) do |i|
+      cost_matrix[i] = [words.size]
+      (i).upto(num_words - 1) do |j|
+        candidates = words[i..j]
+        cost = length - (candidates.sum(&:size) + candidates.size - 1)
+        cost = cost >= 0 ? cost = cost ** 2 : Float::INFINITY
+        cost_matrix[i][j] = cost
+      end
+    end
+    cost_matrix
+  end
+
+  def dp_text_justification(words, length)
+    cost_matrix = compute_cost(words, length)
+    min_cost = []
+    final_result = []
+    i = j = words.size - 1
+    while i > -1
+      cost = cost_matrix[i][j]
+      if Float::INFINITY == cost
+        # check at what point we split it.
+        0.upto(j) do |jj|
+          next unless cost_matrix[i][j - jj]
+          next unless min_cost[j - jj + 1]
+          next_cost = cost_matrix[i][j - jj] + min_cost[j - jj + 1]
+          if next_cost < cost
+            cost = next_cost
+            min_cost[i] = cost
+            final_result[i] = j - jj + 1
+          end
+        end
+        j = words.size - 1
+      else
+        min_cost[i] = cost
+        final_result[i] = words.size
+      end
+      i -= 1
+    end
+
+    lines = []
+    n = 0
+    index = 0
+    loop do
+      take = final_result[n] - index
+      lines[index] = []
+      take.times do
+        lines[index] << words.shift
+      end
+      if words.empty?
+        lines[index] = pad_right(lines[index].compact, length - lines[index].compact.sum(&:size))
+      else
+        lines[index] = pad_center(lines[index].compact, length - lines[index].compact.sum(&:size))
+      end
+      n = final_result[n]
+      index += 1
+      break if words.empty?
+    end
+    lines
+  end
+
+  [
+    { words: ["Tushar", "Roy", "likes", "to", "code"], l: 10, expected: ["Tushar    ", "Roy  likes", "to code   "] },
+  ].each do |x|
+    it do
+      result = dp_text_justification(x[:words], x[:l])
+      expect(result).to contain_exactly(*x[:expected])
+    end
   end
 
   [
