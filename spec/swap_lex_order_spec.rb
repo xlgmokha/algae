@@ -79,11 +79,12 @@ describe "swap_lex_order" do
       connected_at = nil
       connections.size.times do |n|
         connection = connections[n]
+        next if connection.nil?
+
         if connected?(pair, connection)
           if connected
-            connections[connected_at] = union(connections[connected_at], connection)
-            connections[connected_at] = union(connections[connected_at], pair)
-            connections[n].clear
+            connections[connected_at] = union(connections[connected_at], connection + pair)
+            connections[n] = nil
           else
             connections[n] = union(pair, connection)
             connected = true
@@ -93,14 +94,13 @@ describe "swap_lex_order" do
       end
       connections.push(pair) unless connected
     end
-    connections.find_all(&:any?).map(&:uniq).map(&:sort).sort { |x, y| (x[0] <=> y[0]) }
+    connections.compact.map { |x| x.uniq.sort }
   end
 
   def swap_lex_order(string, pairs)
     connections = connected_components_in(pairs)
     result = string.dup
     connections.each do |connection|
-      connection.sort!
       letters = connection.map { |x| string[x - 1] }.sort { |x, y| y <=> x }
       connection.each { |index| result[index - 1] = letters.shift }
     end
@@ -117,7 +117,7 @@ describe "swap_lex_order" do
   },
   ].each do |x|
     it do
-      expect(connected_components_in(x[:pairs])).to eql(x[:expected])
+      expect(connected_components_in(x[:pairs])).to match_array(x[:expected])
     end
   end
 
