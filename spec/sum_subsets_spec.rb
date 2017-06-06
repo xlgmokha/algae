@@ -32,7 +32,33 @@ It is guaranteed that there are no more than 1000 subsets in the answer.
 DOC
 
 describe "sum_subsets" do
-  def sum_subsets(arr, num)
+  def sum_subsets(items, target)
+    head = 0
+    tail = items.size - 1
+    results = []
+    found_target = false
+    while head < tail
+      x, y = items[head], items[tail]
+      sum = x + y
+      puts [x, y, sum].inspect
+      found_target = true if x == target
+      found_target = true if y == target
+
+      if target == sum
+        if found_target && x > target
+          results << [target]
+          found_target = false
+        end
+        results << [x, y]
+        tail -= 1
+      elsif sum > target
+        tail -= 1
+      elsif sum < target
+        head += 1
+      end
+    end
+    results << [target] if found_target
+    results
   end
 
   [
