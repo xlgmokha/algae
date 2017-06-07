@@ -31,6 +31,8 @@ Guaranteed constraints:
 pairs[i].length = 2.
 
 [output] string
+
+https://www.careercup.com/question?id=5652404478410752
 DOC
 
 describe "swap_lex_order" do
