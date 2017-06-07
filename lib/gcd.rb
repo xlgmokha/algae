@@ -5,5 +5,5 @@ def gcd(p, q)
   gcd(q, p % q)
 end
 
-
 fail unless gcd(1440, 408) == 24
+fail unless gcd(102, 68) == 34
