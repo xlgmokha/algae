@@ -29,7 +29,20 @@ Guaranteed constraints:
 
 A sorted array containing sorted subsets composed of elements from arr that have a sum of num. 
 It is guaranteed that there are no more than 1000 subsets in the answer.
+
+                ([1, 2, 3, 4, 5] 5)
+                /                 \
+            ([2, 3, 4, 5] 4) ([2, 3, 4, 5] 5)
+            /      \
+    ([3, 4, 5] 2) ([2, 3, 4, 5] 4)
+       /      \
+  ([4, 5] -1) ([3, 4, 5], 2)
+               /          \
+         ([4, 5], -1) ([3, 4, 5], 2)
+                       /          \
+                  ([4, 5], -1) ([3, 4, 5], 2)
 DOC
+require 'pp'
 
 describe "sum_subsets" do
   def sum_subsets(items, target)
@@ -40,7 +53,6 @@ describe "sum_subsets" do
     while head < tail
       x, y = items[head], items[tail]
       sum = x + y
-      puts [x, y, sum].inspect
       found_target = true if x == target
       found_target = true if y == target
 
@@ -59,6 +71,109 @@ describe "sum_subsets" do
     end
     results << [target] if found_target
     results
+  end
+
+  def sum_subsets(items, target)
+    results = []
+    total = items.sum
+    size = items.size
+
+    return [] if target <= 0
+    return [] if size == 0
+    puts [items, total, target].inspect
+    results.push(items) if total == target
+    return results if size == 1
+
+    first = items[0]
+    1.upto(size - 1) do |n|
+      puts "next"
+      result = sum_subsets(items[n..(size-1)], target - first)
+      results += ([first] + result) if result.any?
+
+      result = sum_subsets(items[n..(size-1)], target)
+      results += (result) if result.size > 0
+    end
+    results
+  end
+
+  def sum_subsets(items, target)
+    i = 0
+    results = []
+    until i >= items.size
+      j = 0
+      until j >= items.size
+        if target == items[i] + items[j]
+          results.push([items[i], items[j]])
+        end
+        if target == items[i] || target == items[j]
+          results.push([target])
+        end
+        j += 1
+      end
+      i += 1
+    end
+    results
+  end
+
+  def sum_subsets(items, target)
+    puts items.inspect
+    matrix = Array.new(items.size) { Array.new(items.size, 0) }
+    (items.size - 1).downto(0) do |i|
+      (items.size - 1).downto(0) do |j|
+        matrix[i][j] = items[i] + items[j]
+        j += 1
+      end
+      i += 1
+    end
+    PP.pp matrix
+
+    []
+  end
+  <<-DOC
+   1, 2, 3, 4, 5
+1 [2, 3, 4, 5, 6]
+2 [3, 4, 5, 6, 7]
+3 [4, 5, 6, 7, 8]
+4 [5, 6, 7, 8, 9]
+5 [6, 7, 8, 9, 10]
+
+   1, 2, 3, 4, 5
+1 [1, 3, 6, 10, 15]
+2 [3, 4, 5, 6, 7]
+3 [4, 5, 6, 7, 8]
+4 [5, 6, 7, 8, 9]
+5 [6, 7, 8, 9, 10]
+  DOC
+
+  # 1, 2, 3, 4, 5
+  def sum_subsets(items, target)
+    last_index = items.size - 1
+    results = []
+    0.upto(last_index) do |i|
+      last_index.downto(i) do |j|
+        subset = items[(i)..j]
+        sum = subset.sum
+        results.push(subset) if target == sum
+      end
+    end
+    results
+  end
+
+  def sum_subsets(numbers, target, partial=[], results=Set.new)
+    sum = partial.sum
+
+    if sum == target
+      results.add(partial)
+    end
+
+    return results.to_a if sum >= target
+
+    numbers.size.times do |i|
+      item = numbers[i]
+      remaining = numbers[(i + 1)..-1]
+      sum_subsets(remaining, target, partial + [item], results)
+    end
+    results.to_a
   end
 
   [
