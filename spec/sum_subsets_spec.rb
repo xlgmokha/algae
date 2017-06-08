@@ -160,18 +160,13 @@ describe "sum_subsets" do
   end
 
   def sum_subsets(numbers, target, partial=[], results=Set.new)
-    sum = partial.sum
-
-    if sum == target
-      results.add(partial)
-    end
-
+    sum = partial.inject(0, :+)
+    results.add(partial) if sum == target
     return results.to_a if sum >= target
 
-    numbers.size.times do |i|
-      item = numbers[i]
-      remaining = numbers[(i + 1)..-1]
-      sum_subsets(remaining, target, partial + [item], results)
+    numbers.size.times do |n|
+      remaining = numbers[(n + 1)..-1]
+      sum_subsets(remaining, target, partial + [numbers[n]], results)
     end
     results.to_a
   end
@@ -185,7 +180,10 @@ describe "sum_subsets" do
     { arr: [1, 1, 2, 4, 4, 4, 7, 9, 9, 13, 13, 13, 15, 15, 16, 16, 16, 19, 19, 20], num: 36, expected: [[1,1,2,4,4,4,7,13], [1,1,2,4,4,4,20], [1,1,2,4,4,9,15], [1,1,2,4,9,19], [1,1,2,4,13,15], [1,1,2,7,9,16], [1,1,2,13,19], [1,1,2,16,16], [1,1,4,4,4,7,15], [1,1,4,4,4,9,13], [1,1,4,4,7,19], [1,1,4,4,13,13], [1,1,4,15,15], [1,1,9,9,16], [1,1,15,19], [1,2,4,4,7,9,9], [1,2,4,4,9,16], [1,2,4,7,9,13], [1,2,4,9,20], [1,2,4,13,16], [1,2,7,13,13], [1,2,9,9,15], [1,2,13,20], [1,4,4,4,7,16], [1,4,4,7,20], [1,4,7,9,15], [1,4,9,9,13], [1,4,15,16], [1,7,9,19], [1,7,13,15], [1,9,13,13], [1,15,20], [1,16,19], [2,4,4,4,7,15], [2,4,4,4,9,13], [2,4,4,7,19], [2,4,4,13,13], [2,4,15,15], [2,9,9,16], [2,15,19], [4,4,4,9,15], [4,4,9,19], [4,4,13,15], [4,7,9,16], [4,13,19], [4,16,16], [7,9,20], [7,13,16], [16,20]] },
   ].each do |x|
     it do
-      expect(sum_subsets(x[:arr], x[:num])).to eql(x[:expected])
+      result = with_profiler do
+        sum_subsets(x[:arr], x[:num])
+      end
+      expect(result).to eql(x[:expected])
     end
   end
 end
