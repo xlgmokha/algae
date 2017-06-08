@@ -159,16 +159,17 @@ describe "sum_subsets" do
     results
   end
 
-  def sum_subsets(numbers, target, partial=[], results=Set.new)
+  def sum_subsets(numbers, target, partial=[], results = {})
     sum = partial.inject(0, :+)
-    results.add(partial) if sum == target
-    return results.to_a if sum >= target
+    results[partial] = true if sum == target
+    return results.keys if sum >= target
 
     numbers.size.times do |n|
+      item = numbers[n]
       remaining = numbers[(n + 1)..-1]
-      sum_subsets(remaining, target, partial + [numbers[n]], results)
+      sum_subsets(remaining, target, partial + [item], results)
     end
-    results.to_a
+    results.keys
   end
 
   [
