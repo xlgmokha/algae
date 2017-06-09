@@ -173,6 +173,41 @@ describe "sum_subsets" do
     results.keys
   end
 
+<<-DOC
+  [1, 2, 3, 4, 5] t: 5
+
+              sum (j)
+           |0|1|2|3|4|5|
+          0|T|F|F|F|F|F|
+          1|T|T|F|F|F|F|
+words (i) 2|T|T|T|T|F|F|
+          3|T|T|T|T|T|T|
+          4|T|T|T|T|T|T|
+          5|T|T|T|T|T|T|
+
+dp[i][j] = dp[i-1][j] || dp[i-1][j - num[i-1]]
+
+if [5][5] == true
+  then we have at least one possible solution
+  then we can backtrack from [5][5] up or right
+else
+  no solution
+DOC
+
+  def sum_subsets(numbers, target)
+    dp = Array.new(numbers.size + 1) { Array.new(numbers.size + 1, false) }
+    dp[0][0] = true
+    (numbers.size + 1).times do |i|
+      (numbers.size + 1).times do |j|
+        next if i == 0 && j == 0
+        dp[i][j] = dp[i - 1][j] || dp[i - 1][j - numbers[i - 1]]
+      end
+    end
+
+    PP.pp dp
+    dp
+  end
+
   [
     { arr: [1, 2, 3, 4, 5], num: 5, expected: [[1,4], [2,3], [5]] },
     { arr: [1, 2, 2, 3, 4, 5], num: 5, expected: [[1,2,2], [1,4], [2,3], [5]] },
