@@ -41,11 +41,7 @@ describe "sum_of_two" do
   # time: nlogn
   def sum_of_two(a, b, v)
     outer, inner =  a.size > b.size ? [b.sort, a.sort] : [a.sort, b.sort]
-    outer.each do |i|
-      target = v - i
-      return true if inner.bsearch { |x| target <=> x }
-    end
-    false
+    outer.any? { |i| inner.bsearch { |x| (v - i) <=> x } }
   end
 
   # time: n
