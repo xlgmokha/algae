@@ -47,6 +47,12 @@ describe "sum_of_two" do
     false
   end
 
+  def sum_of_two(a, b, v)
+    hash = {}
+    a.each { |x| hash[x] = true }
+    b.any? { |x| hash[v - x] }
+  end
+
   [
     { a: [1, 2, 3], b: [10, 20, 30, 40], v: 42, expected: true },
     { a: [1, 2, 3], b: [10, 20, 30, 40], v: 50, expected: false },
