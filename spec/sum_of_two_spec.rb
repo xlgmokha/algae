@@ -38,6 +38,7 @@ true if there are two elements from a and b which add up to v, and false otherwi
 DOC
 
 describe "sum_of_two" do
+  # time: nlogn
   def sum_of_two(a, b, v)
     outer, inner =  a.size > b.size ? [b.sort, a.sort] : [a.sort, b.sort]
     outer.each do |i|
@@ -47,10 +48,15 @@ describe "sum_of_two" do
     false
   end
 
+  # time: n
   def sum_of_two(a, b, v)
     hash = {}
     a.each { |x| hash[x] = true }
     b.any? { |x| hash[v - x] }
+  end
+
+  def sum_of_two(a, b, v)
+    (a.map { |x| v - x } & b).size > 0
   end
 
   [
