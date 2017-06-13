@@ -37,7 +37,12 @@ An integer that is the sum of all of the sums gotten from querying nums, taken m
 DOC
 
 describe "sum_in_range" do
+  MODULO = (10 ** 9) + 7
+
   def sum_in_range(numbers, queries)
+    [[3 + -2], [-2 + 2], [3, 2]]
+    [[1], [0], [5]]
+    [6]
     0
   end
 
