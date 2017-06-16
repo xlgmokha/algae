@@ -40,11 +40,9 @@ describe "sum_in_range" do
   MODULO = (10 ** 9) + 7
 
   def sum_in_range(numbers, queries)
-    sum = 0
-    queries.each do |(x, y)|
-      sum += numbers[x..y].inject(0, &:+)
-    end
-    sum % MODULO
+    queries.inject(0) do |memo, (x, y)|
+      memo + numbers[x..y].inject(0, &:+)
+    end % MODULO
   end
 
   [
