@@ -175,17 +175,20 @@ describe "sum_subsets" do
 
 <<-DOC
   [1, 2, 3, 4, 5] t: 5
+  [[1, 4], [2, 3], [5]]
 
               sum (j)
            |0|1|2|3|4|5|
           0|T|F|F|F|F|F|
           1|T|T|F|F|F|F|
-words (i) 2|T|T|T|T|F|F|
+ nums (i) 2|T|T|T|T|F|F|
           3|T|T|T|T|T|T|
           4|T|T|T|T|T|T|
           5|T|T|T|T|T|T|
 
 dp[i][j] = dp[i-1][j] || dp[i-1][j - num[i-1]]
+
+dp[1][1] = dp[0][1] || dp[0][1]
 
 if [5][5] == true
   then we have at least one possible solution
@@ -201,11 +204,82 @@ DOC
       (numbers.size + 1).times do |j|
         next if i == 0 && j == 0
         dp[i][j] = dp[i - 1][j] || dp[i - 1][j - numbers[i - 1]]
+
       end
     end
-
     PP.pp dp
-    dp
+
+    results = []
+    i, j = 5, 5
+    #loop do
+      #if dp[i][j]
+        #if j == target
+          #results.push([sum])
+          #i -= 1
+        #else
+          #target - j
+        #end
+      #end
+    #end
+    results
+  end
+
+  
+<<-DOC
+[2, 3, 7, 8, 10], t: 11
+[3, 8]
+
+      sum
+  |0|1|2|3|4|5|6|7|8|9|10|11|
+2 |T|F|T|F|F|F|F|F|F|F|F |F |
+3 |T|F|T|T|F|T|F|F|F|F|F |F |
+7 |T|F|T|T|F|T|F|T|F|T|T |F |
+8 |T|F|T|T|F|T|F|T|F|T|T |T |
+10|T|F|T|T|F|T|F|T|F|T|T |T |
+
+
+          sum (j)
+          |0|1|2|3|4|5|
+    (0) 1 |T|T|F|F|F|F|
+(i) (1) 2 |T|T|T|F|F|F|
+    (2) 3 |T|T|T|T|F|F|
+    (3) 4 |T|T|T|T|T|F|
+    (4) 5 |T|T|T|T|T|T|
+
+DOC
+
+  def sum_subsets(numbers, target)
+    dp = Array.new(numbers.size) { Array.new(numbers.size + 1, nil) }
+    numbers.size.times { |n| dp[n][0] = true }
+
+    (numbers.size).times do |i|
+      number = numbers[i]
+      0.upto(target) do |j|
+        next if i == 0 && j == 0
+
+        if number < j
+          dp[i][j] = dp[i-1][j] || false
+        else
+          dp[i][j] = dp[i-1][j] || dp[i-1][j - number]
+        end
+      end
+    end
+    PP.pp dp
+    i, j = numbers.size - 1, target
+    results = []
+    debugger
+    until i < 0 || j < 0
+      puts [i, j, numbers[i], dp[i][j]].inspect
+      if dp[i - 1][j]
+        i -= 1
+      else
+        results << [j]
+        j -= numbers[i]
+        i -= 1
+      end
+      #break
+    end
+    results
   end
 
   [
