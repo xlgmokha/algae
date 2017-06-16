@@ -45,6 +45,23 @@ describe "sum_in_range" do
     end % MODULO
   end
 
+  def sum_in_range(numbers, queries)
+    dp = []
+    0.upto(numbers.size - 1) do |n|
+      if n == 0
+        dp[n] = numbers[n]
+      else
+        dp[n] = dp[n - 1] + numbers[n]
+      end
+    end
+
+    sum = 0
+    queries.each do |(x, y)|
+      sum += (x > 0) ? dp[y] - dp[x - 1] : dp[y]
+    end
+    sum % MODULO
+  end
+
   [
     { nums: [3, 0, -2, 6, -3, 2], queries: [[0,2], [2,5], [0,5]], x: 10 },
     { nums: [-1000], queries: [[0,0]], x: 999999007 },
