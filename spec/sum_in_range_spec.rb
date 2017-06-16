@@ -46,20 +46,14 @@ describe "sum_in_range" do
   end
 
   def sum_in_range(numbers, queries)
-    dp = []
-    0.upto(numbers.size - 1) do |n|
-      if n == 0
-        dp[n] = numbers[n]
-      else
-        dp[n] = dp[n - 1] + numbers[n]
-      end
+    sums = 0.upto(numbers.size - 1).inject([]) do |memo, n|
+      memo[n] = n == 0 ? numbers[n] : memo[n - 1] + numbers[n]
+      memo
     end
 
-    sum = 0
-    queries.each do |(x, y)|
-      sum += (x > 0) ? dp[y] - dp[x - 1] : dp[y]
-    end
-    sum % MODULO
+    queries.inject(0) do |memo, (x, y)|
+      memo += (x > 0) ? sums[y] - sums[x - 1] : sums[y]
+    end % ((10 ** 9) + 7)
   end
 
   [
