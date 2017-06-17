@@ -11,11 +11,10 @@ def circle?(head)
 
   until hare.nil?
     return true if tortoise == hare
-    tortoise = tortoise.next_item
-    hare = hare.next_item&.next_item
+    tortoise, hare = tortoise.next_item, hare.next_item&.next_item
   end
 
-  return false
+  false
 end
 
 class Node
