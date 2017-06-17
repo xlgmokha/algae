@@ -4,13 +4,15 @@ A circle means, a -> b -> c -> b, then it is a circle
 DOC
 require 'byebug'
 
-def circle?(list)
-  tortoise, hare = list, list.next_item
+def circle?(head)
+  return false if head.nil?
+
+  tortoise, hare = head, head.next_item
 
   until hare.nil?
     return true if tortoise == hare
     tortoise = tortoise.next_item
-    hare = hare.next_item.next_item
+    hare = hare.next_item&.next_item
   end
 
   return false
