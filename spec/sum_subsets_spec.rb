@@ -197,32 +197,32 @@ else
   no solution
 DOC
 
-  def sum_subsets(numbers, target)
-    dp = Array.new(numbers.size + 1) { Array.new(numbers.size + 1, false) }
-    dp[0][0] = true
-    (numbers.size + 1).times do |i|
-      (numbers.size + 1).times do |j|
-        next if i == 0 && j == 0
-        dp[i][j] = dp[i - 1][j] || dp[i - 1][j - numbers[i - 1]]
+  #def sum_subsets(numbers, target)
+    #dp = Array.new(numbers.size + 1) { Array.new(numbers.size + 1, false) }
+    #dp[0][0] = true
+    #(numbers.size + 1).times do |i|
+      #(numbers.size + 1).times do |j|
+        #next if i == 0 && j == 0
+        #dp[i][j] = dp[i - 1][j] || dp[i - 1][j - numbers[i - 1]]
 
-      end
-    end
-    PP.pp dp
-
-    results = []
-    i, j = 5, 5
-    #loop do
-      #if dp[i][j]
-        #if j == target
-          #results.push([sum])
-          #i -= 1
-        #else
-          #target - j
-        #end
       #end
     #end
-    results
-  end
+    #PP.pp dp
+
+    #results = []
+    #i, j = 5, 5
+    ##loop do
+      ##if dp[i][j]
+        ##if j == target
+          ##results.push([sum])
+          ##i -= 1
+        ##else
+          ##target - j
+        ##end
+      ##end
+    ##end
+    #results
+  #end
 
   
 <<-DOC
@@ -248,39 +248,37 @@ DOC
 
 DOC
 
-  def sum_subsets(numbers, target)
-    dp = Array.new(numbers.size) { Array.new(numbers.size + 1, nil) }
-    numbers.size.times { |n| dp[n][0] = true }
+  #def sum_subsets(numbers, target)
+    #dp = Array.new(numbers.size) { Array.new(numbers.size + 1, nil) }
+    #numbers.size.times { |n| dp[n][0] = true }
 
-    (numbers.size).times do |i|
-      number = numbers[i]
-      0.upto(target) do |j|
-        next if i == 0 && j == 0
+    #(numbers.size).times do |i|
+      #number = numbers[i]
+      #0.upto(target) do |j|
+        #next if i == 0 && j == 0
 
-        if number < j
-          dp[i][j] = dp[i-1][j] || false
-        else
-          dp[i][j] = dp[i-1][j] || dp[i-1][j - number]
-        end
-      end
-    end
-    PP.pp dp
-    i, j = numbers.size - 1, target
-    results = []
-    debugger
-    until i < 0 || j < 0
-      puts [i, j, numbers[i], dp[i][j]].inspect
-      if dp[i - 1][j]
-        i -= 1
-      else
-        results << [j]
-        j -= numbers[i]
-        i -= 1
-      end
-      #break
-    end
-    results
-  end
+        #if number < j
+          #dp[i][j] = dp[i-1][j] || false
+        #else
+          #dp[i][j] = dp[i-1][j] || dp[i-1][j - number]
+        #end
+      #end
+    #end
+    #PP.pp dp
+    #i, j = numbers.size - 1, target
+    #results = []
+    #until i < 0 || j < 0
+      #puts [i, j, numbers[i], dp[i][j]].inspect
+      #if dp[i - 1][j]
+        #i -= 1
+      #else
+        #results << [j]
+        #j -= numbers[i]
+        #i -= 1
+      #end
+    #end
+    #results
+  #end
 
   [
     { arr: [1, 2, 3, 4, 5], num: 5, expected: [[1,4], [2,3], [5]] },
