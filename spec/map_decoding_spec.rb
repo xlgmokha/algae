@@ -7,7 +7,7 @@ A top secret message containing uppercase letters from 'A' to 'Z' has been encod
 'Z' -> 26
 You are an FBI agent and you need to determine the total number of ways that the message can be decoded.
 
-Since the answer could be very large, take it modulo 109 + 7.
+Since the answer could be very large, take it modulo 10^9 + 7.
 
 Example
 
@@ -34,8 +34,55 @@ The total number of ways to decode the given message.
 DOC
 
 describe "map_decoding" do
+  <<-THINK
+  "abc"
+
+   |1|2|3|
+  1|a|b|c|
+  2|L|W|-|
+  3|-|-|-|
+
+  |1|2|3|
+  |2|2|1|
+
+  10122110
+  10|12|21|10
+  10|12|2|1|10
+  10|1|22|1|10
+  10|1|2|21|10
+  10|1|2|2|1|10
+
+
+  THINK
   def map_decoding(message)
-    0
+    puts [message].inspect
+    if message.size == 1
+      return (0..26).include?(message[0].to_i - 1) ? 1 : 0
+    end
+
+    count = 0
+    results = []
+    (message.size - 1).downto(0) do |i|
+      tail = message[i].to_i
+      combined = message[i-1..i].to_i
+      head = message[i - 1].to_i
+
+      if tail == 0
+        return 0 if combined < 0 || combined >= 26
+        results.push(combined)
+      else
+        if head >= 0 && head < 26
+          count += 1
+          results << tail
+        end
+      end
+      puts results.inspect
+
+      i += 1
+    end
+
+    modulo = (10 ** 9) + 7
+    count % modulo
   end
 
   [
