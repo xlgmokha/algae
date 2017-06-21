@@ -117,7 +117,6 @@ describe "swap_lex_order" do
   end
 
   def swap_lex_order(items, pairs)
-    puts items.inspect
     0.upto(pairs.size - 1) do |i|
       x = pairs[i]
       (i + 1).upto(pairs.size - 1) do |j|
