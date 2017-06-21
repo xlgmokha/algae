@@ -68,7 +68,7 @@ describe "swap_lex_order" do
   end
 
   def union(x, y)
-    (x + y).sort
+    (x + y).sort.uniq
   end
 
   def sort(pairs)
@@ -116,6 +116,27 @@ describe "swap_lex_order" do
     result
   end
 
+  def swap_lex_order(items, pairs)
+    puts items.inspect
+    0.upto(pairs.size - 1) do |i|
+      x = pairs[i]
+      (i + 1).upto(pairs.size - 1) do |j|
+        y = pairs[j]
+        if connected?(x, y)
+          pairs[j] = union(x, y)
+          x.clear
+        end
+      end
+    end
+
+    pairs.reject(&:empty?).each do |connection|
+      connection.sort!
+      candidates = connection.map { |x| items[x - 1] }.sort { |x, y| y <=> x }
+      connection.each_with_index { |x, i| items[x - 1] = candidates[i] }
+    end
+    items
+  end
+
   [
     { pairs: [[1, 4], [3, 4]], expected: [[1, 3, 4]] },
     { pairs: [[1, 4], [7, 8]], expected: [[1, 4], [7, 8]] },
@@ -131,6 +152,7 @@ describe "swap_lex_order" do
   end
 
   [
+    { str: "abdcegeh", pairs: [[1,2], [3,4], [5, 6], [2, 4], [6, 8]], expected: "dcbahgee" },
     { str: "abdc", pairs: [[1,4], [3,4]], expected: "dbca" },
     { str: "abcdefgh", pairs: [[1,4], [7,8]], expected: "dbcaefhg" },
     { str: "acxrabdz", pairs: [[1,3], [6,8], [3,8], [2,7]], expected: "zdxrabca" },
