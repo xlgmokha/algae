@@ -13,6 +13,10 @@ A -> B -> C -> D -> E -> F -> D
 |C|F|
 |D|E|
 |E|D|
+
+Part 3.
+could you find the entry point of the circle?
+which means the point A for (a->b->c->a)
 DOC
 
 describe "cycle" do
@@ -46,6 +50,18 @@ describe "cycle" do
       tortoise, hare = tortoise.next_item, hare.next_item&.next_item
     end
     0
+  end
+
+  def entry_point(head)
+    return nil if head.nil?
+
+    tortoise, hare = head, head.next_item
+
+    until hare.nil?
+      return tortoise.next_item if tortoise == hare
+      tortoise, hare = tortoise.next_item, hare.next_item&.next_item
+    end
+    nil
   end
 
   class Node
@@ -115,5 +131,46 @@ A -> B -> C -> D -> E -> F -> D
 
     expect(circle?(a)).to be_falsey
     expect(cycle_length(a)).to eql(0)
+  end
+
+  it 'detects the entry point' do
+    # (a->b->c->a)
+    # a|b
+    # b|a
+    # c|c
+    a = Node.new("A")
+    b = Node.new("B")
+    c = Node.new("C")
+    a.add(b)
+    b.add(c)
+    c.add(a)
+
+    expect(entry_point(a)).to eql(a)
+  end
+
+
+  it 'detects entry point' do
+    # A -> B -> C -> D -> C is C the entry point
+    a = Node.new("A")
+    b = Node.new("B")
+    c = Node.new("C")
+    d = Node.new("D")
+    a.add(b)
+    b.add(c)
+    c.add(d)
+    d.add(c)
+
+    expect(entry_point(a)).to eql(c)
+  end
+
+  it 'finds no entry point' do
+    #(a->b->c)
+    a = Node.new("A")
+    b = Node.new("B")
+    c = Node.new("C")
+    a.add(b)
+    b.add(c)
+
+    expect(entry_point(a)).to be_nil
   end
 end
