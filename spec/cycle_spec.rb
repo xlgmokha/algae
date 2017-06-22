@@ -13,13 +13,9 @@ A -> B -> C -> D -> E -> F -> D
 |C|F|
 |D|E|
 |E|D|
-
-
 DOC
-require 'spec_helper'
+
 describe "cycle" do
-
-
   def circle?(head)
     return false if head.nil?
 
@@ -102,11 +98,22 @@ A -> B -> C -> D -> E -> F -> D
 
     a.add(b)
     b.add(c)
-    c.add(b)
+    c.add(d)
     d.add(e)
     e.add(f)
     f.add(d)
 
+    expect(circle?(a)).to be_truthy
     expect(cycle_length(a)).to eql(3)
+  end
+
+  it do
+    a = Node.new("A")
+    b = Node.new("B")
+
+    a.add(b)
+
+    expect(circle?(a)).to be_falsey
+    expect(cycle_length(a)).to eql(0)
   end
 end
