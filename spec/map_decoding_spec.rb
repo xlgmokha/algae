@@ -52,6 +52,12 @@ describe "map_decoding" do
   10|1|2|21|10
   10|1|2|2|1|10
 
+  [1, 2, 3]
+
+  [1], [2, 3]  [1, 2, 3]
+  [2], [3]     [2], [3]
+  [3]          [3]
+
 
   THINK
   def map_decoding(message)
@@ -83,6 +89,23 @@ describe "map_decoding" do
 
     modulo = (10 ** 9) + 7
     count % modulo
+  end
+
+  def decode(chars, rest = [])
+    #puts [chars, rest].inspect
+    return chars if rest.empty?
+
+    results = []
+    first = rest[0]
+    results.push(decode([first], rest[1..rest.size]))
+
+    second = rest[1]
+    results.push(decode([first + second], rest[2..rest.size])) if second
+    results
+  end
+
+  def map_decoding(message)
+    decode([], message.chars)
   end
 
   [
