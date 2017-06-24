@@ -1,5 +1,6 @@
 <<-DOC
-Note: Write a solution with O(n) time complexity and O(1) additional space complexity, since this is what you would be asked to do during a real interview.
+Note: Write a solution with O(n) time complexity and O(1) additional space complexity, 
+since this is what you would be asked to do during a real interview.
 
 Given an array a that contains only numbers in the range from 1 to a.length, 
 find the first duplicate number for which the second occurrence has the minimal index. 
@@ -38,11 +39,11 @@ describe "first_duplicate" do
     head, tail = 0, items.size - 1
     min = -1
 
-    until head == (items.size - 1)
-      #puts [items[head], items[tail]].inspect
+    until head == (items.size - 1) || head == min
+      puts [items[head], items[tail]].inspect
       if items[head] == items[tail]
-        new_min = tail + 1
-        min = min < 0 ?  new_min : [min, new_min].min
+        min = min < 0 ?  tail + 1 : [min, tail + 1].min
+        puts ['match', items[head], items[tail], min].inspect
         head += 1
         break if tail == head
       else
