@@ -108,6 +108,33 @@ describe "map_decoding" do
     decode([], message.chars)
   end
 
+  # dp[n] = dp[n - 1] + dp[n - 2] if [x,y] <= 26
+  # dp[n] = dp[n - 1]
+  def map_decoding(message)
+    puts message.inspect
+    dp = [1]
+
+    return message[0].to_i > 0 ? 1 : 0 if message.size == 1
+
+    1.upto(message.size - 1) do |n|
+      x, y = message[n - 1], message[n]
+      z = (x + y).to_i
+      puts [x, y].join.inspect
+      if x != "0" && z <= 26
+        dp[n] = dp[n - 1] + dp[n - 2]
+      else
+        if y.to_i > 0
+          dp[n] = dp[n - 1]
+        else
+          dp[n] = 0
+        end
+      end
+      puts dp.inspect
+    end
+    modulo = (10 ** 9) + 7
+    dp.last % modulo
+  end
+
   [
     { message: "123", expected: 3 },
     { message: "12", expected: 2 },
