@@ -60,6 +60,15 @@ describe "first_duplicate" do
     min > 0 ? items[min - 1] : min
   end
 
+  def first_duplicate(items)
+    hash = {}
+    items.each do |item|
+      return item if hash[item]
+      hash[item] = true
+    end
+    -1
+  end
+
   [
     { a: [2, 3, 3, 1, 5, 2], x: 3 },
     { a: [2, 4, 3, 5, 1], x: -1 },
@@ -71,6 +80,7 @@ describe "first_duplicate" do
     { a: [3, 3, 3], x: 3 },
     { a: [8, 4, 6, 2, 6, 4, 7, 9, 5, 8], x: 6 },
     { a: [10, 6, 8, 4, 9, 1, 7, 2, 5, 3], x: -1 },
+    { a: [1, 2, 3, 4, 5, 6, 7, 8, 9, 9], x: 9 },
   ].each do |x|
     it do
       expect(first_duplicate(x[:a])).to eql(x[:x])
