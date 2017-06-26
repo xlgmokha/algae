@@ -40,10 +40,8 @@ describe "first_duplicate" do
     min = -1
 
     until head == (items.size - 1) || head == min
-      puts [items[head], items[tail]].inspect
       if items[head] == items[tail]
         min = min < 0 ?  tail + 1 : [min, tail + 1].min
-        puts ['match', items[head], items[tail], min].inspect
         head += 1
         break if tail == head
       else
@@ -54,7 +52,7 @@ describe "first_duplicate" do
         end
       end
     end
-    min
+    min > 0 ? items[min - 1] : min
   end
 
   [
