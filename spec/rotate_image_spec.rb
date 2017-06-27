@@ -31,15 +31,14 @@ DOC
 
 describe "rotate_image" do
   def rotate_image(image)
-    0.upto(image.size) do |i|
-      row = image[i]
-      puts row.inspect
-      0.upto(row.size - 1) do |j|
+    copy = Array.new(image.size) { Array.new }
 
-        puts row[j].inspect
+    0.upto(image.size - 1) do |i|
+      (image.size - 1).downto(0) do |j|
+        copy[i].push(image[j][i])
       end
     end
-    image
+    copy
   end
 
   [
