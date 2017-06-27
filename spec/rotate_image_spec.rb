@@ -31,6 +31,14 @@ DOC
 
 describe "rotate_image" do
   def rotate_image(image)
+    0.upto(image.size) do |i|
+      row = image[i]
+      puts row.inspect
+      0.upto(row.size - 1) do |j|
+
+        puts row[j].inspect
+      end
+    end
     image
   end
 

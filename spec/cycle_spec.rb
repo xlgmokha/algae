@@ -58,10 +58,40 @@ describe "cycle" do
     tortoise, hare = head, head.next_item
 
     until hare.nil?
-      return tortoise.next_item if tortoise == hare
+      break if tortoise == hare
       tortoise, hare = tortoise.next_item, hare.next_item&.next_item
     end
-    nil
+
+    tortoise = head
+    until hare == tortoise
+      tortoise = tortoise.next_item
+      hare = hare.next_item
+    end
+    return tortoise
+  end
+
+  def entry_point(head)
+    return nil if head.nil?
+
+    tortoise, hare = head, head.next_item
+
+    until hare.nil?
+      break if tortoise == hare
+      tortoise, hare = tortoise.next_item, hare.next_item&.next_item
+    end
+
+    return nil if tortoise.nil? || hare.nil?
+
+    visited = {}
+    tortoise = head
+    until hare == tortoise
+      tortoise = tortoise.next_item
+      hare = hare.next_item
+      return hare if visited[hare]
+
+      visited[hare] = true
+    end
+    return tortoise
   end
 
   class Node
