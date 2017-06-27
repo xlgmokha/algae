@@ -45,6 +45,35 @@ describe "rotate_image" do
     image.reverse!.transpose
   end
 
+  def reverse(image)
+    head = 0
+    tail = image.size - 1
+
+    until head == tail || head > tail
+      image[head], image[tail] = image[tail], image[head]
+      head += 1
+      tail -= 1
+    end
+    image
+  end
+
+  def transpose(image)
+    copy = Array.new(image[0].size) { Array.new }
+    i = 0
+    until image.empty?
+      image.each do |row|
+        copy[i].push(row.shift)
+      end
+      i += 1
+      break if i == image.size
+    end
+    copy
+  end
+
+  def rotate_image(image)
+    transpose(reverse(image))
+  end
+
   [
     { a: [[1,2,3], [4,5,6], [7,8,9]], x: [[7,4,1], [8,5,2], [9,6,3]] },
     { a: [[1]], x: [[1]] },
