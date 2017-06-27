@@ -74,6 +74,16 @@ describe "rotate_image" do
     transpose(reverse(image))
   end
 
+  def rotate_image(image)
+    image.reverse!
+    (0...image.size).each do |i|
+      (i + 1...image.size).each do |j|
+        image[i][j], image[j][i] = image[j][i], image[i][j]
+      end
+    end
+    image
+  end
+
   [
     { a: [[1,2,3], [4,5,6], [7,8,9]], x: [[7,4,1], [8,5,2], [9,6,3]] },
     { a: [[1]], x: [[1]] },
