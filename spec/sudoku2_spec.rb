@@ -84,7 +84,7 @@ DOC
 describe "sudoku2" do
   def duplicates?(items)
     hash = {}
-    items.each do |item|
+    items.reject { |x| x == 0 || x == "." }.each do |item|
       return true if hash[item]
       hash[item] = true
     end
@@ -108,19 +108,17 @@ describe "sudoku2" do
     end
     # find duplicates in each 3x3 grid
     PP.pp grid
-    0.upto(8) do |row|
-      0.upto(8) do |column|
-        value = grid[row][column]
-        next if value == "."
-        puts [row, column, value].inspect
-        return false if value == grid[row - 1][column - 1]
-        return false if value == grid[row - 1][column]
-        return false if value == grid[row - 1][column + 1]
-        return false if value == grid[row][column - 1]
-        return false if value == grid[row][column + 1]
-        return false if value == grid[row + 1]&.[](column - 1)
-        return false if value == grid[row + 1]&.[](column)
-        return false if value == grid[row + 1]&.[](column + 1)
+    row, column = 0, 0
+    until row > 8
+      section = grid[row][column...(column + 3)] +
+        grid[row + 1][column...(column + 3)] +
+        grid[row + 2][column...(column + 3)]
+      return false if duplicates?(section)
+
+      column += 3
+      if column > 8
+        column = 0
+        row += 3
       end
     end
     true
