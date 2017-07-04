@@ -1,7 +1,11 @@
 <<-DOC
-Sudoku is a number-placement puzzle. The objective is to fill a 9 × 9 grid with numbers in such a way that each column, each row, and each of the nine 3 × 3 sub-grids that compose the grid all contain all of the numbers from 1 to 9 one time.
+Sudoku is a number-placement puzzle.
+The objective is to fill a 9 × 9 grid with numbers in such a way that each column, each row,
+and each of the nine 3 × 3 sub-grids that compose the grid all contain all of the numbers from 1 to 9 one time.
 
-Implement an algorithm that will check whether the given grid of numbers represents a valid Sudoku puzzle according to the layout rules described above. Note that the puzzle represented by grid does not have to be solvable.
+Implement an algorithm that will check whether the given grid of numbers represents a valid
+Sudoku puzzle according to the layout rules described above.
+Note that the puzzle represented by grid does not have to be solvable.
 
 Example
 
@@ -33,7 +37,8 @@ grid = [['.', '.', '.', '.', '2', '.', '.', '9', '.'],
 the output should be
 sudoku2(grid) = false.
 
-The given grid is not correct because there are two 1s in the second column. Each column, each row, and each 3 × 3 subgrid can only contain the numbers 1 through 9 one time.
+The given grid is not correct because there are two 1s in the second column. 
+Each column, each row, and each 3 × 3 subgrid can only contain the numbers 1 through 9 one time.
 
 Input/Output
 
@@ -45,9 +50,80 @@ A 9 × 9 array of characters, in which each character is either a digit from '1'
 [output] boolean
 
 Return true if grid represents a valid Sudoku puzzle, otherwise return false.
+
+THINK
+
+If i grab each number in the matrix and store it's coordinate can I come up with a formula for
+checking the appropriate indexes to see if there is a duplicate on the same row, column or 3x3 grid.
+
+
+2 => [0, 4] => [[0, 3], [0, 5], [1, 3], [1, 4], [1, 5]]
+9 => [0, 7]
+6 => [1, 4] => [[0, 3], [0, 4], [0, 5], [1, 3], [1, 5], [2, 3], [2, 4], [2, 5]]
+7 => [2, 0]
+1 => [2, 1]
+7 => [2, 4]
+5 => [2, 5]
+7 => [3, 1]
+8 => [4, 4]
+3 => [4, 5]
+8 => [5, 2]
+7 => [5, 4]
+6 => [5, 7]
+2 => [6, 5]
+1 => [7, 1]
+2 => [7, 3]
+2 => [8, 1]
+3 => [8, 4]
+
+
+1  |2  | 4 |8
+2^0|2^1|2^2|2^3|
+
 DOC
 describe "sudoku2" do
+  def duplicates?(items)
+    hash = {}
+    items.each do |item|
+      return true if hash[item]
+      hash[item] = true
+    end
+    false
+  end
+
   def sudoku2(grid)
+    columns = 0.upto(8).map { |x| [x, []] }.to_h
+
+    # find duplicates in each row
+    0.upto(8) do |i|
+      row = grid[i].map(&:to_i)
+      return false if duplicates?(row.reject { |x| x == 0 })
+      row.each_with_index do |x, column|
+        columns[column].push(x.to_i) unless x == 0
+      end
+    end
+    # find duplicates in each column
+    columns.each do |key, column|
+      return false if duplicates?(column)
+    end
+    # find duplicates in each 3x3 grid
+    PP.pp grid
+    0.upto(8) do |row|
+      0.upto(8) do |column|
+        value = grid[row][column]
+        next if value == "."
+        puts [row, column, value].inspect
+        return false if value == grid[row - 1][column - 1]
+        return false if value == grid[row - 1][column]
+        return false if value == grid[row - 1][column + 1]
+        return false if value == grid[row][column - 1]
+        return false if value == grid[row][column + 1]
+        return false if value == grid[row + 1]&.[](column - 1)
+        return false if value == grid[row + 1]&.[](column)
+        return false if value == grid[row + 1]&.[](column + 1)
+      end
+    end
+    true
   end
 
   [
