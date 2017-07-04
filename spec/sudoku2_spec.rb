@@ -107,7 +107,7 @@ describe "sudoku2" do
       return false if duplicates?(column)
     end
     # find duplicates in each 3x3 grid
-    PP.pp grid
+    #PP.pp grid
     row, column = 0, 0
     until row > 8
       section = grid[row][column...(column + 3)] +
@@ -119,6 +119,30 @@ describe "sudoku2" do
       if column > 8
         column = 0
         row += 3
+      end
+    end
+    true
+  end
+
+  def sudoku2(grid)
+    columns = Array.new(9) { Hash.new }
+    rows = Array.new(9) { Hash.new }
+    sub_grids = Array.new(9) { Hash.new }
+
+    9.times do |i|
+      9.times do |j|
+        value = grid[i][j].to_i
+
+        next if value.zero?
+        return false if rows[i].key?(value)
+        rows[i][value] = true
+
+        return false if columns[j].key?(value)
+        columns[j][value] = true
+
+        index = (i / 3) * 3 + (j / 3)
+        return false if sub_grids[index].key?(value)
+        sub_grids[index][value] = true
       end
     end
     true
