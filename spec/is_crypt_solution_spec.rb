@@ -70,5 +70,24 @@ Return true if the solution represents the correct solution to the cryptarithm c
 DOC
 
 describe "#is_crypt_solution" do
+  def is_crypt_solution(crypt, solution)
+  end
+
+  [
+    { crypt: ["SEND", "MORE", "MONEY"], solution: [["O","0"], ["M","1"], ["Y","2"], ["E","5"], ["N","6"], ["D","7"], ["R","8"], ["S","9"]], x: true },
+    { crypt: ["TEN", "TWO", "ONE"], solution: [["O","1"], ["T","0"], ["W","9"], ["E","5"], ["N","4"]], x: false },
+    { crypt: ["ONE", "ONE", "TWO"], solution: [["O","2"], ["T","4"], ["W","6"], ["E","1"], ["N","3"]], x: true },
+    { crypt: ["ONE", "ONE", "TWO"], solution: [["O","0"], ["T","1"], ["W","2"], ["E","5"], ["N","6"]], x: false },
+    { crypt: ["A", "A", "A"], solution: [["A","0"]], x: false },
+    { crypt: ["A", "B", "C"], solution: [["A","5"], ["B","6"], ["C","1"]], x: false },
+    { crypt: ["AA", "AA", "AA"], solution: [["A","0"]], x: false },
+    { crypt: ["A", "A", "A"], solution: [["A","1"]], x: false },
+    { crypt: ["AA", "AA", "BB"], solution: [["A","1"], ["B","2"]], x: true },
+    { crypt: ["BAA", "CAB", "DAB"], solution: [["A","0"], ["B","1"], ["C","2"], ["D","4"]], x: false },
+  ].each do |x|
+    it do
+      expect(is_crypt_solution(x[:crypt], x[:solution])).to eql(x[:x])
+    end
+  end
 
 end
