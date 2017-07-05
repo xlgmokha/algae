@@ -73,18 +73,13 @@ DOC
 
 describe "#is_crypt_solution" do
   def crypt_solution?(crypt, solution)
-    return false if solution.empty?
-
     mapping = solution.to_h
     decoded = crypt.map do |word|
       word.chars.map { |x| mapping[x] }.join
     end
-    if (decoded[0].size > 1 && decoded[0][0] == "0") ||
-        (decoded[1].size > 1 && decoded[1][0] == "0")
-      return false
-    end
-    sum = decoded[0].to_i + decoded[1].to_i
-    sum == decoded[2].to_i
+
+    return false if decoded.any? { |x| x.size > 1 && x[0] == "0" }
+    decoded[0].to_i + decoded[1].to_i == decoded[2].to_i
   end
 
   [
@@ -98,9 +93,19 @@ describe "#is_crypt_solution" do
     { crypt: ["A", "A", "A"], solution: [["A","1"]], x: false },
     { crypt: ["AA", "AA", "BB"], solution: [["A","1"], ["B","2"]], x: true },
     { crypt: ["BAA", "CAB", "DAB"], solution: [["A","0"], ["B","1"], ["C","2"], ["D","4"]], x: false },
-    { crypt: ["A", "A", "A"], solution: [], x: false },
+    { crypt: ["BAA", "CAB", "DAB"], solution: [["A","0"], ["B","1"], ["C","2"], ["D","3"]], x: true },
+    { crypt: ["BAA", "BAA", "CAA"], solution: [["A","0"], ["B","1"], ["C","2"]], x: true },
+    { crypt: ["AA", "BB", "AA"], solution: [["A","1"], ["B","0"]], x: false },
+    { crypt: ["FOUR", "FOUR", "EIGHT"], solution: [["F","5"], ["O","2"], ["U","3"], ["R","9"], ["E","1"], ["I","0"], ["G","4"], ["H","7"], ["T","8"]], x: true }, 
+    { crypt: ["AAAAAAAAAAAAAA", "BBBBBBBBBBBBBB", "CCCCCCCCCCCCCC"], solution: [["A","0"], ["B","1"], ["C","2"]], x: false },
+    { crypt: ["AAAAAAAAAAAAAA", "BBBBBBBBBBBBBB", "CCCCCCCCCCCCCC"], solution: [["A","1"], ["B","2"], ["C","3"]], x: true },
+    { crypt: ["WASD", "IJKL", "OPAS"], solution: [["W","2"], ["A","4"], ["S","7"], ["D","9"], ["I","1"], ["J","0"], ["K","6"], ["L","8"], ["O","3"], ["P","5"]], x: true },
+    { crypt: ["WASD", "IJKL", "OPAS"], solution: [["W","2"], ["A","0"], ["S","4"], ["D","1"], ["I","5"], ["J","8"], ["K","6"], ["L","3"], ["O","7"], ["P","9"]], x: true },
+    { crypt: ["WASD", "IJKL", "AOPAS"], solution: [["W","2"], ["A","0"], ["S","4"], ["D","1"], ["I","5"], ["J","8"], ["K","6"], ["L","3"], ["O","7"], ["P","9"]], x: false },
+    { crypt: ["BLACK", "BLUE", "APPLE"], solution: [["B","5"], ["L","8"], ["A","6"], ["C","7"], ["K","0"], ["U","1"], ["E","9"], ["P","4"]], x: true },
     { crypt: ["A" * 13, "A" * 13, "Z" * 13], solution: [["A", "1"], ["Z", "2"]], x: true },
     { crypt: ["A" * 13, "Z", "Z" + ("B" * 13)], solution: [["A", "9"], ["B", "0"], ["Z", "1"]], x: true },
+    { crypt: [('A'..'Z').to_a.join, ('A'..'Z').to_a.join, "C"], solution: ('A'..'Z').each_with_index.map { |x, y| [x, (y + 1).to_s] }, x: false },
   ].each do |x|
     it do
       expect(crypt_solution?(x[:crypt], x[:solution])).to eql(x[:x])
