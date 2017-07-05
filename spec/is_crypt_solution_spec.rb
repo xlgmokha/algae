@@ -7,7 +7,7 @@ The array crypt will contain three non-empty strings that follow the structure: 
 which should be interpreted as the word1 + word2 = word3 cryptarithm.
 
 If crypt, when it is decoded by replacing all of the letters in the cryptarithm with digits using the mapping in solution,
-becomes a valid arithmetic equation containing no numbers with leading zeroes, the answer is true. 
+becomes a valid arithmetic equation containing no numbers with leading zeroes, the answer is true.
 If it does not become a valid arithmetic solution, the answer is false.
 
 Example
@@ -25,7 +25,8 @@ solution = [['O', '0'],
 the output should be
 isCryptSolution(crypt, solution) = true.
 
-When you decrypt "SEND", "MORE", and "MONEY" using the mapping given in crypt, you get 9567 + 1085 = 10652 which is correct and a valid arithmetic equation.
+When you decrypt "SEND", "MORE", and "MONEY" using the mapping given in crypt,
+you get 9567 + 1085 = 10652 which is correct and a valid arithmetic equation.
 
 For crypt = ["TEN", "TWO", "ONE"] and
 
@@ -62,7 +63,8 @@ solution[i].length = 2,
 solution[i][0] ≠ solution[j][0], i ≠ j,
 solution[i][1] ≠ solution[j][1], i ≠ j.
 
-It is guaranteed that solution only contains entries for the letters present in crypt and that different letters have different values.
+It is guaranteed that solution only contains entries for the letters present in crypt and that different 
+letters have different values.
 
 [output] boolean
 
@@ -71,6 +73,15 @@ DOC
 
 describe "#is_crypt_solution" do
   def is_crypt_solution(crypt, solution)
+    mapping = solution.to_h
+    decoded = crypt.map do |word|
+      word.chars.map { |x| mapping[x] }.join
+    end
+    if (decoded[0].size > 1 && decoded[0][0] == "0") ||
+        (decoded[1].size > 1 && decoded[1][0] == "0")
+      return false
+    end
+    decoded[0].to_i + decoded[1].to_i == decoded[2].to_i
   end
 
   [
@@ -78,7 +89,7 @@ describe "#is_crypt_solution" do
     { crypt: ["TEN", "TWO", "ONE"], solution: [["O","1"], ["T","0"], ["W","9"], ["E","5"], ["N","4"]], x: false },
     { crypt: ["ONE", "ONE", "TWO"], solution: [["O","2"], ["T","4"], ["W","6"], ["E","1"], ["N","3"]], x: true },
     { crypt: ["ONE", "ONE", "TWO"], solution: [["O","0"], ["T","1"], ["W","2"], ["E","5"], ["N","6"]], x: false },
-    { crypt: ["A", "A", "A"], solution: [["A","0"]], x: false },
+    { crypt: ["A", "A", "A"], solution: [["A","0"]], x: true },
     { crypt: ["A", "B", "C"], solution: [["A","5"], ["B","6"], ["C","1"]], x: false },
     { crypt: ["AA", "AA", "AA"], solution: [["A","0"]], x: false },
     { crypt: ["A", "A", "A"], solution: [["A","1"]], x: false },
@@ -89,5 +100,4 @@ describe "#is_crypt_solution" do
       expect(is_crypt_solution(x[:crypt], x[:solution])).to eql(x[:x])
     end
   end
-
 end
