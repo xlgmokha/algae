@@ -54,6 +54,20 @@ describe "remove_k_from_list" do
     head
   end
 
+  def not_target(head, target)
+    head = head.next while head && head.value == target
+    head
+  end
+
+  def remove_k_from_list(head, target)
+    head = node = not_target(head, target)
+    while node
+      node.next = not_target(node.next, target)
+      node = node.next
+    end
+    head
+  end
+
   class ListNode
     attr_accessor :value, :next
 
