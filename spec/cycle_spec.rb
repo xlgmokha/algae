@@ -52,6 +52,24 @@ describe "cycle" do
     0
   end
 
+  def cycle_length(head)
+    return 0 if head.nil?
+
+    tortoise, hare = head, head
+    d1, d2 = 0, 0
+
+    while hare && tortoise
+      break if tortoise == hare && hare != head
+
+      tortoise, hare = tortoise.next_item, hare.next_item&.next_item
+      d1 += 1
+      d2 += 2
+    end
+    return 0 if hare.nil?
+
+    d2 - d1
+  end
+
   def entry_point(head)
     return nil if head.nil?
 
