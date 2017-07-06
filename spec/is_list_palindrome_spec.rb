@@ -24,8 +24,42 @@ Return true if l is a palindrome, otherwise return false.
 DOC
 
 describe "is_list_palindrome" do
+  def length_of(head)
+    i = 0
+    until head.nil?
+      i += 1
+      head = head.next
+    end
+    i
+  end
+
   def palindrome?(head)
-    true
+    return true if head.nil?
+
+    puts head.to_a.inspect
+    length = length_of(head)
+    mid = length.even? ? length / 2 : (length / 2) + 1
+    distance_travelled = 0
+    left_sum, right_sum = 0, 0
+
+    node = head
+    until node.nil?
+      if distance_travelled >= mid
+        right_sum += node.value
+      else
+        left_sum += node.value
+      end
+      puts [distance_travelled, left_sum, right_sum].inspect
+      distance_travelled += 1
+      node = node.next
+    end
+
+    puts [left_sum, right_sum].inspect
+    if length.even?
+      left_sum - right_sum == 0
+    else
+      left_sum - right_sum == 1
+    end
   end
 
   class ListNode
@@ -63,6 +97,16 @@ describe "is_list_palindrome" do
 
   [
     { l: [0, 1, 0], x: true },
+    { l: [1, 2, 2, 3], x: false },
+    { l: [1, 1000000000, -1000000000, -1000000000, 1000000000, 1], x: true },
+    { l: [1, 2, 3, 3, 2], x: false },
+    { l: [1, 2, 3, 1, 2, 3], x: false },
+    { l: [], x: true },
+    { l: [3, 5, 3, 5], x: false },
+    { l: [1, 5, 2, 4], x: false },
+    { l: [10], x: true },
+    { l: [0, 0], x: true },
+    { l: [1, 3, 2, 2, 2], x: false },
   ].each do |x|
     it do
       expect(palindrome?(to_list(x[:l]))).to eql(x[:x])
