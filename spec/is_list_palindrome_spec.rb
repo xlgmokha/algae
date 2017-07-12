@@ -24,15 +24,6 @@ Return true if l is a palindrome, otherwise return false.
 DOC
 
 describe "is_list_palindrome" do
-  def length_of(head)
-    i = 0
-    until head.nil?
-      i += 1
-      head = head.next
-    end
-    i
-  end
-
   def palindrome?(head)
     return true if head.nil?
 
@@ -59,10 +50,24 @@ describe "is_list_palindrome" do
     end
   end
 
+  def length_of(head)
+    n = 1
+    n += 1 while head = head.next
+    n
+  end
+
+  # recursion blows the stack for a long list
+  #def advance_to(head, index)
+    #return head if index == 0
+    #advance_to(head.next, index - 1)
+  #end
+
   def advance_to(head, index)
     return head if index == 0
-
-    advance_to(head.next, index - 1)
+    (index - 1).downto(0) do |n|
+      head = head.next
+    end
+    head
   end
 
   def reverse(head)
@@ -70,12 +75,11 @@ describe "is_list_palindrome" do
     root = head
 
     while root
-      x = root.next
+      next_node = root.next
       root.next = new_root
       new_root = root
-      root = x
+      root = next_node
     end
-
     new_root
   end
 
