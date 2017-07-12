@@ -36,7 +36,6 @@ describe "is_list_palindrome" do
   def palindrome?(head)
     return true if head.nil?
 
-    puts head.to_a.inspect
     length = length_of(head)
     mid = length.even? ? length / 2 : (length / 2) + 1
     distance_travelled = 0
@@ -49,17 +48,48 @@ describe "is_list_palindrome" do
       else
         left_sum += node.value
       end
-      puts [distance_travelled, left_sum, right_sum].inspect
       distance_travelled += 1
       node = node.next
     end
 
-    puts [left_sum, right_sum].inspect
     if length.even?
       left_sum - right_sum == 0
     else
       left_sum - right_sum == 1
     end
+  end
+
+  def advance_to(head, index)
+    return head if index == 0
+
+    advance_to(head.next, index - 1)
+  end
+
+  def reverse(head)
+    new_root = nil
+    root = head
+
+    while root
+      x = root.next
+      root.next = new_root
+      new_root = root
+      root = x
+    end
+
+    new_root
+  end
+
+  def palindrome?(head)
+    return true if head.nil?
+    length = length_of(head)
+    mid = length / 2
+
+    x, y = head, reverse(advance_to(head, mid))
+    0.upto(mid - 1) do |i|
+      return false unless x.value == y.value
+      x, y = x.next, y.next
+    end
+    true
   end
 
   class ListNode
