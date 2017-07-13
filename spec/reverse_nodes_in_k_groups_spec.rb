@@ -37,8 +37,52 @@ The initial list, with reversed groups of k elements.
 DOC
 
 describe "#reverse_nodes_in_k_groups" do
+  def length_of(head)
+    i = 1
+    i += 1 while head = head.next
+    i
+  end
+
+  def reverse(head, k)
+    new_root = nil
+    root = head
+
+    while root && k > 0
+      next_node = root.next
+      root.next = new_root
+      new_root = root
+      root = next_node
+      k -= 1
+    end
+
+    new_root
+  end
+
   def reverse_nodes_in_k_groups(head, k)
-    head
+    return head if k == 1
+    ph = nil
+    result = nil
+
+    loop do
+      tail = head
+      (k - 1).times { tail = tail.next if tail.next }
+      nh = tail.next
+      length = length_of(head)
+      if k > length
+        return result
+      else
+        reverse(head, k)
+        head.next = nh
+        ph.next = tail if ph
+        ph = head
+        head = nh
+      end
+
+      result = tail if result.nil?
+
+      break if head.nil?
+    end
+    result
   end
 
   [
