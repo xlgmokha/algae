@@ -38,22 +38,32 @@ describe "#merge_two_linked_lists" do
     return left if right.nil?
     return right if left.nil?
     result, other = left.value < right.value ? [left, right] : [right, left]
-    puts [result.to_a, other.to_a].inspect
 
     current = result
+    previous = nil
     until other.nil?
-      puts [current.value, other.value].inspect
       if current.value < other.value
-        # move forward on current list
-        if current.next.nil?
+        if current.next
+          previous = current
+          current = current.next
+        else
           current.next = other
           break
-        else
-          current = current.next
         end
+      elsif current.value == other.value
+        tmp = other
+        other = other.next
+        tmp.next = current.next
+        current.next = tmp
+        previous = current
+        current = current.next
       else
         # take node from other
-        break
+        tmp = other
+        other = other.next
+        tmp.next = current
+        previous&.next = tmp
+        previous = tmp
       end
     end
 
