@@ -103,6 +103,32 @@ describe "triplet sum" do
     #items.combination(3).to_a.any? { |x| x.reduce(:+) == target }
   #end
 
+  # Victors solution
+  #def triplet_sum(target, array)
+    #array.sort!
+    #solution = []
+    #(0..array.length - 3).each do |i|
+      #next unless i == 0 || i > 0 && array[i - 1] != array[i]
+      #head = i + 1
+      #tail = array.length - 1
+      #while head < tail
+        #sum = array[i] + array[head] + array[tail]
+        #if sum == target
+          #solution.push([array[i], array[head], array[tail]])
+          #head += 1
+          #tail -= 1
+          #head += 1 while head < tail && array[head] == array[head - 1]
+          #tail += 1 while tail > head && array[tail] == array[tail + 1]
+        #elsif sum < target
+          #head += 1
+        #else
+          #tail -= 1
+        #end
+      #end
+    #end
+    #solution.any?
+  #end
+
   it do
     expect(triplet_sum(15, [14, 1, 2, 3, 8, 15, 3])).to be(false)
   end
