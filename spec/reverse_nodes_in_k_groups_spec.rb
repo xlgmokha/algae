@@ -68,18 +68,14 @@ describe "#reverse_nodes_in_k_groups" do
       (k - 1).times { tail = tail.next if tail.next }
       nh = tail.next
       length = length_of(head)
-      if k > length
-        return result
-      else
-        reverse(head, k)
-        head.next = nh
-        ph.next = tail if ph
-        ph = head
-        head = nh
-      end
+      break if k > length
 
+      reverse(head, k)
+      head.next = nh
+      ph.next = tail if ph
+      ph = head
+      head = nh
       result = tail if result.nil?
-
       break if head.nil?
     end
     result
