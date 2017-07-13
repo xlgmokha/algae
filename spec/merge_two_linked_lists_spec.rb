@@ -58,7 +58,6 @@ describe "#merge_two_linked_lists" do
         previous = current
         current = current.next
       else
-        # take node from other
         tmp = other
         other = other.next
         tmp.next = current
