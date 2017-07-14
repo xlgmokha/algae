@@ -57,7 +57,21 @@ DOC
 
 describe "#grouping_dishes" do
   def grouping_dishes(dishes)
-    []
+    ingredients = {}
+    dishes.each do |menu|
+      dish = menu[0]
+      menu[1..-1].each do |ingredient|
+        ingredients[ingredient] ||= []
+        ingredients[ingredient].push(dish)
+      end
+    end
+
+    result = []
+    ingredients.each do |(ingredient, dishes)|
+      next if dishes.count <= 1
+      result.push(dishes.sort.unshift(ingredient))
+    end
+    result.sort!
   end
 
   [
