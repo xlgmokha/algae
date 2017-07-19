@@ -1,6 +1,7 @@
 <<-DOC
-Given an array strings, determine whether it follows the sequence given in the patterns array. 
-In other words, there should be no i and j for which strings[i] = strings[j] and patterns[i] ≠ patterns[j] or for which strings[i] ≠ strings[j] and patterns[i] = patterns[j].
+Given an array strings, determine whether it follows the sequence given in the patterns array.
+In other words, there should be no i and j for which strings[i] = strings[j] and patterns[i] ≠ patterns[j]
+or for which strings[i] ≠ strings[j] and patterns[i] = patterns[j].
 
 Example
 
@@ -33,13 +34,48 @@ Return true if strings follows patterns and false otherwise.
 DOC
 
 describe "are_following_patterns" do
-
   <<-THINK
-  strings: [ cat, dog, dog ], patterns: [ a, b, b ] => true
-  strings: [ cat, dog, doggy ], patterns: [ a, b, b ] => false
+  { cat: :a, dog: :b } X
+  { a: :cat, b: :dog } X
+  { a: [0], b: [1, 2] } X
+  { a: [cat], b: [nil, dog, doggy]
   THINK
   def following_patterns?(strings, patterns)
-    items = Hash.new(0)
+    return false if strings.size != patterns.size
+    items = Hash.new { |hash, key| hash[key] = [] }
+
+    patterns.each_with_index do |pattern, index|
+      items[pattern][index] = strings[index]
+    end
+
+    true
+  end
+
+  def following_patterns?(strings, patterns)
+    return false if strings.size != patterns.size
+    x_s, x_p = Hash.new { |h, k| h[k] = [] }, Hash.new { |h, k| h[k] = [] }
+
+    strings.each_with_index { |string, index| x_s[string].push(index) }
+    patterns.each_with_index { |pattern, index| x_p[pattern].push(index) }
+
+    return false if x_s.keys.size != x_p.keys.size
+    strings.each_with_index do |string, index|
+      return false if x_s[string] != x_p[patterns[index]]
+    end
+
+    patterns.each_with_index do |pattern, index|
+      return false if x_p[pattern] != x_s[strings[index]]
+    end
+    true
+  end
+
+  def following_patterns?(strings, patterns)
+    k, m = {}, {}
+    i = 0
+    a = strings.map { |string| k[string] ||= (i += 1) }
+    i = 0
+    b = patterns.map { |pattern| m[pattern] ||= (i += 1) }
+    a == b
   end
 
   [
