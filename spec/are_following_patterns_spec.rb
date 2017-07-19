@@ -71,11 +71,8 @@ describe "are_following_patterns" do
 
   def following_patterns?(strings, patterns)
     k, m = {}, {}
-    i = 0
-    a = strings.map { |string| k[string] ||= (i += 1) }
-    i = 0
-    b = patterns.map { |pattern| m[pattern] ||= (i += 1) }
-    a == b
+    i, j = 0, 0
+    strings.map { |string| k[string] ||= (i += 1) } == patterns.map { |pattern| m[pattern] ||= (j += 1) }
   end
 
   [
