@@ -35,5 +35,26 @@ Guaranteed constraints:
 DOC
 
 describe "#contains_close_numbers" do
+  def contains_close_numbers(numbers, k)
+    false
+  end
 
+  [
+    { nums: [0, 1, 2, 3, 5, 2], k: 3, x: true },
+    { nums: [0, 1, 2, 3, 5, 2], k: 2, x: false },
+    { nums: [], k: 0, x: false },
+    { nums: [99, 99], k: 2, x: true },
+    { nums: [2, 2], k: 3, x: true },
+    { nums: [1, 2], k: 2, x: false },
+    { nums: [1, 2, 1], k: 2, x: true },
+    { nums: [1, 0, 1, 1], k: 1, x: true },
+    { nums: [1, 2, 1], k: 0, x: false },
+    { nums: [1, 2, 1], k: 1, x: false },
+    { nums: [1], k: 1, x: false },
+    { nums: [-1, -1], k: 1, x: true },
+  ].each do |x|
+    it do
+      expect(contains_close_numbers(x[:nums], x[:k])).to eql(x[:x])
+    end
+  end
 end
