@@ -51,6 +51,16 @@ describe "#contains_close_numbers" do
     false
   end
 
+  def contains_close_numbers(numbers, k)
+    items = {}
+    numbers.each_with_index do |number, index|
+      puts items.inspect
+      return true if items[number] && (index - items[number]) <= k
+      items[number] = index
+    end
+    false
+  end
+
   [
     { nums: [0, 1, 2, 3, 5, 2], k: 3, x: true },
     { nums: [0, 1, 2, 3, 5, 2], k: 2, x: false },
