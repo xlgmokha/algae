@@ -45,7 +45,7 @@ describe "#contains_close_numbers" do
     items = Hash.new { |hash, key| hash[key] = [] }
     numbers.each_with_index do |number, index|
       items[number].push(index)
-      return true if diff(items[number]).include?(k)
+      return true if diff(items[number]).find { |x| x <= k }
     end
 
     false
@@ -64,6 +64,7 @@ describe "#contains_close_numbers" do
     { nums: [1, 2, 1], k: 1, x: false },
     { nums: [1], k: 1, x: false },
     { nums: [-1, -1], k: 1, x: true },
+    { nums: [1,2,3,4,1], k: 5, x: true },
   ].each do |x|
     it do
       expect(contains_close_numbers(x[:nums], x[:k])).to eql(x[:x])
