@@ -35,7 +35,19 @@ Guaranteed constraints:
 DOC
 
 describe "#contains_close_numbers" do
+  def diff(x)
+    1.upto(x.size - 1).map { |n| (x[n] - x[n-1]).abs }
+  end
+
   def contains_close_numbers(numbers, k)
+    return numbers[0] == numbers[1] if numbers.size == 2
+
+    items = Hash.new { |hash, key| hash[key] = [] }
+    numbers.each_with_index do |number, index|
+      items[number].push(index)
+      return true if diff(items[number]).include?(k)
+    end
+
     false
   end
 
