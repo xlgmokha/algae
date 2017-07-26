@@ -71,6 +71,18 @@ describe "#possible_sums" do
     dp.map { |x| x ? 1 : 0 }.sum - 1
   end
 
+  def possible_sums(coins, quantity)
+    results = { 0 => true }
+    coins.zip(quantity).each do |coin, number_of_coins|
+      results.keys.each do |key|
+        1.upto(number_of_coins) do |n|
+          results[key + (coin * n)] = true
+        end
+      end
+    end
+    results.size - 1
+  end
+
   [
     { coins: [10, 50, 100], quantity: [1, 2, 1], x: 9 },
     { coins: [10, 50, 100, 500], quantity: [5, 3, 2, 2], x: 122 },
