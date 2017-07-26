@@ -1,5 +1,6 @@
 <<-DOC
-You have a collection of coins, and you know the values of the coins and the quantity of each type of coin in it. You want to know how many distinct sums you can make from non-empty groupings of these coins.
+You have a collection of coins, and you know the values of the coins and the quantity of each type of coin in it.
+You want to know how many distinct sums you can make from non-empty groupings of these coins.
 
 Example
 
@@ -49,7 +50,25 @@ DOC
 
 describe "#possible_sums" do
   def possible_sums(coins, quantity)
-    0
+    maximum = coins.zip(quantity).map { |(x, y)| x * y }.sum
+
+    dp = [false] * (maximum + 1)
+    dp[0] = true
+
+    coins.zip(quantity).each do |(coin, q)|
+      (0...coin).each do |b|
+        num = -1
+        (b..maximum + 1).step(coin).each do |i|
+          if dp[i]
+            num = 0
+          elsif num >= 0
+            num += 1
+          end
+          dp[i] = (0 <= num && num <= q)
+        end
+      end
+    end
+    dp.map { |x| x ? 1 : 0 }.sum - 1
   end
 
   [
