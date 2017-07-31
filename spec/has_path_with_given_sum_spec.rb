@@ -1,5 +1,7 @@
 <<-DOC
-Given a binary tree t and an integer s, determine whether there is a root to leaf path in t such that the sum of vertex values equals s.
+Given a binary tree t and an integer s,
+determine whether there is a root to leaf path in t
+such that the sum of vertex values equals s.
 
 Example
 
@@ -131,7 +133,8 @@ Guaranteed constraints:
 
 [output] boolean
 
-Return true if there is a path from root to leaf in t such that the sum of node values in it is equal to s, otherwise return false.
+Return true if there is a path from root to leaf in t such that the sum of node values in it is equal to s,
+otherwise return false.
 DOC
 
 describe "#path_with_given_sum?" do
@@ -152,6 +155,15 @@ describe "#path_with_given_sum?" do
       stack.push(node.right) if node.right
     end
     sum == target_sum
+  end
+
+  def path_with_given_sum?(tree, target)
+    return target.zero? if tree.nil?
+    new_target = target - tree.value
+    return new_target.zero? if leaf?(tree)
+    return true if tree.left && path_with_given_sum?(tree.left, new_target)
+    return true if tree.right && path_with_given_sum?(tree.right, new_target)
+    false
   end
 
   [
@@ -177,6 +189,10 @@ describe "#path_with_given_sum?" do
       @value = value
       @left = left
       @right = right
+    end
+
+    def to_h
+      { value: value, left: left&.to_h, right: right&.to_h }
     end
 
     def self.build_from(hash)
