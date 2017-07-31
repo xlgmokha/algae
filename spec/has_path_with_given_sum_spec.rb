@@ -135,13 +135,29 @@ Return true if there is a path from root to leaf in t such that the sum of node 
 DOC
 
 describe "#path_with_given_sum?" do
+  def leaf?(node)
+    node.left.nil? && node.right.nil?
+  end
+
   def path_with_given_sum?(tree, target_sum)
-    false
+    stack = []
+    stack.push(tree) if tree
+    sum = 0
+    until stack.empty?
+      node = stack.pop
+      sum += node.value
+      return true if leaf?(node) && sum == target_sum
+
+      stack.push(node.left) if node.left
+      stack.push(node.right) if node.right
+    end
+    sum == target_sum
   end
 
   [
     { t: { "value": 4, "left": { "value": 1, "left": { "value": -2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } }, "right": nil }, "right": { "value": 3, "left": { "value": 1, "left": nil, "right": nil }, "right": { "value": 2, "left": { "value": -2, "left": nil, "right": nil }, "right": { "value": -3, "left": nil, "right": nil } } } }, s: 7, x: true },
     { t: { "value": 4, "left": { "value": 1, "left": { "value": -2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } }, "right": nil }, "right": { "value": 3, "left": { "value": 1, "left": nil, "right": nil }, "right": { "value": 2, "left": { "value": -4, "left": nil, "right": nil }, "right": { "value": -3, "left": nil, "right": nil } } } }, s: 7, x: false },
+    { t: { "value": 4, "left": { "value": 1, "left": { "value": -2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } }, "right": nil }, "right": { "value": 3, "left": { "value": 1, "left": { value: -1, left: nil, right: nil}, "right": nil }, "right": { "value": 2, "left": { "value": -4, "left": nil, "right": nil }, "right": { "value": -3, "left": nil, "right": nil } } } }, s: 7, x: true },
     { t: nil, s: 0, x: true },
     { t: nil, s: 1, x: false },
     { t: { "value": 5, "left": nil, "right": nil }, s: 5, x: true },
@@ -150,9 +166,7 @@ describe "#path_with_given_sum?" do
     { t: { "value": 8, "left": nil, "right": { "value": 3, "left": nil, "right": nil } }, s: 8, x: false },
   ].each do |x|
     it do
-      tree = Tree.build_from(x[:t])
-      PP.pp tree
-      expect(path_with_given_sum?(tree, x[:s])).to eql(x[:x])
+      expect(path_with_given_sum?(Tree.build_from(x[:t]), x[:s])).to eql(x[:x])
     end
   end
 
