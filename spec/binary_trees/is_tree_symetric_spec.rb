@@ -95,7 +95,6 @@ Guaranteed constraints:
 
 Return true if t is symmetric and false otherwise.
 DOC
-require 'ostruct'
 
 describe "#symmetric?" do
 <<-DOC
@@ -134,24 +133,19 @@ DOC
   end
 
   def symmetric?(tree)
-    queue = [tree]
-    level = 0
-    visited = 0
-    nodes_in_level = []
+    level, visited, queue, nodes_in_level = 0, 0, [tree], []
 
     until queue.empty?
       node = queue.shift
       nodes_in_level.push(node&.value)
       visited += 1
+      max_per_level = (2**level)
 
-      if visited >= (2**level)
-        if !symmetric_array?(nodes_in_level)
-          return false
-        end
+      if visited >= max_per_level
+        return false unless symmetric_array?(nodes_in_level)
 
         level += 1
-        visited = 0
-        nodes_in_level = []
+        visited, nodes_in_level = 0, []
       end
 
       unless leaf?(node)
@@ -170,7 +164,15 @@ DOC
     { t: { "value": 100, "left": nil, "right": { "value": 100, "left": nil, "right": nil } }, x: false },
     { t: { "value": 100, "left": { "value": 100, "left": nil, "right": nil }, "right": nil }, x: false },
     { t: { "value": 99, "left": { "value": 100, "left": nil, "right": nil }, "right": { "value": 99, "left": nil, "right": nil } }, x: false },
+    { t: { "value": 1, "left": { "value": 2, "left": { "value": 3, "left": nil, "right": nil }, "right": nil }, "right": { "value": 3, "left": { "value": 2, "left": nil, "right": nil }, "right": nil } }, x: false }
   ].each do |x|
+<<-DOC
+    1
+   / \
+  2   3
+ /   /
+3    2
+DOC
     it do
       expect(symmetric?(Tree.build_from(x[:t]))).to eql(x[:x])
     end
