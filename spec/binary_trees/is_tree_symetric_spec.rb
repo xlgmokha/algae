@@ -132,20 +132,27 @@ DOC
     node.left.nil? && node.right.nil?
   end
 
+<<-DOC
+    1
+   / \
+  2   3
+ /   /
+3    2
+DOC
   def symmetric?(tree)
-    level, visited, queue, nodes_in_level = 0, 0, [tree], []
+    level, visited, queue, values_in_level = 0, 0, [tree], []
 
     until queue.empty?
       node = queue.shift
-      nodes_in_level.push(node&.value)
+      values_in_level.push(node&.value)
       visited += 1
       max_per_level = (2**level)
 
-      if visited >= max_per_level
-        return false unless symmetric_array?(nodes_in_level)
+      if visited == max_per_level
+        return false unless symmetric_array?(values_in_level)
 
         level += 1
-        visited, nodes_in_level = 0, []
+        visited, values_in_level = 0, []
       end
 
       unless leaf?(node)
@@ -161,18 +168,12 @@ DOC
     { t: { "value": 1, "left": { "value": 2, "left": { "value": 3, "left": nil, "right": nil }, "right": { "value": 4, "left": nil, "right": nil } }, "right": { "value": 2, "left": { "value": 4, "left": nil, "right": nil }, "right": { "value": 3, "left": nil, "right": nil } } }, x: true },
     { t: { "value": 1, "left": { "value": 2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } }, "right": { "value": 2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } } }, x: false },
     { t: nil, x: true },
+    { t: { value: 1, left: nil, right: nil }, x: true },
     { t: { "value": 100, "left": nil, "right": { "value": 100, "left": nil, "right": nil } }, x: false },
     { t: { "value": 100, "left": { "value": 100, "left": nil, "right": nil }, "right": nil }, x: false },
     { t: { "value": 99, "left": { "value": 100, "left": nil, "right": nil }, "right": { "value": 99, "left": nil, "right": nil } }, x: false },
     { t: { "value": 1, "left": { "value": 2, "left": { "value": 3, "left": nil, "right": nil }, "right": nil }, "right": { "value": 3, "left": { "value": 2, "left": nil, "right": nil }, "right": nil } }, x: false }
   ].each do |x|
-<<-DOC
-    1
-   / \
-  2   3
- /   /
-3    2
-DOC
     it do
       expect(symmetric?(Tree.build_from(x[:t]))).to eql(x[:x])
     end
