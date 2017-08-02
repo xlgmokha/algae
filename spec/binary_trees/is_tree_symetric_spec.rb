@@ -165,14 +165,14 @@ DOC
   end
 
   [
-    { t: { "value": 1, "left": { "value": 2, "left": { "value": 3, "left": nil, "right": nil }, "right": { "value": 4, "left": nil, "right": nil } }, "right": { "value": 2, "left": { "value": 4, "left": nil, "right": nil }, "right": { "value": 3, "left": nil, "right": nil } } }, x: true },
-    { t: { "value": 1, "left": { "value": 2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } }, "right": { "value": 2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } } }, x: false },
+    { t: { value: 1, left: { value: 2, left: { value: 3, left: nil, right: nil }, right: { value: 4, left: nil, right: nil } }, right: { value: 2, left: { value: 4, left: nil, right: nil }, right: { value: 3, left: nil, right: nil } } }, x: true },
+    { t: { value: 1, left: { value: 2, left: nil, right: { value: 3, left: nil, right: nil } }, right: { value: 2, left: nil, right: { value: 3, left: nil, right: nil } } }, x: false },
     { t: nil, x: true },
     { t: { value: 1, left: nil, right: nil }, x: true },
-    { t: { "value": 100, "left": nil, "right": { "value": 100, "left": nil, "right": nil } }, x: false },
-    { t: { "value": 100, "left": { "value": 100, "left": nil, "right": nil }, "right": nil }, x: false },
-    { t: { "value": 99, "left": { "value": 100, "left": nil, "right": nil }, "right": { "value": 99, "left": nil, "right": nil } }, x: false },
-    { t: { "value": 1, "left": { "value": 2, "left": { "value": 3, "left": nil, "right": nil }, "right": nil }, "right": { "value": 3, "left": { "value": 2, "left": nil, "right": nil }, "right": nil } }, x: false }
+    { t: { value: 100, left: nil, right: { value: 100, left: nil, right: nil } }, x: false },
+    { t: { value: 100, left: { value: 100, left: nil, right: nil }, right: nil }, x: false },
+    { t: { value: 99, left: { value: 100, left: nil, right: nil }, right: { value: 99, left: nil, right: nil } }, x: false },
+    { t: { value: 1, left: { value: 2, left: { value: 3, left: nil, right: nil }, right: nil }, right: { value: 3, left: { value: 2, left: nil, right: nil }, right: nil } }, x: false }
   ].each do |x|
     it do
       expect(symmetric?(Tree.build_from(x[:t]))).to eql(x[:x])
