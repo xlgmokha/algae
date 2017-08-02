@@ -12,26 +12,26 @@ t = {
         "value": 2,
         "left": {
             "value": 3,
-            "left": null,
-            "right": null
+            "left": nil,
+            "right": nil
         },
         "right": {
             "value": 4,
-            "left": null,
-            "right": null
+            "left": nil,
+            "right": nil
         }
     },
     "right": {
         "value": 2,
         "left": {
             "value": 4,
-            "left": null,
-            "right": null
+            "left": nil,
+            "right": nil
         },
         "right": {
             "value": 3,
-            "left": null,
-            "right": null
+            "left": nil,
+            "right": nil
         }
     }
 }
@@ -52,20 +52,20 @@ t = {
     "value": 1,
     "left": {
         "value": 2,
-        "left": null,
+        "left": nil,
         "right": {
             "value": 3,
-            "left": null,
-            "right": null
+            "left": nil,
+            "right": nil
         }
     },
     "right": {
         "value": 2,
-        "left": null,
+        "left": nil,
         "right": {
             "value": 3,
-            "left": null,
-            "right": null
+            "left": nil,
+            "right": nil
         }
     }
 }
@@ -97,7 +97,7 @@ Return true if t is symmetric and false otherwise.
 DOC
 require 'ostruct'
 
-describe "#symetric?" do
+describe "#symmetric?" do
 <<-DOC
     1
    / \
@@ -110,9 +110,13 @@ describe "#symetric?" do
   2
  / \
 3  4
+
+    1
+     \
+      1
 DOC
 
-  def symetric_array?(items)
+  def symmetric_array?(items)
     head, tail = 0, items.size - 1
 
     until head >= tail
@@ -129,7 +133,7 @@ DOC
     node.left.nil? && node.right.nil?
   end
 
-  def symetric?(tree)
+  def symmetric?(tree)
     queue = [tree]
     level = 0
     visited = 0
@@ -141,7 +145,9 @@ DOC
       visited += 1
 
       if visited >= (2**level)
-        return false unless symetric_array?(nodes_in_level)
+        if !symmetric_array?(nodes_in_level)
+          return false
+        end
 
         level += 1
         visited = 0
@@ -160,9 +166,13 @@ DOC
   [
     { t: { "value": 1, "left": { "value": 2, "left": { "value": 3, "left": nil, "right": nil }, "right": { "value": 4, "left": nil, "right": nil } }, "right": { "value": 2, "left": { "value": 4, "left": nil, "right": nil }, "right": { "value": 3, "left": nil, "right": nil } } }, x: true },
     { t: { "value": 1, "left": { "value": 2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } }, "right": { "value": 2, "left": nil, "right": { "value": 3, "left": nil, "right": nil } } }, x: false },
+    { t: nil, x: true },
+    { t: { "value": 100, "left": nil, "right": { "value": 100, "left": nil, "right": nil } }, x: false },
+    { t: { "value": 100, "left": { "value": 100, "left": nil, "right": nil }, "right": nil }, x: false },
+    { t: { "value": 99, "left": { "value": 100, "left": nil, "right": nil }, "right": { "value": 99, "left": nil, "right": nil } }, x: false },
   ].each do |x|
     it do
-      expect(symetric?(Tree.build_from(x[:t]))).to eql(x[:x])
+      expect(symmetric?(Tree.build_from(x[:t]))).to eql(x[:x])
     end
   end
 end
