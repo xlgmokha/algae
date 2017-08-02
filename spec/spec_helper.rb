@@ -16,6 +16,7 @@
 require 'byebug'
 require 'ruby-prof'
 require 'pp'
+require_relative '../lib/tree'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
