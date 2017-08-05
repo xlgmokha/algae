@@ -133,17 +133,22 @@ DOC
   end
 
 <<-DOC
-    1
-   / \
-  2   3
- /   /
-3    2
+        -191
+        /  \
+      374   374
+     /        \
+    361       361
+   /  \       /  \
+-771  159   159  -771
+
 DOC
   def symmetric?(tree)
-    level, visited, queue, values_in_level = 0, 0, [tree], []
+    tree.print
+    level, visited, queue, values_in_level = 0, 0, [{ node: tree, level: 0 }], []
 
     until queue.empty?
-      node = queue.shift
+      item = queue.shift
+      node = item[:node]
       values_in_level.push(node&.value)
       visited += 1
       max_per_level = (2**level)
@@ -156,8 +161,8 @@ DOC
       end
 
       unless leaf?(node)
-        queue.push(node.left)
-        queue.push(node.right)
+        queue.push({ node: node.left, level: item[:level] + 1 })
+        queue.push({ node: node.right, level: item[:level] + 1 })
       end
     end
 
