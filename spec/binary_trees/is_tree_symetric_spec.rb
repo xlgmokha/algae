@@ -143,7 +143,7 @@ DOC
 
 DOC
   def symmetric?(tree)
-    tree.print
+    tree&.print
     level, visited, queue, values_in_level = 0, 0, [{ node: tree, level: 0 }], []
 
     until queue.empty?
