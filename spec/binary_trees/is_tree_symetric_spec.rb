@@ -113,6 +113,14 @@ describe "#symmetric?" do
     1
      \
       1
+        -191
+        /  \
+      374   374
+     /        \
+    361       361
+   /  \       /  \
+-771  159   159  -771
+
 DOC
 
   def symmetric_array?(items)
@@ -132,40 +140,23 @@ DOC
     node.left.nil? && node.right.nil?
   end
 
-<<-DOC
-        -191
-        /  \
-      374   374
-     /        \
-    361       361
-   /  \       /  \
--771  159   159  -771
-
-DOC
   def symmetric?(tree)
-    tree&.print
-    level, visited, queue, values_in_level = 0, 0, [{ node: tree, level: 0 }], []
+		queue = [node: tree, level: 0]
+		items = Hash.new { |h, k| h[k] = [] }
 
     until queue.empty?
       item = queue.shift
       node = item[:node]
-      values_in_level.push(node&.value)
-      visited += 1
-      max_per_level = (2**level)
-
-      if visited == max_per_level
-        return false unless symmetric_array?(values_in_level)
-
-        level += 1
-        visited, values_in_level = 0, []
-      end
+      items[item[:level]].push(node&.value)
 
       unless leaf?(node)
-        queue.push({ node: node.left, level: item[:level] + 1 })
-        queue.push({ node: node.right, level: item[:level] + 1 })
+        queue.push(node: node&.left, level: item[:level] + 1)
+        queue.push(node: node&.right, level: item[:level] + 1)
       end
     end
-
+		items.each do |key, value|
+			return false unless symmetric_array?(value)
+		end
     true
   end
 
