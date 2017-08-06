@@ -160,6 +160,46 @@ DOC
     true
   end
 
+def in_order_traversal(node)
+	return [nil] if node.nil?
+  in_order_traversal(node.left) + [node.value] + in_order_traversal(node.right)
+end
+
+def	symmetric?(tree)
+	tree.print
+	return true if tree.nil?
+	x, y = in_order_traversal(tree.left), in_order_traversal(tree.right).reverse
+	puts [x, y].inspect
+	x == y
+end
+
+def copy(tree)
+	return nil if tree.nil?
+	new_tree = Tree.new(tree.value)
+	new_tree.left = copy(tree.left)
+	new_tree.right = copy(tree.right)
+	new_tree
+end
+
+def flip(tree)
+	return if tree.nil?
+	tree.left, tree.right = tree.right, tree.left
+	flip(tree.left)
+	flip(tree.right)
+	tree
+end
+
+def equal?(tree, other)
+	return true if tree.nil? && other.nil?
+	return false if tree.nil? || other.nil?
+	return false if tree.value != other.value
+	return equal?(tree.left, other.left) && equal?(tree.right, other.right)
+end
+
+def symmetric?(tree)
+	equal?(tree, flip(copy(tree)))
+end
+
   [
     { t: { value: 1, left: { value: 2, left: { value: 3, left: nil, right: nil }, right: { value: 4, left: nil, right: nil } }, right: { value: 2, left: { value: 4, left: nil, right: nil }, right: { value: 3, left: nil, right: nil } } }, x: true },
     { t: { value: 1, left: { value: 2, left: nil, right: { value: 3, left: nil, right: nil } }, right: { value: 2, left: nil, right: { value: 3, left: nil, right: nil } } }, x: false },
