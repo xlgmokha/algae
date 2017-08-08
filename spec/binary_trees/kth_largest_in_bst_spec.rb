@@ -128,31 +128,29 @@ describe "#kth_largest_in_bst" do
   end
 
   class Traversal
-    def initialize
-      @count = 0
-      @kth_value = nil
+    attr_reader :k
+
+    def initialize(k)
+      @counter = 0
+      @k = k
     end
 
-    def traverse(tree, k)
-      return @kth_value if @kth_value
+    def traverse(tree)
       return if tree.nil?
 
-      traverse(tree.left, k) if @count < k
-
-      @count += 1
-
-      if @count == k
-        @kth_value = tree.value
-        return tree.value
+      if @counter < k && result = traverse(tree.left)
+        return result
       end
 
-      traverse(tree.right, k) if @count < k
-      @kth_value
+      @counter += 1
+      return tree.value if @counter == k
+
+      traverse(tree.right) if @counter < k
     end
   end
 
   def kth_largest_in_bst(tree, k)
-    Traversal.new.traverse(tree, k)
+    Traversal.new(k).traverse(tree)
   end
 
   [
