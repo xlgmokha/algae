@@ -15,8 +15,8 @@ class Tree
     puts(prefix + (tail ? "└── " : "├── ") + value.to_s)
 
     prefix = prefix + (tail ? "    " : "│   ")
-    left.print(prefix, false) if left
     right.print(prefix, false) if right
+    left.print(prefix, false) if left
   end
 
   def to_h

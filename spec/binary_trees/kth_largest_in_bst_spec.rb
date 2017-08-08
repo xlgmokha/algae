@@ -127,6 +127,34 @@ describe "#kth_largest_in_bst" do
     to_array(tree)[k - 1]
   end
 
+  class Traversal
+    def initialize
+      @count = 0
+      @kth_value = nil
+    end
+
+    def traverse(tree, k)
+      return @kth_value if @kth_value
+      return if tree.nil?
+
+      traverse(tree.left, k) if @count < k
+
+      @count += 1
+
+      if @count == k
+        @kth_value = tree.value
+        return tree.value
+      end
+
+      traverse(tree.right, k) if @count < k
+      @kth_value
+    end
+  end
+
+  def kth_largest_in_bst(tree, k)
+    Traversal.new.traverse(tree, k)
+  end
+
   [
     { t: { "value": 3, "left": { "value": 1, "left": nil, "right": nil }, "right": { "value": 5, "left": { "value": 4, "left": nil, "right": nil }, "right": { "value": 6, "left": nil, "right": nil } } }, k: 2, x: 3 },
     { t: { "value": 1, "left": { "value": -1, "left": { "value": -2, "left": nil, "right": nil }, "right": { "value": 0, "left": nil, "right": nil } }, "right": nil }, k: 1, x: -2 },
