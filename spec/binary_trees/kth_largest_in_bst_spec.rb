@@ -118,9 +118,23 @@ describe "#kth_largest_in_bst" do
     all[k + 1]
   end
 
+  def leaf?(tree)
+    tree.left&.nil? && tree.right&.nil?
+  end
+
+  def to_array(tree)
+    return [] if tree.nil?
+    return [tree.value] if leaf?(tree)
+    to_array(tree.left) + [tree.value] + to_array(tree.right)
+  end
+
+  def kth_largest_in_bst(tree, k)
+    to_array(tree)[k - 1]
+  end
+
   [
     { t: { "value": 3, "left": { "value": 1, "left": nil, "right": nil }, "right": { "value": 5, "left": { "value": 4, "left": nil, "right": nil }, "right": { "value": 6, "left": nil, "right": nil } } }, k: 2, x: 3 },
-    { t: { "value": 1, "left": { "value": -1, "left": { "value": -2, "left": nil, "right": nil }, "right": { "value": 0, "left": nil, "right": nil } }, "right": nil }, k: 1, x: -1 },
+    { t: { "value": 1, "left": { "value": -1, "left": { "value": -2, "left": nil, "right": nil }, "right": { "value": 0, "left": nil, "right": nil } }, "right": nil }, k: 1, x: -2 },
     { t: { "value": 100, "left": nil, "right": nil }, k: 1, x: 100 },
     { t: { "value": 1, "left": { "value": 0, "left": nil, "right": nil }, "right": { "value": 2, "left": nil, "right": nil } }, k: 3, x: 2 },
     { t: { "value": 1, "left": { "value": 0, "left": nil, "right": nil }, "right": { "value": 2, "left": nil, "right": nil } }, k: 2, x: 1 },
