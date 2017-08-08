@@ -153,16 +153,18 @@ describe "#kth_largest_in_bst" do
     Traversal.new(k).traverse(tree)
   end
 
-  def dfs(node, yielder)
+  def traverse(node, yielder)
     return if node.nil?
 
-    dfs(node.left, yielder)
+    traverse(node.left, yielder)
     yielder.yield node.value
-    dfs(node.right, yielder)
+    traverse(node.right, yielder)
   end
 
   def kth_largest_in_bst(tree, k)
-    Enumerator.new { |yielder| dfs(tree, yielder) }.take(k).last
+    x = Enumerator.new { |yielder| traverse(tree, yielder) }
+    (k-1).times { x.next }
+    x.next
   end
 
   [
