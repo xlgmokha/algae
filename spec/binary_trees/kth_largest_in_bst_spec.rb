@@ -118,13 +118,8 @@ describe "#kth_largest_in_bst" do
     all[k + 1]
   end
 
-  def leaf?(tree)
-    tree.left&.nil? && tree.right&.nil?
-  end
-
   def to_array(tree)
     return [] if tree.nil?
-    return [tree.value] if leaf?(tree)
     to_array(tree.left) + [tree.value] + to_array(tree.right)
   end
 
