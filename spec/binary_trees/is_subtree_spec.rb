@@ -208,3 +208,25 @@ Guaranteed constraints:
 
 Return true if t2 is a subtree of t1, otherwise return false.
 DOC
+describe "#subtree?" do
+  def subtree?(t1, t2)
+    false
+  end
+
+  null = nil
+  [
+    { t1: { "value": 5, "left": { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": null, "right": { "value": -1, "left": null, "right": null } } }, "right": { "value": 7, "left": null, "right": null } }, t2: { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": null, "right": { "value": -1, "left": null, "right": null } } }, x: true },
+    { t1: { "value": 5, "left": { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": { "value": -1, "left": null, "right": null }, "right": null } }, "right": { "value": 7, "left": null, "right": null } }, t2: { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": null, "right": { "value": -1, "left": null, "right": null } } }, x: false },
+    { t1: { "value": 1, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, t2: { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": null }, x: false },
+    { t1: { "value": 1, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, t2: null, x: true },
+    { t1: null, t2: null, x: true },
+    { t1: null, t2: { "value": 2, "left": null, "right": null }, x: false },
+    { t1: { "value": 1, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, t2: { "value": 2, "left": null, "right": null }, x: true },
+  ].each do |x|
+    it do
+      expect(
+        subtree?(Tree.build_from(x[:t1]), Tree.build_from(x[:t2]))
+      ).to eql(x[:x])
+    end
+  end
+end
