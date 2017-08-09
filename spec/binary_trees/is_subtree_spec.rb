@@ -209,8 +209,19 @@ Guaranteed constraints:
 Return true if t2 is a subtree of t1, otherwise return false.
 DOC
 describe "#subtree?" do
+  def to_array(tree)
+    return [] if tree.nil?
+    [tree.value, to_array(tree.left), to_array(tree.right)]
+  end
+
   def subtree?(t1, t2)
-    false
+    [t1&.print, t2&.print]
+    return true if t1.nil? && t2.nil?
+    return true if t1 && t2.nil?
+
+    x = to_array(t1)
+    y = to_array(t2)
+    x.include?(y)
   end
 
   null = nil
