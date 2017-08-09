@@ -92,19 +92,19 @@ describe "#restore_binary_tree" do
     return nil if start_index > end_index
 
     value = preorder[$preorder_index]
-    node = Tree.new(value)
+    node = { value: value, left: nil, right: nil }
     $preorder_index += 1
 
     return node if start_index == end_index
 
     index = search(inorder[start_index..end_index], value) + start_index
-    node.left = build_tree(inorder, preorder, start_index, index - 1)
-    node.right = build_tree(inorder, preorder, index + 1, end_index)
+    node[:left] = build_tree(inorder, preorder, start_index, index - 1)
+    node[:right] = build_tree(inorder, preorder, index + 1, end_index)
     node
   end
 
   def restore_binary_tree(inorder, preorder)
-    build_tree(inorder, preorder, 0, inorder.size - 1).to_h
+    build_tree(inorder, preorder, 0, inorder.size - 1)
   end
 
   null = nil
