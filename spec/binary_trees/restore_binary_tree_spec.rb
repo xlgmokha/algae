@@ -78,11 +78,36 @@ preorder.length = inorder.length,
 [output] tree.integer
 
 The restored binary tree.
+http://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
 DOC
 
 describe "#restore_binary_tree" do
+  $preorder_index = 0
+
+  def search(items, start, end_range, value)
+    start.upto(end_range+1).each do |n|
+      return n if items[n] == value
+    end
+    nil
+  end
+
+  def build_tree(inorder, preorder, start_index, end_index)
+    return nil if start_index > end_index
+
+    value = preorder[$preorder_index]
+    node = Tree.new(value)
+    $preorder_index += 1
+
+    return node if start_index == end_index
+
+    index = search(inorder, start_index, end_index, value)
+    node.left = build_tree(inorder, preorder, start_index, index - 1)
+    node.right = build_tree(inorder, preorder, index + 1, end_index)
+    node
+  end
+
   def restore_binary_tree(inorder, preorder)
-    {}
+    build_tree(inorder, preorder, 0, inorder.size - 1).to_h
   end
 
   null = nil
@@ -93,6 +118,7 @@ describe "#restore_binary_tree" do
     { inorder: [-100000, -99999, -99998], preorder: [-99999, -100000, -99998], x: { "value": -99999, "left": { "value": -100000, "left": null, "right": null }, "right": { "value": -99998, "left": null, "right": null } } },
   ].each do |x|
     it do
+      $preorder_index = 0
       expect(restore_binary_tree(x[:inorder], x[:preorder])).to eql(x[:x])
     end
   end
