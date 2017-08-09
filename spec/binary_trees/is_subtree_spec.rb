@@ -8,62 +8,62 @@ Example
 For
 
 t1 = {
-    "value": 5,
-    "left": {
-        "value": 10,
-        "left": {
-            "value": 4,
-            "left": {
-                "value": 1,
-                "left": null,
-                "right": null
+    value: 5,
+    left: {
+        value: 10,
+        left: {
+            value: 4,
+            left: {
+                value: 1,
+                left: null,
+                right: null
             },
-            "right": {
-                "value": 2,
-                "left": null,
-                "right": null
+            right: {
+                value: 2,
+                left: null,
+                right: null
             }
         },
-        "right": {
-            "value": 6,
-            "left": null,
-            "right": {
-                "value": -1,
-                "left": null,
-                "right": null
+        right: {
+            value: 6,
+            left: null,
+            right: {
+                value: -1,
+                left: null,
+                right: null
             }
         }
     },
-    "right": {
-        "value": 7,
-        "left": null,
-        "right": null
+    right: {
+        value: 7,
+        left: null,
+        right: null
     }
 }
 and
 
 t2 = {
-    "value": 10,
-    "left": {
-        "value": 4,
-        "left": {
-            "value": 1,
-            "left": null,
-            "right": null
+    value: 10,
+    left: {
+        value: 4,
+        left: {
+            value: 1,
+            left: null,
+            right: null
         },
-        "right": {
-            "value": 2,
-            "left": null,
-            "right": null
+        right: {
+            value: 2,
+            left: null,
+            right: null
         }
     },
-    "right": {
-        "value": 6,
-        "left": null,
-        "right": {
-            "value": -1,
-            "left": null,
-            "right": null
+    right: {
+        value: 6,
+        left: null,
+        right: {
+            value: -1,
+            left: null,
+            right: null
         }
     }
 }
@@ -84,62 +84,62 @@ As you can see, t2 is a subtree of t1 (the vertex in t1 with value 10).
 For
 
 t1 = {
-    "value": 5,
-    "left": {
-        "value": 10,
-        "left": {
-            "value": 4,
-            "left": {
-                "value": 1,
-                "left": null,
-                "right": null
+    value: 5,
+    left: {
+        value: 10,
+        left: {
+            value: 4,
+            left: {
+                value: 1,
+                left: null,
+                right: null
             },
-            "right": {
-                "value": 2,
-                "left": null,
-                "right": null
+            right: {
+                value: 2,
+                left: null,
+                right: null
             }
         },
-        "right": {
-            "value": 6,
-            "left": {
-                "value": -1,
-                "left": null,
-                "right": null
+        right: {
+            value: 6,
+            left: {
+                value: -1,
+                left: null,
+                right: null
             },
-            "right": null
+            right: null
         }
     },
-    "right": {
-        "value": 7,
-        "left": null,
-        "right": null
+    right: {
+        value: 7,
+        left: null,
+        right: null
     }
 }
 and
 
 t2 = {
-    "value": 10,
-    "left": {
-        "value": 4,
-        "left": {
-            "value": 1,
-            "left": null,
-            "right": null
+    value: 10,
+    left: {
+        value: 4,
+        left: {
+            value: 1,
+            left: null,
+            right: null
         },
-        "right": {
-            "value": 2,
-            "left": null,
-            "right": null
+        right: {
+            value: 2,
+            left: null,
+            right: null
         }
     },
-    "right": {
-        "value": 6,
-        "left": null,
-        "right": {
-            "value": -1,
-            "left": null,
-            "right": null
+    right: {
+        value: 6,
+        left: null,
+        right: {
+            value: -1,
+            left: null,
+            right: null
         }
     }
 }
@@ -160,28 +160,28 @@ As you can see, there is no vertex v such that the subtree of t1 for vertex v eq
 For
 
 t1 = {
-    "value": 1,
-    "left": {
-        "value": 2,
-        "left": null,
-        "right": null
+    value: 1,
+    left: {
+        value: 2,
+        left: null,
+        right: null
     },
-    "right": {
-        "value": 2,
-        "left": null,
-        "right": null
+    right: {
+        value: 2,
+        left: null,
+        right: null
     }
 }
 and
 
 t2 = {
-    "value": 2,
-    "left": {
-        "value": 1,
-        "left": null,
-        "right": null
+    value: 2,
+    left: {
+        value: 1,
+        left: null,
+        right: null
     },
-    "right": null
+    right: null
 }
 the output should be isSubtree(t1, t2) = false.
 
@@ -209,31 +209,40 @@ Guaranteed constraints:
 Return true if t2 is a subtree of t1, otherwise return false.
 DOC
 describe "#subtree?" do
-  def to_array(tree)
-    return [] if tree.nil?
-    [tree.value, to_array(tree.left), to_array(tree.right)]
+  # (1(2(),3())
+  def to_sexpression(tree)
+    return "()" if tree.nil?
+    "(#{tree.value}#{to_sexpression(tree.left)},#{to_sexpression(tree.right)})"
   end
 
   def subtree?(t1, t2)
-    [t1&.print, t2&.print]
-    return true if t1.nil? && t2.nil?
-    return true if t1 && t2.nil?
-
-    x = to_array(t1)
-    y = to_array(t2)
-    x.include?(y)
+    return true if (t1.nil? && t2.nil?) || (t1 && t2.nil?)
+    to_sexpression(t1).include?(to_sexpression(t2))
   end
 
   null = nil
   [
-    { t1: { "value": 5, "left": { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": null, "right": { "value": -1, "left": null, "right": null } } }, "right": { "value": 7, "left": null, "right": null } }, t2: { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": null, "right": { "value": -1, "left": null, "right": null } } }, x: true },
-    { t1: { "value": 5, "left": { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": { "value": -1, "left": null, "right": null }, "right": null } }, "right": { "value": 7, "left": null, "right": null } }, t2: { "value": 10, "left": { "value": 4, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, "right": { "value": 6, "left": null, "right": { "value": -1, "left": null, "right": null } } }, x: false },
-    { t1: { "value": 1, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, t2: { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": null }, x: false },
-    { t1: { "value": 1, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, t2: null, x: true },
+    { t1: { value: 5, left: { value: 10, left: { value: 4, left: { value: 1, left: null, right: null }, right: { value: 2, left: null, right: null } }, right: { value: 6, left: null, right: { value: -1, left: null, right: null } } }, right: { value: 7, left: null, right: null } }, t2: { value: 10, left: { value: 4, left: { value: 1, left: null, right: null }, right: { value: 2, left: null, right: null } }, right: { value: 6, left: null, right: { value: -1, left: null, right: null } } }, x: true },
+    { t1: { value: 5, left: { value: 10, left: { value: 4, left: { value: 1, left: null, right: null }, right: { value: 2, left: null, right: null } }, right: { value: 6, left: { value: -1, left: null, right: null }, right: null } }, right: { value: 7, left: null, right: null } }, t2: { value: 10, left: { value: 4, left: { value: 1, left: null, right: null }, right: { value: 2, left: null, right: null } }, right: { value: 6, left: null, right: { value: -1, left: null, right: null } } }, x: false },
+    { t1: { value: 1, left: { value: 2, left: null, right: null }, right: { value: 2, left: null, right: null } }, t2: { value: 2, left: { value: 1, left: null, right: null }, right: null }, x: false },
+    { t1: { value: 1, left: { value: 2, left: null, right: null }, right: { value: 2, left: null, right: null } }, t2: null, x: true },
     { t1: null, t2: null, x: true },
-    { t1: null, t2: { "value": 2, "left": null, "right": null }, x: false },
-    { t1: { "value": 1, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 2, "left": null, "right": null } }, t2: { "value": 2, "left": null, "right": null }, x: true },
+    { t1: null, t2: { value: 2, left: null, right: null }, x: false },
+    { t1: { value: 1, left: { value: 2, left: null, right: null }, right: { value: 2, left: null, right: null } }, t2: { value: 2, left: null, right: null }, x: true },
+    { t1: { value: 3, left: { value: 1 }, right: {} }, t2: null, x: true },
+    { t1: { value: 2, right: { value: 3 } }, t2: { value: 2, left: { value: 1 }, right: { value: 3 } }, x: false },
   ].each do |x|
+    <<-DOC
+
+    2
+     \
+      3
+
+       2
+     /  \
+    1    3
+
+    DOC
     it do
       expect(
         subtree?(Tree.build_from(x[:t1]), Tree.build_from(x[:t2]))
