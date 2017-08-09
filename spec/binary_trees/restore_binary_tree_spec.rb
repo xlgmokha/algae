@@ -85,12 +85,12 @@ describe "#restore_binary_tree" do
   def restore_binary_tree(inorder, preorder)
     return nil if inorder.empty?
 
-    value = preorder[0]
-    index = inorder.index(value)
+    value = preorder.shift
+    pivot = inorder.index(value)
     {
       value: value,
-      left: index.zero? ? nil : restore_binary_tree(inorder[0..(index-1)], preorder[1..index]),
-      right: restore_binary_tree(inorder[index+1..-1], preorder[index+1..-1])
+      left: pivot.zero? ? nil : restore_binary_tree(inorder[0..(pivot-1)], preorder[0..pivot]),
+      right: restore_binary_tree(inorder[pivot+1..-1], preorder[pivot..-1])
     }
   end
 
