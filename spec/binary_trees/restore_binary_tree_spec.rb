@@ -82,21 +82,16 @@ http://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-trav
 DOC
 
 describe "#restore_binary_tree" do
-  $preorder_index = 0
+  def restore_binary_tree(inorder, preorder)
+    return nil if inorder.empty?
 
-  def restore_binary_tree(inorder, preorder, start_index = 0, end_index = inorder.size - 1)
-    return nil if start_index > end_index
-
-    value = preorder[$preorder_index]
-    node = { value: value, left: nil, right: nil }
-    $preorder_index += 1
-
-    return node if start_index == end_index
-
-    index = inorder[start_index..end_index].index(value) + start_index
-    node[:left] = restore_binary_tree(inorder, preorder, start_index, index - 1)
-    node[:right] = restore_binary_tree(inorder, preorder, index + 1, end_index)
-    node
+    value = preorder[0]
+    index = inorder.index(value)
+    {
+      value: value,
+      left: index.zero? ? nil : restore_binary_tree(inorder[0..(index-1)], preorder[1..index]),
+      right: restore_binary_tree(inorder[index+1..-1], preorder[index+1..-1])
+    }
   end
 
   null = nil
