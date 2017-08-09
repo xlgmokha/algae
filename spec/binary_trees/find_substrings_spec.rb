@@ -35,7 +35,18 @@ DOC
 
 describe "#find_substrings" do
   def find_substrings(words, parts)
-    words
+    regex = /(#{parts.join("|")})/
+    puts regex.inspect
+    words.map do |word|
+      match = word.match(regex)
+      if match
+        max = match.captures.max { |a, b| a.length <=> b.length }
+        puts [word, match.captures, max].inspect
+        word.gsub(max, "[#{max}]")
+      else
+        word
+      end
+    end
   end
 
   [
