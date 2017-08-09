@@ -93,7 +93,7 @@ describe "#restore_binary_tree" do
 
     return node if start_index == end_index
 
-    index = inorder[start_index..end_index].find_index { |x| x == value } + start_index
+    index = inorder[start_index..end_index].index(value) + start_index
     node[:left] = restore_binary_tree(inorder, preorder, start_index, index - 1)
     node[:right] = restore_binary_tree(inorder, preorder, index + 1, end_index)
     node
