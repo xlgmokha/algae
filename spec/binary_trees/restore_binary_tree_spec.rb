@@ -88,7 +88,7 @@ describe "#restore_binary_tree" do
     items.find_index { |x| x == target }
   end
 
-  def build_tree(inorder, preorder, start_index, end_index)
+  def restore_binary_tree(inorder, preorder, start_index = 0, end_index = inorder.size - 1)
     return nil if start_index > end_index
 
     value = preorder[$preorder_index]
@@ -98,13 +98,12 @@ describe "#restore_binary_tree" do
     return node if start_index == end_index
 
     index = search(inorder[start_index..end_index], value) + start_index
-    node[:left] = build_tree(inorder, preorder, start_index, index - 1)
-    node[:right] = build_tree(inorder, preorder, index + 1, end_index)
-    node
-  end
 
-  def restore_binary_tree(inorder, preorder)
-    build_tree(inorder, preorder, 0, inorder.size - 1)
+    items.find_index { |x| x == target }
+
+    node[:left] = restore_binary_tree(inorder, preorder, start_index, index - 1)
+    node[:right] = restore_binary_tree(inorder, preorder, index + 1, end_index)
+    node
   end
 
   null = nil
