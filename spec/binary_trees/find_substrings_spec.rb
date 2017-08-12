@@ -76,6 +76,38 @@ describe "#find_substrings" do
     end
   end
 
+  def find_substrings(words, parts)
+    return words if parts.empty?
+    parts_hash = parts.map { |x| [x, x] }.to_h
+    sorted = parts_hash.keys.sort_by(&:length)
+    max = sorted.last.size
+    min = sorted.first.size
+    #puts [min, max, parts_hash].inspect
+
+    words.map do |word|
+      match = nil
+      match_index = nil
+      length = nil
+      0.upto(word.size - 1) do |n|
+        max.downto(min) do |m|
+          x = word[n...n+m]
+          #puts x.inspect
+
+          if part = parts_hash[x]
+            #puts "FOUND: #{x} in #{word}"
+            if match.nil? || part.length > length || (part.length == length && n < match_index)
+              match = part
+              match_index = n
+              length = part.length
+            end
+          end
+        end
+      end
+
+      match ? word.sub(match, "[#{match}]") : word
+    end
+  end
+
   <<-DOC
   Apple
   [0,1,2,3,4]
@@ -138,9 +170,9 @@ l  e
     { words: ["during"], parts: ["d", "g", "i"], x: ["[d]uring"] },
   ].each do |x|
     it do
-      result = with_profiler do
-        find_substrings(x[:words], x[:parts])
-      end
+      #result = with_profiler do
+        result = find_substrings(x[:words], x[:parts])
+      #end
 
       expect(result).to eql(x[:x])
     end
