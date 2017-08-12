@@ -76,6 +76,47 @@ describe "#find_substrings" do
     end
   end
 
+  <<-DOC
+  Apple
+  [0,1,2,3,4]
+  [1,2,3,4,5]
+  [A,p,p,l,e]
+root of the tree (A): array position 1
+root's left child (B): array position 2
+root's right child (C): array position 3
+...
+left child of node in array position K: array position 2K
+right child of node in array position K: array position 2K+1
+
+    A
+   / \
+  p   p
+ /\
+l  e
+
+  DOC
+  def to_tree(string)
+    string.chars.each_with_index do |char, index|
+    end
+  end
+
+  def to_sexpression(tree, root)
+    return "()" if tree[root-1].nil?
+    "(#{tree[root-1]}#{to_sexpression(tree, 2*root)},#{to_sexpression(tree, 2*root + 1)})"
+  end
+
+  def find_substrings(words, parts)
+    words.map do |word|
+      word_x = to_sexpression(word.chars, 1)
+      result = nil
+      parts.each do |part|
+        part_x = to_sexpression(part.chars, 1)
+        result = word.sub(part, "[#{part}]") if word_x.include?(part_x)
+      end
+      result
+    end
+  end
+
   [
     { words: ["Apple", "Melon", "Orange", "Watermelon"], parts: ["a", "mel", "lon", "el", "An"], x: ["Apple", "Me[lon]", "Or[a]nge", "Water[mel]on"] },
     { words: ["Aaaaaaaaa", "bcdEFGh"], parts: ["aaaaa", "Aaaa", "E", "z", "Zzzzz"], x: ["A[aaaaa]aaa", "bcd[E]FGh"] },
