@@ -1,14 +1,19 @@
 <<-DOC
-You have two arrays of strings, words and parts. Return an array that contains the strings from words, modified so that any occurrences of the substrings from parts are surrounded by square brackets [], following these guidelines:
+You have two arrays of strings, words and parts.
+Return an array that contains the strings from words,
+modified so that any occurrences of the substrings from parts are surrounded by square brackets [],
+following these guidelines:
 
-If several parts substrings occur in one string in words, choose the longest one. If there is still more than one such part, then choose the one that appears first in the string.
+If several parts substrings occur in one string in words, choose the longest one.
+If there is still more than one such part, then choose the one that appears first in the string.
 
 Example
 
 For words = ["Apple", "Melon", "Orange", "Watermelon"] and parts = ["a", "mel", "lon", "el", "An"], the output should be
 findSubstrings(words, parts) = ["Apple", "Me[lon]", "Or[a]nge", "Water[mel]on"].
 
-While "Watermelon" contains three substrings from the parts array, "a", "mel", and "lon", "mel" is the longest substring that appears first in the string.
+While "Watermelon" contains three substrings from the parts array, "a", "mel", and "lon", "mel" is the longest substring
+that appears first in the string.
 
 Input/Output
 
@@ -23,7 +28,8 @@ Guaranteed constraints:
 
 [input] array.string parts
 
-An array of strings consisting only of uppercase and lower English letters. Each string is no more than 5 characters in length.
+An array of strings consisting only of uppercase and lower English letters.
+Each string is no more than 5 characters in length.
 
 Guaranteed constraints:
 0 ≤ parts.length ≤ 105,
@@ -35,7 +41,7 @@ DOC
 
 describe "#find_substrings" do
   def find_substrings(words, parts)
-    regex = /(#{parts.sort { |a, b| b.length <=> a.length }.join("|")})/
+    regex = /(#{parts.join("|")})/
 
     puts regex.inspect
     words.map do |word|
@@ -49,6 +55,27 @@ describe "#find_substrings" do
     end
   end
 
+  def find_substrings(words, parts)
+    words.map do |word|
+      current = nil
+      length = nil
+      index = nil
+      parts.each do |part|
+        if word.match?(part)
+          next_match = word.match(part)[0]
+          if current.nil? ||
+              next_match.length > length ||
+              (next_match.length == length && word.index(next_match) < index)
+            current = next_match
+            length = next_match.length
+            index = word.index(next_match)
+          end
+        end
+      end
+      current ? word.sub(current, "[#{current}]") : word
+    end
+  end
+
   [
     { words: ["Apple", "Melon", "Orange", "Watermelon"], parts: ["a", "mel", "lon", "el", "An"], x: ["Apple", "Me[lon]", "Or[a]nge", "Water[mel]on"] },
     { words: ["Aaaaaaaaa", "bcdEFGh"], parts: ["aaaaa", "Aaaa", "E", "z", "Zzzzz"], x: ["A[aaaaa]aaa", "bcd[E]FGh"] },
@@ -59,6 +86,7 @@ describe "#find_substrings" do
     { words: ["abc"], parts: ["ABC"], x: ["abc"] },
     { words: ["a", "b"], parts: ["b"], x: ["a", "[b]"] },
     { words: ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaab", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaab", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaab", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaab", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaab", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaac"], parts: ["aaaaa", "bbbbb", "a", "aa", "aaaa", "AAAAA", "aaa", "aba", "aaaab", "c", "bbbb", "d", "g", "ccccc", "B", "C", "P", "D"], x: ["[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaab", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaab", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaab", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaab", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaab", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaa", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaa", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaaa", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaaa", "[aaaaa]aaaaaaaaaaaaaaaaaaaaaaaac"] },
+    { words: ["during"], parts: ["d", "g", "i"], x: ["[d]uring"] },
   ].each do |x|
     it do
       expect(find_substrings(x[:words], x[:parts])).to eql(x[:x])
