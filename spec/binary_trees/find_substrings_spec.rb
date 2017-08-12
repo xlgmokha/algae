@@ -56,6 +56,7 @@ describe "#find_substrings" do
   #end
 
   def find_substrings(words, parts)
+    parts = parts.sort { |x, y| y.length <=> x.length }
     words.map do |word|
       current = nil
       length = nil
