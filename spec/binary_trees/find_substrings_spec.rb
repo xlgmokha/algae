@@ -40,20 +40,20 @@ parts[i] ≠ parts[j].
 DOC
 
 describe "#find_substrings" do
-  def find_substrings(words, parts)
-    regex = /(#{parts.join("|")})/
+  #def find_substrings(words, parts)
+    #regex = /(#{parts.join("|")})/
 
-    puts regex.inspect
-    words.map do |word|
-      if match = word.match(regex)
-        max = match.captures.max { |a, b| a.length <=> b.length }
-        puts [word, match.captures, max].inspect
-        word.gsub(max, "[#{max}]")
-      else
-        word
-      end
-    end
-  end
+    #puts regex.inspect
+    #words.map do |word|
+      #if match = word.match(regex)
+        #max = match.captures.max { |a, b| a.length <=> b.length }
+        #puts [word, match.captures, max].inspect
+        #word.gsub(max, "[#{max}]")
+      #else
+        #word
+      #end
+    #end
+  #end
 
   def find_substrings(words, parts)
     words.map do |word|
@@ -61,14 +61,13 @@ describe "#find_substrings" do
       length = nil
       index = nil
       parts.each do |part|
-        if word.match?(part)
-          next_match = word.match(part)[0]
-          if current.nil? ||
-              next_match.length > length ||
-              (next_match.length == length && word.index(next_match) < index)
-            current = next_match
-            length = next_match.length
-            index = word.index(next_match)
+        next if length && length > part.size
+
+        if next_index = word.index(part)
+          if current.nil? || part.length > length || (part.length == length && next_index < index)
+            current = part
+            length = part.length
+            index = next_index
           end
         end
       end
@@ -95,27 +94,35 @@ right child of node in array position K: array position 2K+1
 l  e
 
   DOC
-  def to_tree(string)
-    string.chars.each_with_index do |char, index|
-    end
-  end
+  #def to_tree(string)
+    #string.chars.each_with_index do |char, index|
+    #end
+  #end
 
-  def to_sexpression(tree, root)
-    return "()" if tree[root-1].nil?
-    "(#{tree[root-1]}#{to_sexpression(tree, 2*root)},#{to_sexpression(tree, 2*root + 1)})"
-  end
+  #def to_sexpression(tree, root)
+    #return "()" if tree[root-1].nil?
+    #"(#{tree[root-1]}#{to_sexpression(tree, 2*root)},#{to_sexpression(tree, 2*root + 1)})"
+  #end
 
-  def find_substrings(words, parts)
-    words.map do |word|
-      word_x = to_sexpression(word.chars, 1)
-      result = nil
-      parts.each do |part|
-        part_x = to_sexpression(part.chars, 1)
-        result = word.sub(part, "[#{part}]") if word_x.include?(part_x)
-      end
-      result
-    end
-  end
+  #def find_substrings(words, parts)
+    #words.map do |word|
+      #word_x = to_sexpression(word.chars, 1)
+      #result = nil
+      #parts.each do |part|
+        #part_x = to_sexpression(part.chars, 1)
+        #result = word.sub(part, "[#{part}]") if word_x.include?(part_x)
+      #end
+      #result
+    #end
+  #end
+
+  #def find_substrings(words, parts)
+    #words.each do |word|
+      #parts.each do |parts|
+
+      #end
+    #end
+  #end
 
   [
     { words: ["Apple", "Melon", "Orange", "Watermelon"], parts: ["a", "mel", "lon", "el", "An"], x: ["Apple", "Me[lon]", "Or[a]nge", "Water[mel]on"] },
@@ -130,7 +137,11 @@ l  e
     { words: ["during"], parts: ["d", "g", "i"], x: ["[d]uring"] },
   ].each do |x|
     it do
-      expect(find_substrings(x[:words], x[:parts])).to eql(x[:x])
+      result = with_profiler do
+        find_substrings(x[:words], x[:parts])
+      end
+
+      expect(result).to eql(x[:x])
     end
   end
 end
