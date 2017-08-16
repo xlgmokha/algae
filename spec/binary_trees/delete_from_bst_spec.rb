@@ -150,10 +150,33 @@ remove 2:
 remove 1
 
   5
+
+
+
+And removing 6 after that creates the following tree:
+
+{ value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 6, left: { value: 5 }, right: { value: 8, left: { value: 7 } } } }
+    3
+   / \
+  2   6
+ /  /  \
+1  5    8
+       /
+      7
+
+{ value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 5, right: { value: 8, left: { value: 7 } } } }
+    3
+   / \
+  2   5
+ /     \
+1       8
+       /
+      7
   DOC
 
   def remove(tree, target)
     return nil if tree.nil?
+    tree&.print
 
     if target < tree.value
       tree.left = remove(tree.left, target)
@@ -188,6 +211,7 @@ remove 1
     { t: { "value": 3, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 5, "left": null, "right": null } }, queries: [1, 2, 3, 5], x: nil },
     { t: { "value": 3, "left": { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": null }, "right": { "value": 5, "left": null, "right": null } }, queries: [3, 2, 1], x: { "value": 5, "left": null, "right": null } },
     { t: { "value": 5, "left": { "value": 3, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 4, "left": null, "right": null } }, "right": { "value": 7, "left": null, "right": null } }, queries: [1, 7, 4, 6], x: { "value": 5, "left": { "value": 3, "left": null, "right": null }, "right": null } },
+    { t: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 6, left: { value: 5 }, right: { value: 8, left: { value: 7 } } } }, queries: [5], x: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 5, right: { value: 8, left: { value: 7 } } } } }
   ].each do |x|
     it do
       result = delete_from_bst(Tree.build_from(x[:t]), x[:queries])
