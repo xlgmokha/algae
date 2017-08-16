@@ -119,55 +119,59 @@ The tree after removing all the numbers in queries, following the algorithm abov
 DOC
 
 describe "#delete_from_bst" do
-<<-DOC
+  <<-DOC
   If there is no x in t, nothing happens;
   Otherwise, let t' be a subtree of t such that t'.value = x.
   If t' has a left subtree, remove the rightmost node from it and put it at the root of t';
   Otherwise, remove the root of t' and its right subtree becomes the new t's root.
-DOC
 
-  def rightmost(tree)
-    return nil if tree.nil?
+    3
+   / \
+  2   5
+ /
+1
+remove 3:
 
-    tree.right.nil? ? tree : rightmost(tree.right)
-  end
+  2
+ / \
+1   5
 
-  def parent_of(tree, target)
-    return nil if tree.nil?
+remove 2:
 
-    return tree if tree.right && target == tree.right.value
-    parent_of(tree.right)
-  end
+  1
+   \
+    5
+
+remove 1
+
+  5
+  DOC
 
   def remove(tree, target)
     return nil if tree.nil?
 
-    if target == tree.value
-      if tree.left
-        new_root = rightmost(tree.left)
-        old_parent = parent_of(tree.left, new_root.value)
-        old_parent&.right = nil
-        new_root.left = tree.left
-        new_root.right = tree.right
-        tree = new_root
-      else
-        tree.right
-      end
-    else
+    if target < tree.value
       tree.left = remove(tree.left, target)
+    elsif tree.value < target
       tree.right = remove(tree.right, target)
+    else
+      if tree.left.nil?
+        return tree.right
+      elsif tree.right.nil?
+        return tree.left
+      else
+        min = tree.left
+        min = min.right while min.right
+        tree.value = min.value
+        tree.left = remove(tree.left, tree.value)
+      end
     end
     tree
   end
 
   def delete_from_bst(tree, queries)
-    return tree if tree.nil?
-    tree.print
-
-    queries.each do |query|
-      tree = remove(tree, query)
-    end
-
+    return nil if tree.nil?
+    queries.each { |query| tree = remove(tree, query) }
     tree
   end
 
@@ -182,9 +186,11 @@ DOC
   ].each do |x|
     it do
       result = delete_from_bst(Tree.build_from(x[:t]), x[:queries])
-      puts x[:queries].inspect
-      result.print
-      expect(result.to_h).to eql(x[:x])
+      puts "EXPECTED"
+      Tree.build_from(x[:x])&.print
+      puts "RESULT"
+      result&.print
+      expect(result ? result.to_h : result).to eql(x[:x])
     end
   end
 end
