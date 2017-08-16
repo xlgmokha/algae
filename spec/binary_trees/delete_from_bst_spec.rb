@@ -125,6 +125,11 @@ describe "#delete_from_bst" do
   If t' has a left subtree, remove the rightmost node from it and put it at the root of t';
   Otherwise, remove the root of t' and its right subtree becomes the new t's root.
 
+  If t' has a left subtree and the left subtree has a child on the right, 
+  the node you should put at the root of t' is the rightmost node (not necessarily leaf) in this subtree. 
+  When you remove the rightmost node, you must also discard its children 
+  (rather than keeping them as children of the rightmost node's parent).
+
     3
    / \
   2   5
@@ -160,9 +165,9 @@ remove 1
       elsif tree.right.nil?
         return tree.left
       else
-        min = tree.left
-        min = min.right while min.right
-        tree.value = min.value
+        max = tree.left
+        max = max.right while max.right
+        tree.value = max.value
         tree.left = remove(tree.left, tree.value)
       end
     end
