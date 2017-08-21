@@ -231,4 +231,12 @@ they want you to take the largest node's left subtree and make it the child of t
     expected = x[:x] ? Tree.build_from(x[:x]).to_s : nil
     expect(result ? result.to_s : result).to eql(expected)
   end
+
+  it do
+    require_relative 'spec_9'
+    x = SPEC9
+    result = delete_from_bst(Tree.build_from(x[:t]), x[:queries])
+    expected = x[:x] ? Tree.build_from(x[:x]).to_s : nil
+    expect(result ? result.to_s : result).to eql(expected)
+  end
 end
