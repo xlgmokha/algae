@@ -172,11 +172,14 @@ And removing 6 after that creates the following tree:
 1       8
        /
       7
+
+
+Instead of recursively removing the largest node from the right subtree using the specified algorithm,
+they want you to take the largest node's left subtree and make it the child of the largest node's parent
   DOC
 
   def remove(tree, target)
     return nil if tree.nil?
-    tree&.print
 
     if target < tree.value
       tree.left = remove(tree.left, target)
@@ -211,15 +214,13 @@ And removing 6 after that creates the following tree:
     { t: { "value": 3, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 5, "left": null, "right": null } }, queries: [1, 2, 3, 5], x: nil },
     { t: { "value": 3, "left": { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": null }, "right": { "value": 5, "left": null, "right": null } }, queries: [3, 2, 1], x: { "value": 5, "left": null, "right": null } },
     { t: { "value": 5, "left": { "value": 3, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 4, "left": null, "right": null } }, "right": { "value": 7, "left": null, "right": null } }, queries: [1, 7, 4, 6], x: { "value": 5, "left": { "value": 3, "left": null, "right": null }, "right": null } },
-    { t: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 6, left: { value: 5 }, right: { value: 8, left: { value: 7 } } } }, queries: [5], x: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 5, right: { value: 8, left: { value: 7 } } } } }
+    { t: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 6, left: { value: 5 }, right: { value: 8, left: { value: 7 } } } }, queries: [6], x: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 5, right: { value: 8, left: { value: 7 } } } } },
+    { t: { "value": 3, "left": { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": null }, "right": { "value": 5, "left": null, "right": null } }, queries: [3], x: { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 5, "left": null, "right": null } } },
   ].each do |x|
     it do
       result = delete_from_bst(Tree.build_from(x[:t]), x[:queries])
-      puts "EXPECTED"
-      Tree.build_from(x[:x])&.print
-      puts "RESULT"
-      result&.print
-      expect(result ? result.to_h : result).to eql(x[:x])
+      expected = x[:x] ? Tree.build_from(x[:x]).to_s : nil
+      expect(result ? result.to_s : result).to eql(expected)
     end
   end
 end

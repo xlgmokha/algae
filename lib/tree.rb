@@ -23,6 +23,15 @@ class Tree
     { value: value, left: left&.to_h, right: right&.to_h }
   end
 
+  def to_sexpression(tree)
+    return "()" if tree.nil?
+    "(#{tree.value}#{to_sexpression(tree.left)},#{to_sexpression(tree.right)})"
+  end
+
+  def to_s
+    to_sexpression(self)
+  end
+
   def self.build_from(hash)
     return nil if hash.nil?
     Tree.new(hash[:value], left: build_from(hash[:left]), right: build_from(hash[:right]))
