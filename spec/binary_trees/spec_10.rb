@@ -4,7 +4,7 @@ SPEC10 = { t: {
         "value": -990916866,
         "left": {
             "value": -995302986,
-            "left": null,
+            "left": nil,
             "right": {
                 "value": -994200157,
                 "left": {
@@ -17,24 +17,24 @@ SPEC10 = { t: {
                                 "value": -995290367,
                                 "left": {
                                     "value": -995295554,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": -995291001,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -995281763,
                                     "left": {
                                         "value": -995287062,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -995281063,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -44,26 +44,26 @@ SPEC10 = { t: {
                                     "value": -995273082,
                                     "left": {
                                         "value": -995277598,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -995269755,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -995265174,
                                     "left": {
                                         "value": -995267714,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -995265028,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -76,26 +76,26 @@ SPEC10 = { t: {
                                     "value": -995263887,
                                     "left": {
                                         "value": -995264552,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -995263209,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -995244277,
                                     "left": {
                                         "value": -995245297,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -995236255,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -105,26 +105,26 @@ SPEC10 = { t: {
                                     "value": -995224178,
                                     "left": {
                                         "value": -995230556,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -995216606,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -995199242,
                                     "left": {
                                         "value": -995205954,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -995199219,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -140,26 +140,26 @@ SPEC10 = { t: {
                                     "value": -995081844,
                                     "left": {
                                         "value": -995166285,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994811470,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -994562197,
                                     "left": {
                                         "value": -994624369,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994471968,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -169,26 +169,26 @@ SPEC10 = { t: {
                                     "value": -994410494,
                                     "left": {
                                         "value": -994426683,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994395951,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -994322817,
                                     "left": {
                                         "value": -994367146,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994308705,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -201,26 +201,26 @@ SPEC10 = { t: {
                                     "value": -994269769,
                                     "left": {
                                         "value": -994285094,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994266644,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -994248065,
                                     "left": {
                                         "value": -994253179,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994244722,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -230,26 +230,26 @@ SPEC10 = { t: {
                                     "value": -994231670,
                                     "left": {
                                         "value": -994233406,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994215339,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -994210498,
                                     "left": {
                                         "value": -994210846,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -994201300,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -268,26 +268,26 @@ SPEC10 = { t: {
                                     "value": -993773158,
                                     "left": {
                                         "value": -994006957,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -993740673,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -993630840,
                                     "left": {
                                         "value": -993642998,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -993580932,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -297,26 +297,26 @@ SPEC10 = { t: {
                                     "value": -993526310,
                                     "left": {
                                         "value": -993537749,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -993508525,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -993248577,
                                     "left": {
                                         "value": -993403104,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -993233699,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -329,16 +329,16 @@ SPEC10 = { t: {
                                     "value": -993133564,
                                     "left": {
                                         "value": -993140337,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -993128683,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": -993057332,
@@ -346,26 +346,26 @@ SPEC10 = { t: {
                                     "value": -993097652,
                                     "left": {
                                         "value": -993100302,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -993079555,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -992931616,
                                     "left": {
                                         "value": -993039878,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -992817660,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -381,16 +381,16 @@ SPEC10 = { t: {
                                     "value": -992698224,
                                     "left": {
                                         "value": -992720116,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -992602146,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": -991689179,
@@ -398,23 +398,23 @@ SPEC10 = { t: {
                                     "value": -991870815,
                                     "left": {
                                         "value": -992460092,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -991738176,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -991637735,
                                     "left": {
                                         "value": -991655566,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         },
@@ -426,26 +426,26 @@ SPEC10 = { t: {
                                     "value": -991510829,
                                     "left": {
                                         "value": -991523352,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -991497277,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -991418080,
                                     "left": {
                                         "value": -991437157,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -991379758,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -455,26 +455,26 @@ SPEC10 = { t: {
                                     "value": -991164547,
                                     "left": {
                                         "value": -991321589,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -991132227,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -990990382,
                                     "left": {
                                         "value": -991011936,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -990927474,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -499,26 +499,26 @@ SPEC10 = { t: {
                                     "value": -990791684,
                                     "left": {
                                         "value": -990885257,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -990469336,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -989329021,
                                     "left": {
                                         "value": -989346768,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -989247271,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -528,26 +528,26 @@ SPEC10 = { t: {
                                     "value": -989121768,
                                     "left": {
                                         "value": -989144366,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -988399265,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -988251860,
                                     "left": {
                                         "value": -988274909,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -988138129,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -560,26 +560,26 @@ SPEC10 = { t: {
                                     "value": -987785644,
                                     "left": {
                                         "value": -987896002,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -987774362,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -986536174,
                                     "left": {
                                         "value": -986945147,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -981305897,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -589,26 +589,26 @@ SPEC10 = { t: {
                                     "value": -967843170,
                                     "left": {
                                         "value": -967889461,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -967824377,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -964722727,
                                     "left": {
                                         "value": -964971628,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -963189233,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -624,26 +624,26 @@ SPEC10 = { t: {
                                     "value": -962649696,
                                     "left": {
                                         "value": -962693651,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -962390662,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -960684763,
                                     "left": {
                                         "value": -961906894,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -960448837,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -653,26 +653,26 @@ SPEC10 = { t: {
                                     "value": -957264945,
                                     "left": {
                                         "value": -957305485,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -955996413,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -954584408,
                                     "left": {
                                         "value": -954854478,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -954569475,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -685,26 +685,26 @@ SPEC10 = { t: {
                                     "value": -950954191,
                                     "left": {
                                         "value": -953712611,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -950572750,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -945978638,
                                     "left": {
                                         "value": -948541337,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -945577706,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -714,26 +714,26 @@ SPEC10 = { t: {
                                     "value": -942440254,
                                     "left": {
                                         "value": -942799544,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -939182843,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -937259754,
                                     "left": {
                                         "value": -937484227,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -937043898,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -752,26 +752,26 @@ SPEC10 = { t: {
                                     "value": -936939569,
                                     "left": {
                                         "value": -936950104,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936933575,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -936916048,
                                     "left": {
                                         "value": -936924657,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936895446,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -781,26 +781,26 @@ SPEC10 = { t: {
                                     "value": -936849311,
                                     "left": {
                                         "value": -936850116,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936848757,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -936826312,
                                     "left": {
                                         "value": -936835655,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936825753,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -813,26 +813,26 @@ SPEC10 = { t: {
                                     "value": -936805845,
                                     "left": {
                                         "value": -936822782,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936788387,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -936732051,
                                     "left": {
                                         "value": -936745948,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936724048,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -842,26 +842,26 @@ SPEC10 = { t: {
                                     "value": -936542996,
                                     "left": {
                                         "value": -936632871,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936485591,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -935654801,
                                     "left": {
                                         "value": -935813227,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -935614652,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -877,26 +877,26 @@ SPEC10 = { t: {
                                     "value": -935092247,
                                     "left": {
                                         "value": -935134851,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -935016937,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -934495917,
                                     "left": {
                                         "value": -934752317,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -934404777,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -906,26 +906,26 @@ SPEC10 = { t: {
                                     "value": -932690165,
                                     "left": {
                                         "value": -933648866,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -932619810,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -932504804,
                                     "left": {
                                         "value": -932547894,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -932494112,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -938,26 +938,26 @@ SPEC10 = { t: {
                                     "value": -932281492,
                                     "left": {
                                         "value": -932335993,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -932267258,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -932146423,
                                     "left": {
                                         "value": -932225013,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -932142467,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -967,26 +967,26 @@ SPEC10 = { t: {
                                     "value": -932090098,
                                     "left": {
                                         "value": -932108986,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -932067692,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -932036998,
                                     "left": {
                                         "value": -932047082,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -932008078,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1008,8 +1008,8 @@ SPEC10 = { t: {
                                     "value": -885748812,
                                     "left": {
                                         "value": -901539666,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -870979153,
@@ -1259,267 +1259,267 @@ SPEC10 = { t: {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 "value": -870979275,
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 "left": {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     "value": -870979276,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "left": null,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "left": nil,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                             },
-                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                         },
-                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                     },
-                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                 },
-                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                "right": nil
                                                                                                                                                                                             },
-                                                                                                                                                                                            "right": null
+                                                                                                                                                                                            "right": nil
                                                                                                                                                                                         },
-                                                                                                                                                                                        "right": null
+                                                                                                                                                                                        "right": nil
                                                                                                                                                                                     },
-                                                                                                                                                                                    "right": null
+                                                                                                                                                                                    "right": nil
                                                                                                                                                                                 },
-                                                                                                                                                                                "right": null
+                                                                                                                                                                                "right": nil
                                                                                                                                                                             },
-                                                                                                                                                                            "right": null
+                                                                                                                                                                            "right": nil
                                                                                                                                                                         },
-                                                                                                                                                                        "right": null
+                                                                                                                                                                        "right": nil
                                                                                                                                                                     },
-                                                                                                                                                                    "right": null
+                                                                                                                                                                    "right": nil
                                                                                                                                                                 },
-                                                                                                                                                                "right": null
+                                                                                                                                                                "right": nil
                                                                                                                                                             },
-                                                                                                                                                            "right": null
+                                                                                                                                                            "right": nil
                                                                                                                                                         },
-                                                                                                                                                        "right": null
+                                                                                                                                                        "right": nil
                                                                                                                                                     },
-                                                                                                                                                    "right": null
+                                                                                                                                                    "right": nil
                                                                                                                                                 },
-                                                                                                                                                "right": null
+                                                                                                                                                "right": nil
                                                                                                                                             },
-                                                                                                                                            "right": null
+                                                                                                                                            "right": nil
                                                                                                                                         },
-                                                                                                                                        "right": null
+                                                                                                                                        "right": nil
                                                                                                                                     },
-                                                                                                                                    "right": null
+                                                                                                                                    "right": nil
                                                                                                                                 },
-                                                                                                                                "right": null
+                                                                                                                                "right": nil
                                                                                                                             },
-                                                                                                                            "right": null
+                                                                                                                            "right": nil
                                                                                                                         },
-                                                                                                                        "right": null
+                                                                                                                        "right": nil
                                                                                                                     },
-                                                                                                                    "right": null
+                                                                                                                    "right": nil
                                                                                                                 },
-                                                                                                                "right": null
+                                                                                                                "right": nil
                                                                                                             },
-                                                                                                            "right": null
+                                                                                                            "right": nil
                                                                                                         },
-                                                                                                        "right": null
+                                                                                                        "right": nil
                                                                                                     },
-                                                                                                    "right": null
+                                                                                                    "right": nil
                                                                                                 },
-                                                                                                "right": null
+                                                                                                "right": nil
                                                                                             },
-                                                                                            "right": null
+                                                                                            "right": nil
                                                                                         },
-                                                                                        "right": null
+                                                                                        "right": nil
                                                                                     },
-                                                                                    "right": null
+                                                                                    "right": nil
                                                                                 },
-                                                                                "right": null
+                                                                                "right": nil
                                                                             },
-                                                                            "right": null
+                                                                            "right": nil
                                                                         },
-                                                                        "right": null
+                                                                        "right": nil
                                                                     },
-                                                                    "right": null
+                                                                    "right": nil
                                                                 },
-                                                                "right": null
+                                                                "right": nil
                                                             },
-                                                            "right": null
+                                                            "right": nil
                                                         },
-                                                        "right": null
+                                                        "right": nil
                                                     },
-                                                    "right": null
+                                                    "right": nil
                                                 },
-                                                "right": null
+                                                "right": nil
                                             },
-                                            "right": null
+                                            "right": nil
                                         },
-                                        "right": null
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -624500760,
                                     "left": {
                                         "value": -628231889,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -620080304,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1529,26 +1529,26 @@ SPEC10 = { t: {
                                     "value": -608262486,
                                     "left": {
                                         "value": -608318559,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -608110784,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -581529830,
                                     "left": {
                                         "value": -598010873,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -562720675,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1561,26 +1561,26 @@ SPEC10 = { t: {
                                     "value": -538517143,
                                     "left": {
                                         "value": -542833010,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -536927766,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -428971026,
                                     "left": {
                                         "value": -485430049,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -396328449,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1590,26 +1590,26 @@ SPEC10 = { t: {
                                     "value": -172731429,
                                     "left": {
                                         "value": -200534112,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -167446328,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -119623941,
                                     "left": {
                                         "value": -144441751,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -116794092,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1625,26 +1625,26 @@ SPEC10 = { t: {
                                     "value": -61799270,
                                     "left": {
                                         "value": -105549138,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -58930074,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -56371673,
                                     "left": {
                                         "value": -56405741,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -56359061,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1654,26 +1654,26 @@ SPEC10 = { t: {
                                     "value": -50540116,
                                     "left": {
                                         "value": -54729257,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -49362221,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -43657152,
                                     "left": {
                                         "value": -43826756,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -35645127,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1686,26 +1686,26 @@ SPEC10 = { t: {
                                     "value": 64948352,
                                     "left": {
                                         "value": 42124053,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 90857743,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 125786198,
                                     "left": {
                                         "value": 121642899,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 131901712,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1715,26 +1715,26 @@ SPEC10 = { t: {
                                     "value": 138646990,
                                     "left": {
                                         "value": 137683491,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 138924710,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 139285536,
                                     "left": {
                                         "value": 139261620,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 139401660,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1753,26 +1753,26 @@ SPEC10 = { t: {
                                     "value": 139548978,
                                     "left": {
                                         "value": 139532992,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 139560291,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 139582244,
                                     "left": {
                                         "value": 139572732,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 139590972,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1782,26 +1782,26 @@ SPEC10 = { t: {
                                     "value": 140783122,
                                     "left": {
                                         "value": 140213477,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 140820931,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 143739169,
                                     "left": {
                                         "value": 143502112,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 143852032,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1814,26 +1814,26 @@ SPEC10 = { t: {
                                     "value": 147316718,
                                     "left": {
                                         "value": 146101215,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 150756178,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 153460819,
                                     "left": {
                                         "value": 153416956,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 154239432,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1843,26 +1843,26 @@ SPEC10 = { t: {
                                     "value": 155638458,
                                     "left": {
                                         "value": 155423570,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 155656452,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 156097125,
                                     "left": {
                                         "value": 156085421,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 156128836,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1878,26 +1878,26 @@ SPEC10 = { t: {
                                     "value": 160738114,
                                     "left": {
                                         "value": 158293486,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 161525636,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 164086279,
                                     "left": {
                                         "value": 162148949,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 164368506,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1907,26 +1907,26 @@ SPEC10 = { t: {
                                     "value": 173021150,
                                     "left": {
                                         "value": 170737860,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 180060912,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 190789340,
                                     "left": {
                                         "value": 184990221,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 192259445,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -1939,26 +1939,26 @@ SPEC10 = { t: {
                                     "value": 210849324,
                                     "left": {
                                         "value": 204833109,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 211644774,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 213006608,
                                     "left": {
                                         "value": 212808546,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 213341540,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -1968,26 +1968,26 @@ SPEC10 = { t: {
                                     "value": 214097828,
                                     "left": {
                                         "value": 213395995,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 214222398,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 218212873,
                                     "left": {
                                         "value": 215020320,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 220507910,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2015,26 +2015,26 @@ SPEC10 = { t: {
                                     "value": 225820506,
                                     "left": {
                                         "value": 223128933,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 226598596,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 231014896,
                                     "left": {
                                         "value": 227194555,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 232078836,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2044,26 +2044,26 @@ SPEC10 = { t: {
                                     "value": 240763493,
                                     "left": {
                                         "value": 236321088,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 241237649,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 248212468,
                                     "left": {
                                         "value": 246214968,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 248320665,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2076,26 +2076,26 @@ SPEC10 = { t: {
                                     "value": 256347141,
                                     "left": {
                                         "value": 255533651,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 256803609,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 257191230,
                                     "left": {
                                         "value": 257167879,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 257328393,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2105,26 +2105,26 @@ SPEC10 = { t: {
                                     "value": 257551645,
                                     "left": {
                                         "value": 257538525,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 257556328,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 258062794,
                                     "left": {
                                         "value": 258041069,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 258077605,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2140,26 +2140,26 @@ SPEC10 = { t: {
                                     "value": 258360118,
                                     "left": {
                                         "value": 258344684,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 267646607,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 270253069,
                                     "left": {
                                         "value": 270077284,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 270616137,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2169,26 +2169,26 @@ SPEC10 = { t: {
                                     "value": 272272443,
                                     "left": {
                                         "value": 271855214,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 273154953,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 273862724,
                                     "left": {
                                         "value": 273855675,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 273865013,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2201,26 +2201,26 @@ SPEC10 = { t: {
                                     "value": 273996085,
                                     "left": {
                                         "value": 273969991,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 274008095,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 274551799,
                                     "left": {
                                         "value": 274072567,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 274801498,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2230,26 +2230,26 @@ SPEC10 = { t: {
                                     "value": 274978195,
                                     "left": {
                                         "value": 274941395,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 274982217,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 274996845,
                                     "left": {
                                         "value": 274996133,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 275000175,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2268,26 +2268,26 @@ SPEC10 = { t: {
                                     "value": 276225134,
                                     "left": {
                                         "value": 275524368,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 277690795,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 277772835,
                                     "left": {
                                         "value": 277759377,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 277786974,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2297,26 +2297,26 @@ SPEC10 = { t: {
                                     "value": 278033829,
                                     "left": {
                                         "value": 278018932,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 278397899,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 278716937,
                                     "left": {
                                         "value": 278647224,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 278778011,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2329,26 +2329,26 @@ SPEC10 = { t: {
                                     "value": 279019258,
                                     "left": {
                                         "value": 278995414,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 279036672,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 279344107,
                                     "left": {
                                         "value": 279311767,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 279388783,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2358,26 +2358,26 @@ SPEC10 = { t: {
                                     "value": 281884333,
                                     "left": {
                                         "value": 281850316,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 282174024,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 298533889,
                                     "left": {
                                         "value": 292195244,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 303144613,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2393,26 +2393,26 @@ SPEC10 = { t: {
                                     "value": 303580722,
                                     "left": {
                                         "value": 303565898,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 303748670,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 305327073,
                                     "left": {
                                         "value": 304294838,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 306324381,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2422,26 +2422,26 @@ SPEC10 = { t: {
                                     "value": 308800172,
                                     "left": {
                                         "value": 308480404,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 309020988,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 313329180,
                                     "left": {
                                         "value": 311019697,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 314157153,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2454,26 +2454,26 @@ SPEC10 = { t: {
                                     "value": 318231142,
                                     "left": {
                                         "value": 318216283,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 319057774,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 320207854,
                                     "left": {
                                         "value": 320049435,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 320251562,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2483,26 +2483,26 @@ SPEC10 = { t: {
                                     "value": 320348284,
                                     "left": {
                                         "value": 320329737,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 320360535,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 320784350,
                                     "left": {
                                         "value": 320477768,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 321207606,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2520,18 +2520,18 @@ SPEC10 = { t: {
                             "value": 321751335,
                             "left": {
                                 "value": 321654870,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 321709349,
                                     "left": {
                                         "value": 321699012,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 321720424,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2541,26 +2541,26 @@ SPEC10 = { t: {
                                     "value": 321799633,
                                     "left": {
                                         "value": 321767864,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 321836453,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 321918543,
                                     "left": {
                                         "value": 321908428,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 321929766,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2571,24 +2571,24 @@ SPEC10 = { t: {
                                 "value": 322021579,
                                 "left": {
                                     "value": 321968864,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 321999083,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 322041831,
                                     "left": {
                                         "value": 322031729,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 322048919,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2598,26 +2598,26 @@ SPEC10 = { t: {
                                     "value": 325823337,
                                     "left": {
                                         "value": 325307054,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 328288760,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 331746622,
                                     "left": {
                                         "value": 331231354,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 333310011,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2633,26 +2633,26 @@ SPEC10 = { t: {
                                     "value": 334042313,
                                     "left": {
                                         "value": 333797898,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 334200895,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 335575788,
                                     "left": {
                                         "value": 335056209,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 335615853,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2662,26 +2662,26 @@ SPEC10 = { t: {
                                     "value": 336021585,
                                     "left": {
                                         "value": 335821195,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 336429191,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 336693405,
                                     "left": {
                                         "value": 336667840,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 336803210,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2694,26 +2694,26 @@ SPEC10 = { t: {
                                     "value": 337127761,
                                     "left": {
                                         "value": 337116660,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 337135523,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 338077478,
                                     "left": {
                                         "value": 337277315,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 338119109,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2723,26 +2723,26 @@ SPEC10 = { t: {
                                     "value": 338272199,
                                     "left": {
                                         "value": 338264402,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 338288382,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 341050298,
                                     "left": {
                                         "value": 339873389,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 341257405,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2761,26 +2761,26 @@ SPEC10 = { t: {
                                     "value": 341678505,
                                     "left": {
                                         "value": 341677230,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 341683701,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 341698404,
                                     "left": {
                                         "value": 341693938,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 341704812,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2790,26 +2790,26 @@ SPEC10 = { t: {
                                     "value": 341862253,
                                     "left": {
                                         "value": 341791052,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 341914339,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 342794301,
                                     "left": {
                                         "value": 342610617,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 342921895,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2818,18 +2818,18 @@ SPEC10 = { t: {
                             "value": 343245182,
                             "left": {
                                 "value": 343195226,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 343219902,
                                     "left": {
                                         "value": 343207162,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343232286,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2839,26 +2839,26 @@ SPEC10 = { t: {
                                     "value": 343263058,
                                     "left": {
                                         "value": 343257613,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343263787,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 343276440,
                                     "left": {
                                         "value": 343275661,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343277151,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2874,26 +2874,26 @@ SPEC10 = { t: {
                                     "value": 343314395,
                                     "left": {
                                         "value": 343304196,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343316780,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 343391685,
                                     "left": {
                                         "value": 343367756,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343402533,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2903,26 +2903,26 @@ SPEC10 = { t: {
                                     "value": 343495058,
                                     "left": {
                                         "value": 343492573,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343508767,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 343531974,
                                     "left": {
                                         "value": 343526288,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343533620,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -2935,26 +2935,26 @@ SPEC10 = { t: {
                                     "value": 343544760,
                                     "left": {
                                         "value": 343544574,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343546715,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 343598243,
                                     "left": {
                                         "value": 343573848,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343612154,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -2964,26 +2964,26 @@ SPEC10 = { t: {
                                     "value": 343636642,
                                     "left": {
                                         "value": 343635140,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343645635,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 343661941,
                                     "left": {
                                         "value": 343646873,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 343663764,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3008,26 +3008,26 @@ SPEC10 = { t: {
                                     "value": 345754502,
                                     "left": {
                                         "value": 344924379,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 347548310,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 350059718,
                                     "left": {
                                         "value": 349740816,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 350181217,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3037,26 +3037,26 @@ SPEC10 = { t: {
                                     "value": 350520527,
                                     "left": {
                                         "value": 350494845,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 350678789,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 350911629,
                                     "left": {
                                         "value": 350886868,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 351363545,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3069,26 +3069,26 @@ SPEC10 = { t: {
                                     "value": 371399052,
                                     "left": {
                                         "value": 361405280,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 372157991,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 378915304,
                                     "left": {
                                         "value": 374543183,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 384010371,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3098,23 +3098,23 @@ SPEC10 = { t: {
                                     "value": 391152775,
                                     "left": {
                                         "value": 390565116,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 392454065,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 396143851,
                                     "left": {
                                         "value": 392846730,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         }
@@ -3129,26 +3129,26 @@ SPEC10 = { t: {
                                     "value": 404754013,
                                     "left": {
                                         "value": 404742545,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 406858890,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 412193181,
                                     "left": {
                                         "value": 410695154,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 412769159,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3158,26 +3158,26 @@ SPEC10 = { t: {
                                     "value": 416060176,
                                     "left": {
                                         "value": 415680988,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 416143384,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 418340545,
                                     "left": {
                                         "value": 417671578,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 418411882,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3190,26 +3190,26 @@ SPEC10 = { t: {
                                     "value": 422850677,
                                     "left": {
                                         "value": 419496115,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 423424218,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 453565138,
                                     "left": {
                                         "value": 433403643,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 455010194,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3219,26 +3219,26 @@ SPEC10 = { t: {
                                     "value": 461191782,
                                     "left": {
                                         "value": 460697924,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 461357078,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 464057738,
                                     "left": {
                                         "value": 463827226,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 464617093,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3257,26 +3257,26 @@ SPEC10 = { t: {
                                     "value": 471380915,
                                     "left": {
                                         "value": 471371552,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 471396945,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 478577923,
                                     "left": {
                                         "value": 472508310,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 489950796,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3286,26 +3286,26 @@ SPEC10 = { t: {
                                     "value": 508788790,
                                     "left": {
                                         "value": 507802383,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 509580287,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 510924776,
                                     "left": {
                                         "value": 510850515,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 511173619,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3318,26 +3318,26 @@ SPEC10 = { t: {
                                     "value": 514069631,
                                     "left": {
                                         "value": 514068411,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 514081910,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 514133388,
                                     "left": {
                                         "value": 514105836,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 514144952,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3347,26 +3347,26 @@ SPEC10 = { t: {
                                     "value": 514241835,
                                     "left": {
                                         "value": 514216897,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 514307398,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 524794170,
                                     "left": {
                                         "value": 515952233,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 525568725,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3378,18 +3378,18 @@ SPEC10 = { t: {
                             "value": 556614744,
                             "left": {
                                 "value": 546348510,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 547663603,
                                     "left": {
                                         "value": 547501722,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 548946546,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3399,26 +3399,26 @@ SPEC10 = { t: {
                                     "value": 557367817,
                                     "left": {
                                         "value": 557011155,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 560978436,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 572756089,
                                     "left": {
                                         "value": 564628566,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 572802540,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3431,26 +3431,26 @@ SPEC10 = { t: {
                                     "value": 576857270,
                                     "left": {
                                         "value": 576033029,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 577114128,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 578004123,
                                     "left": {
                                         "value": 577838807,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 578039592,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3460,26 +3460,26 @@ SPEC10 = { t: {
                                     "value": 581507616,
                                     "left": {
                                         "value": 579855049,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 586358454,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 602692519,
                                     "left": {
                                         "value": 599482567,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 606478687,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3501,26 +3501,26 @@ SPEC10 = { t: {
                                     "value": 608800253,
                                     "left": {
                                         "value": 608156814,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 608856413,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 609860336,
                                     "left": {
                                         "value": 609531732,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 610784070,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3530,26 +3530,26 @@ SPEC10 = { t: {
                                     "value": 611404435,
                                     "left": {
                                         "value": 611321346,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 611685153,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 613241184,
                                     "left": {
                                         "value": 613228647,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 613370285,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3562,26 +3562,26 @@ SPEC10 = { t: {
                                     "value": 614395995,
                                     "left": {
                                         "value": 614030504,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 614630818,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 615976618,
                                     "left": {
                                         "value": 614769641,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 616014671,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3591,26 +3591,26 @@ SPEC10 = { t: {
                                     "value": 617296765,
                                     "left": {
                                         "value": 617250330,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 617374615,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 617558713,
                                     "left": {
                                         "value": 617494703,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 617989595,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3626,26 +3626,26 @@ SPEC10 = { t: {
                                     "value": 618232691,
                                     "left": {
                                         "value": 618103487,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 618518359,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 618918310,
                                     "left": {
                                         "value": 618654421,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 619249549,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3655,26 +3655,26 @@ SPEC10 = { t: {
                                     "value": 621963005,
                                     "left": {
                                         "value": 620695366,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 621996329,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 622962804,
                                     "left": {
                                         "value": 622920386,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 623237046,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3687,26 +3687,26 @@ SPEC10 = { t: {
                                     "value": 623458289,
                                     "left": {
                                         "value": 623384215,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 623589496,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 629937466,
                                     "left": {
                                         "value": 628528351,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 630692917,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3716,26 +3716,26 @@ SPEC10 = { t: {
                                     "value": 632710631,
                                     "left": {
                                         "value": 631211774,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 632744738,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 636829334,
                                     "left": {
                                         "value": 635476084,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 636913898,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3754,26 +3754,26 @@ SPEC10 = { t: {
                                     "value": 637414224,
                                     "left": {
                                         "value": 637020805,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 637623422,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 638204755,
                                     "left": {
                                         "value": 638044888,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 638310163,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3783,26 +3783,26 @@ SPEC10 = { t: {
                                     "value": 651172853,
                                     "left": {
                                         "value": 643147577,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 653457035,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 662540093,
                                     "left": {
                                         "value": 658569504,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 671010419,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3815,26 +3815,26 @@ SPEC10 = { t: {
                                     "value": 677234482,
                                     "left": {
                                         "value": 676277806,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 679273040,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 680664462,
                                     "left": {
                                         "value": 679906242,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 682027653,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3844,26 +3844,26 @@ SPEC10 = { t: {
                                     "value": 687661810,
                                     "left": {
                                         "value": 685313675,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 735708937,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 826419113,
                                     "left": {
                                         "value": 794090641,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 826519659,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3879,26 +3879,26 @@ SPEC10 = { t: {
                                     "value": 826562229,
                                     "left": {
                                         "value": 826550999,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 826658898,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 853065495,
                                     "left": {
                                         "value": 832914444,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 856907003,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3908,26 +3908,26 @@ SPEC10 = { t: {
                                     "value": 866154148,
                                     "left": {
                                         "value": 861642952,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 871191622,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 871759806,
                                     "left": {
                                         "value": 871643764,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 872537234,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -3940,26 +3940,26 @@ SPEC10 = { t: {
                                     "value": 918429334,
                                     "left": {
                                         "value": 882719750,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 919039628,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 941795946,
                                     "left": {
                                         "value": 932016784,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 950193116,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -3969,26 +3969,26 @@ SPEC10 = { t: {
                                     "value": 982763973,
                                     "left": {
                                         "value": 972929311,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 993515411,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 998068264,
                                     "left": {
                                         "value": 996612676,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 999879525,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -4013,24 +4013,24 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                         "value": -995281763,
                         "left": {
                             "value": -995295554,
-                            "left": null,
+                            "left": nil,
                             "right": {
                                 "value": -995287062,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         },
                         "right": {
                             "value": -995269755,
                             "left": {
                                 "value": -995277598,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
                             "right": {
                                 "value": -995267714,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         }
                     },
@@ -4040,30 +4040,30 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": -995246257,
                             "left": {
                                 "value": -995264552,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": -995263209,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
-                            "right": null
+                            "right": nil
                         },
                         "right": {
                             "value": -995213546,
                             "left": {
                                 "value": -995224178,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": -995216606,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": -995205954,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         }
                     }
@@ -4076,29 +4076,29 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": -995081844,
                             "left": {
                                 "value": -995166285,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
-                            "right": null
+                            "right": nil
                         },
                         "right": {
                             "value": -994385110,
                             "left": {
                                 "value": -994395951,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
                             "right": {
                                 "value": -994322817,
                                 "left": {
                                     "value": -994367146,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -994308705,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -4111,17 +4111,17 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -994269769,
                                 "left": {
                                     "value": -994285094,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
-                            "right": null
+                            "right": nil
                         },
                         "right": {
                             "value": -994233406,
-                            "left": null,
-                            "right": null
+                            "left": nil,
+                            "right": nil
                         }
                     }
                 }
@@ -4138,15 +4138,15 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -993773158,
                                 "left": {
                                     "value": -994006957,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": -993630840,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         },
                         "right": {
@@ -4155,22 +4155,22 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -993526310,
                                 "left": {
                                     "value": -993537749,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": -993248577,
                                 "left": {
                                     "value": -993403104,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -993233699,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -4181,18 +4181,18 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": -993126398,
                             "left": {
                                 "value": -993133564,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
-                            "right": null
+                            "right": nil
                         },
                         "right": {
                             "value": -993079555,
-                            "left": null,
+                            "left": nil,
                             "right": {
                                 "value": -992931616,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         }
                     }
@@ -4203,10 +4203,10 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                         "value": -992515050,
                         "left": {
                             "value": -992585004,
-                            "left": null,
-                            "right": null
+                            "left": nil,
+                            "right": nil
                         },
-                        "right": null
+                        "right": nil
                     },
                     "right": {
                         "value": -991379758,
@@ -4214,19 +4214,19 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": -991494592,
                             "left": {
                                 "value": -991497277,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
-                            "right": null
+                            "right": nil
                         },
                         "right": {
                             "value": -991026283,
                             "left": {
                                 "value": -991132227,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
-                            "right": null
+                            "right": nil
                         }
                     }
                 }
@@ -4246,12 +4246,12 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -989449324,
                                 "left": {
                                     "value": -990791684,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
-                            "right": null
+                            "right": nil
                         },
                         "right": {
                             "value": -967915158,
@@ -4259,16 +4259,16 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -987774362,
                                 "left": {
                                     "value": -987896002,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -986536174,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": -981305897,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -4276,17 +4276,17 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -967843170,
                                 "left": {
                                     "value": -967889461,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -964722727,
                                     "left": {
                                         "value": -964971628,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         }
@@ -4299,15 +4299,15 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -962080027,
                                 "left": {
                                     "value": -962649696,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": -957305485,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         },
                         "right": {
@@ -4316,16 +4316,16 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -950954191,
                                 "left": {
                                     "value": -953712611,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -948541337,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": -945577706,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -4333,17 +4333,17 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -937801179,
                                 "left": {
                                     "value": -942440254,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": -939182843,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -937484227,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -4357,21 +4357,21 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": -936895446,
                             "left": {
                                 "value": -936933575,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": -936924657,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": -936837192,
                                 "left": {
                                     "value": -936848757,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             }
                         },
                         "right": {
@@ -4380,20 +4380,20 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -936788387,
                                 "left": {
                                     "value": -936822782,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -936732051,
                                     "left": {
                                         "value": -936745948,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -936724048,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -4401,16 +4401,16 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -936008677,
                                 "left": {
                                     "value": -936542996,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -935654801,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": -935614652,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -4420,22 +4420,22 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                         "value": -932435931,
                         "left": {
                             "value": -935092247,
-                            "left": null,
+                            "left": nil,
                             "right": {
                                 "value": -932619810,
                                 "left": {
                                     "value": -932690165,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -932504804,
                                     "left": {
                                         "value": -932547894,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         },
@@ -4445,23 +4445,23 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -932235798,
                                 "left": {
                                     "value": -932267258,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": -932057316,
                                 "left": {
                                     "value": -932108986,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": -932067692,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
-                                "right": null
+                                "right": nil
                             }
                         }
                     }
@@ -4591,145 +4591,145 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                                                                                                                                                                                                                                                 "value": -870979274,
                                                                                                                                                                                                                                                                 "left": {
                                                                                                                                                                                                                                                                     "value": -870979276,
-                                                                                                                                                                                                                                                                    "left": null,
-                                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                                    "left": nil,
+                                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                                             },
-                                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                                         },
-                                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                                "right": nil
                                                                                                                                                                                                             },
-                                                                                                                                                                                                            "right": null
+                                                                                                                                                                                                            "right": nil
                                                                                                                                                                                                         },
-                                                                                                                                                                                                        "right": null
+                                                                                                                                                                                                        "right": nil
                                                                                                                                                                                                     },
-                                                                                                                                                                                                    "right": null
+                                                                                                                                                                                                    "right": nil
                                                                                                                                                                                                 },
-                                                                                                                                                                                                "right": null
+                                                                                                                                                                                                "right": nil
                                                                                                                                                                                             },
-                                                                                                                                                                                            "right": null
+                                                                                                                                                                                            "right": nil
                                                                                                                                                                                         },
-                                                                                                                                                                                        "right": null
+                                                                                                                                                                                        "right": nil
                                                                                                                                                                                     },
-                                                                                                                                                                                    "right": null
+                                                                                                                                                                                    "right": nil
                                                                                                                                                                                 },
-                                                                                                                                                                                "right": null
+                                                                                                                                                                                "right": nil
                                                                                                                                                                             },
-                                                                                                                                                                            "right": null
+                                                                                                                                                                            "right": nil
                                                                                                                                                                         },
-                                                                                                                                                                        "right": null
+                                                                                                                                                                        "right": nil
                                                                                                                                                                     },
-                                                                                                                                                                    "right": null
+                                                                                                                                                                    "right": nil
                                                                                                                                                                 },
-                                                                                                                                                                "right": null
+                                                                                                                                                                "right": nil
                                                                                                                                                             },
-                                                                                                                                                            "right": null
+                                                                                                                                                            "right": nil
                                                                                                                                                         },
-                                                                                                                                                        "right": null
+                                                                                                                                                        "right": nil
                                                                                                                                                     },
-                                                                                                                                                    "right": null
+                                                                                                                                                    "right": nil
                                                                                                                                                 },
-                                                                                                                                                "right": null
+                                                                                                                                                "right": nil
                                                                                                                                             },
-                                                                                                                                            "right": null
+                                                                                                                                            "right": nil
                                                                                                                                         },
-                                                                                                                                        "right": null
+                                                                                                                                        "right": nil
                                                                                                                                     },
-                                                                                                                                    "right": null
+                                                                                                                                    "right": nil
                                                                                                                                 },
-                                                                                                                                "right": null
+                                                                                                                                "right": nil
                                                                                                                             },
-                                                                                                                            "right": null
+                                                                                                                            "right": nil
                                                                                                                         },
-                                                                                                                        "right": null
+                                                                                                                        "right": nil
                                                                                                                     },
-                                                                                                                    "right": null
+                                                                                                                    "right": nil
                                                                                                                 },
-                                                                                                                "right": null
+                                                                                                                "right": nil
                                                                                                             },
-                                                                                                            "right": null
+                                                                                                            "right": nil
                                                                                                         },
-                                                                                                        "right": null
+                                                                                                        "right": nil
                                                                                                     },
-                                                                                                    "right": null
+                                                                                                    "right": nil
                                                                                                 },
-                                                                                                "right": null
+                                                                                                "right": nil
                                                                                             },
-                                                                                            "right": null
+                                                                                            "right": nil
                                                                                         },
-                                                                                        "right": null
+                                                                                        "right": nil
                                                                                     },
-                                                                                    "right": null
+                                                                                    "right": nil
                                                                                 },
-                                                                                "right": null
+                                                                                "right": nil
                                                                             },
-                                                                            "right": null
+                                                                            "right": nil
                                                                         },
-                                                                        "right": null
+                                                                        "right": nil
                                                                     },
-                                                                    "right": null
+                                                                    "right": nil
                                                                 },
-                                                                "right": null
+                                                                "right": nil
                                                             },
-                                                            "right": null
+                                                            "right": nil
                                                         },
-                                                        "right": null
+                                                        "right": nil
                                                     },
-                                                    "right": null
+                                                    "right": nil
                                                 },
-                                                "right": null
+                                                "right": nil
                                             },
-                                            "right": null
+                                            "right": nil
                                         },
-                                        "right": null
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -624500760,
                                     "left": {
                                         "value": -628231889,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": -608110784,
                                 "left": {
                                     "value": -608318559,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -581529830,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": -562720675,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -4742,26 +4742,26 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": -538517143,
                                     "left": {
                                         "value": -542833010,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -536927766,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": -428971026,
                                     "left": {
                                         "value": -485430049,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": -396328449,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -4771,19 +4771,19 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": -172731429,
                                     "left": {
                                         "value": -200534112,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -119623941,
                                     "left": {
                                         "value": -144441751,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         }
@@ -4796,41 +4796,41 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": -58930074,
                                 "left": {
                                     "value": -105549138,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": -56405741,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": -49362221,
                                 "left": {
                                     "value": -50540116,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             }
                         },
                         "right": {
                             "value": 137657700,
                             "left": {
                                 "value": 64948352,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 125786198,
                                     "left": {
                                         "value": 121642899,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 131901712,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -4838,16 +4838,16 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 139059933,
                                 "left": {
                                     "value": 138646990,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 139285536,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 139401660,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -4862,24 +4862,24 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 139590972,
                             "left": {
                                 "value": 139548978,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 139572732,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 143366100,
                                 "left": {
                                     "value": 140820931,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 143502112,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         },
@@ -4887,14 +4887,14 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 154473723,
                             "left": {
                                 "value": 153367254,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 153460819,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 154239432,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -4904,18 +4904,18 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 155638458,
                                     "left": {
                                         "value": 155423570,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 156085421,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 156128836,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -4927,28 +4927,28 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 165040430,
                             "left": {
                                 "value": 161525636,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 164086279,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 173021150,
                                 "left": {
                                     "value": 170737860,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 190789340,
                                     "left": {
                                         "value": 184990221,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         },
@@ -4960,15 +4960,15 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 210849324,
                                     "left": {
                                         "value": 204833109,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 212808546,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
@@ -4977,18 +4977,18 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 214097828,
                                     "left": {
                                         "value": 213395995,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 218212873,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 220507910,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -5014,29 +5014,29 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 225820506,
                                 "left": {
                                     "value": 223128933,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 227194555,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 232078836,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
                             "right": {
                                 "value": 236321088,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 246214968,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 248320665,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -5045,29 +5045,29 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 257525658,
                             "left": {
                                 "value": 255533651,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 257191230,
                                     "left": {
                                         "value": 257167879,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 257566990,
                                 "left": {
                                     "value": 257551645,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 257556328,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
-                                "right": null
+                                "right": nil
                             }
                         }
                     },
@@ -5077,24 +5077,24 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 270616137,
                             "left": {
                                 "value": 269895426,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
                             "right": {
                                 "value": 273852360,
                                 "left": {
                                     "value": 273154953,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 273862724,
                                     "left": {
                                         "value": 273855675,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         },
@@ -5106,28 +5106,28 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 273996085,
                                     "left": {
                                         "value": 273969991,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 274072567,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 274801498,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
                             "right": {
                                 "value": 274994093,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 275000175,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5145,43 +5145,43 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 276225134,
                                     "left": {
                                         "value": 275524368,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 277772835,
                                     "left": {
                                         "value": 277759377,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 278627816,
                                 "left": {
                                     "value": 278033829,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 278397899,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 278716937,
                                     "left": {
                                         "value": 278647224,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 278778011,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -5192,20 +5192,20 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 279103095,
                                 "left": {
                                     "value": 278995414,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 279344107,
                                     "left": {
                                         "value": 279311767,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 279388783,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -5213,17 +5213,17 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 283217167,
                                 "left": {
                                     "value": 281850316,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 282174024,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 298533889,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5236,26 +5236,26 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 303921723,
                                 "left": {
                                     "value": 303580722,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 303748670,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 305327073,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 309020988,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 311019697,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         },
@@ -5263,24 +5263,24 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 320207854,
                             "left": {
                                 "value": 319275095,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 320049435,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 320375518,
                                 "left": {
                                     "value": 320329737,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 321207606,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5297,17 +5297,17 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 321720424,
                             "left": {
                                 "value": 321699012,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             },
                             "right": {
                                 "value": 321836453,
                                 "left": {
                                     "value": 321799633,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             }
                         },
                         "right": {
@@ -5316,30 +5316,30 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 322021579,
                                 "left": {
                                     "value": 321968864,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 321999083,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 322048919,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 328288760,
                                 "left": {
                                     "value": 325823337,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 331746622,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5352,27 +5352,27 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 334200895,
                                 "left": {
                                     "value": 334042313,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 335575788,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 336655978,
                                 "left": {
                                     "value": 335821195,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 336429191,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
-                                "right": null
+                                "right": nil
                             }
                         },
                         "right": {
@@ -5381,27 +5381,27 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 337140732,
                                 "left": {
                                     "value": 337116660,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 337135523,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 338077478,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 338289902,
                                 "left": {
                                     "value": 338272199,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             }
                         }
                     }
@@ -5416,44 +5416,44 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 341685840,
                                 "left": {
                                     "value": 341683701,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 341698404,
                                     "left": {
                                         "value": 341693938,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 342794301,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         },
                         "right": {
                             "value": 343232286,
                             "left": {
                                 "value": 343195226,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 343219902,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 343276440,
                                 "left": {
                                     "value": 343275661,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             }
                         }
                     },
@@ -5467,20 +5467,20 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 343314395,
                                     "left": {
                                         "value": 343304196,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": 343492573,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 343531974,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         },
@@ -5490,30 +5490,30 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 343546715,
                                 "left": {
                                     "value": 343544574,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 343598243,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 343646763,
                                 "left": {
                                     "value": 343636642,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 343645635,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 343646873,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5531,18 +5531,18 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                         "value": 352193829,
                         "left": {
                             "value": 350461987,
-                            "left": null,
+                            "left": nil,
                             "right": {
                                 "value": 350855860,
                                 "left": {
                                     "value": 350494845,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 350886868,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         },
@@ -5550,28 +5550,28 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 372892547,
                             "left": {
                                 "value": 371399052,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 372157991,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 392750269,
                                 "left": {
                                     "value": 390565116,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 392454065,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 392846730,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5582,23 +5582,23 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 409304277,
                             "left": {
                                 "value": 404754013,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 406858890,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 416060176,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 417671578,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 418411882,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -5611,28 +5611,28 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 422850677,
                                     "left": {
                                         "value": 419496115,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 433403643,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 455010194,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
                             "right": {
                                 "value": 464057738,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 464617093,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5650,28 +5650,28 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 471380915,
                                     "left": {
                                         "value": 471371552,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 489950796,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 509868486,
                                 "left": {
                                     "value": 507802383,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 510850515,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         },
@@ -5683,28 +5683,28 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 514069631,
                                     "left": {
                                         "value": 514068411,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 514081910,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": 514241835,
                                 "left": {
                                     "value": 514216897,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 514307398,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5715,21 +5715,21 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 556614744,
                             "left": {
                                 "value": 546348510,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 547663603,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 548946546,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
                             "right": {
                                 "value": 557011155,
-                                "left": null,
-                                "right": null
+                                "left": nil,
+                                "right": nil
                             }
                         },
                         "right": {
@@ -5738,22 +5738,22 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 577705603,
                                 "left": {
                                     "value": 576857270,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             },
                             "right": {
                                 "value": 586358454,
                                 "left": {
                                     "value": 579855049,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 602692519,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
@@ -5774,26 +5774,26 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 608800253,
                                     "left": {
                                         "value": 608156814,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 608856413,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 609860336,
                                     "left": {
                                         "value": 609531732,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             },
-                            "right": null
+                            "right": nil
                         },
                         "right": {
                             "value": 616040255,
@@ -5803,25 +5803,25 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 614395995,
                                     "left": {
                                         "value": 614030504,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 616014671,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 617558713,
                                 "left": {
                                     "value": 617494703,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             }
                         }
                     },
@@ -5831,24 +5831,24 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 619510548,
                             "left": {
                                 "value": 618518359,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 618654421,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 619249549,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
                             "right": {
                                 "value": 620695366,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 622920386,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         },
@@ -5856,18 +5856,18 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 631116733,
                             "left": {
                                 "value": 623458289,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 629937466,
                                     "left": {
                                         "value": 628528351,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 630692917,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             },
@@ -5875,24 +5875,24 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 633442595,
                                 "left": {
                                     "value": 632710631,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 632744738,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 },
                                 "right": {
                                     "value": 636829334,
                                     "left": {
                                         "value": 635476084,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
                                     "right": {
                                         "value": 636913898,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -5907,31 +5907,31 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                             "value": 639649755,
                             "left": {
                                 "value": 638018210,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 638204755,
                                     "left": {
                                         "value": 638044888,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 651172853,
                                 "left": {
                                     "value": 643147577,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 658569504,
-                                    "left": null,
+                                    "left": nil,
                                     "right": {
                                         "value": 671010419,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     }
                                 }
                             }
@@ -5942,26 +5942,26 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                 "value": 679273040,
                                 "left": {
                                     "value": 677234482,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 680664462,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 687661810,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 826419113,
                                     "left": {
                                         "value": 794090641,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 }
                             }
                         }
@@ -5976,45 +5976,45 @@ queries: [728751367, -932335993, 822255280, 461357078, -336882146, 248214836, -1
                                     "value": 826562229,
                                     "left": {
                                         "value": 826550999,
-                                        "left": null,
-                                        "right": null
+                                        "left": nil,
+                                        "right": nil
                                     },
-                                    "right": null
+                                    "right": nil
                                 },
                                 "right": {
                                     "value": 832914444,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 871191622,
                                 "left": {
                                     "value": 861642952,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 },
-                                "right": null
+                                "right": nil
                             }
                         },
                         "right": {
                             "value": 950193116,
                             "left": {
                                 "value": 919039628,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 941795946,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             },
                             "right": {
                                 "value": 982763973,
-                                "left": null,
+                                "left": nil,
                                 "right": {
                                     "value": 999879525,
-                                    "left": null,
-                                    "right": null
+                                    "left": nil,
+                                    "right": nil
                                 }
                             }
                         }
