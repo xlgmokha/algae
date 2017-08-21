@@ -29,6 +29,29 @@ describe "#kth_largest_element" do
     numbers.sort[-k]
   end
 
+  #def kth_largest_element(numbers, k)
+    #items = Array.new(105)
+    #numbers.each do |n|
+      #items[n] = n
+    #end
+    #items.compact[-k]
+  #end
+
+  def kth_largest_element(numbers, k)
+    return numbers[0] if numbers.size == 1
+
+    numbers.shuffle!
+    partition = numbers[0]
+    upper = numbers[1..-1].find_all { |x| x >= partition }
+
+    if upper.size >= k
+      kth_largest_element(upper, k)
+    else
+      lower = numbers[1..-1].find_all { |x| x < partition } + [partition]
+      kth_largest_element(lower, k - upper.size)
+    end
+  end
+
   [
     { nums: [7, 6, 5, 4, 3, 2, 1], k: 2, x: 6 },
     { nums: [99, 99], k: 1, x: 99 },
