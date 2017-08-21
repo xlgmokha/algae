@@ -193,8 +193,17 @@ they want you to take the largest node's left subtree and make it the child of t
       else
         max = tree.left
         max = max.right while max.right
+        min = tree.right
+        min = min.left while min.left
+
+        puts [max&.value, min&.value].inspect
+
         tree.value = max.value
         tree.left = remove(tree.left, tree.value)
+
+        #tree.value = min.value
+        #tree.right = remove(tree.right, tree.value)
+
       end
     end
     tree
