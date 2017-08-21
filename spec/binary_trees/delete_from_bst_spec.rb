@@ -217,6 +217,7 @@ they want you to take the largest node's left subtree and make it the child of t
     { t: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 6, left: { value: 5 }, right: { value: 8, left: { value: 7 } } } }, queries: [6], x: { value: 3, left: { value: 2, left: { value: 1 } }, right: { value: 5, right: { value: 8, left: { value: 7 } } } } },
     { t: { "value": 3, "left": { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": null }, "right": { "value": 5, "left": null, "right": null } }, queries: [3], x: { "value": 2, "left": { "value": 1, "left": null, "right": null }, "right": { "value": 5, "left": null, "right": null } } },
     { t: null, queries: [100000000, -1000000000, 0, 1, -1, 2, -2], x: null },
+    { t: { "value": 3, "left": { "value": 2, "left": null, "right": null }, "right": { "value": 5, "left": null, "right": null } }, queries: [2, 3, 0, 5], x: nil },
   ].each do |x|
     it do
       result = delete_from_bst(Tree.build_from(x[:t]), x[:queries])
