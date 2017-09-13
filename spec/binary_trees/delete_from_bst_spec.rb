@@ -191,19 +191,28 @@ they want you to take the largest node's left subtree and make it the child of t
       elsif tree.right.nil?
         return tree.left
       else
-        max = tree.left
-        max = max.right while max.right
-        min = tree.right
-        min = min.left while min.left
-
-        puts [max&.value, min&.value].inspect
+        max, parent = tree.left, tree
+        while max.right
+          parent = max
+          max = max.right
+        end
 
         tree.value = max.value
-        tree.left = remove(tree.left, tree.value)
+        if parent == tree
+          tree.left = tree.left.left
+        else
+          parent&.right = max.left
+        end
 
+        #max = tree.left
+        #max = max.right while max.right
+        #tree.value = max.value
+        #tree.left = remove(tree.left, tree.value)
+
+        #min = tree.right
+        #min = min.left while min.left
         #tree.value = min.value
         #tree.right = remove(tree.right, tree.value)
-
       end
     end
     tree
@@ -211,7 +220,11 @@ they want you to take the largest node's left subtree and make it the child of t
 
   def delete_from_bst(tree, queries)
     return nil if tree.nil?
-    queries.each { |query| tree = remove(tree, query) }
+    queries.each do |target|
+      #puts [target].inspect
+      #tree&.print
+      tree = remove(tree, target)
+    end
     tree
   end
 
@@ -248,7 +261,7 @@ they want you to take the largest node's left subtree and make it the child of t
     x = SPEC9
     result = delete_from_bst(Tree.build_from(x[:t]), x[:queries])
     expected = x[:x] ? Tree.build_from(x[:x]).to_s : nil
-    expect(result ? result.to_s : result).to eql(expected)
+    expect(result.to_s).to eql(expected)
   end
 
   it do
@@ -256,6 +269,6 @@ they want you to take the largest node's left subtree and make it the child of t
     x = SPEC10
     result = delete_from_bst(Tree.build_from(x[:t]), x[:queries])
     expected = x[:x] ? Tree.build_from(x[:x]).to_s : nil
-    expect(result ? result.to_s : result).to eql(expected)
+    expect(result.to_s).to eql(expected)
   end
 end

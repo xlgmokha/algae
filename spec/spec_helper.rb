@@ -14,8 +14,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'byebug'
-require 'ruby-prof'
+require 'diffy'
 require 'pp'
+require 'ruby-prof'
 require_relative '../lib/tree'
 
 RSpec.configure do |config|
@@ -111,5 +112,9 @@ RSpec.configure do |config|
     printer = RubyProf::GraphPrinter.new(report)
     printer.print(STDOUT, {})
     result
+  end
+
+  def print_diff(x, y)
+    puts Diffy::Diff.new(x, y).to_s(:color)
   end
 end
