@@ -35,7 +35,18 @@ DOC
 
 describe "simplify_path" do
   def simplify_path(path)
-    path
+    result = []
+    path.split('/').each do |part|
+      case part
+      when '.'
+      when '..'
+        result.pop
+      when ''
+      else
+        result.push(part)
+      end
+    end
+    "/" + result.join('/')
   end
 
   [
