@@ -40,8 +40,23 @@ Guaranteed constraints:
 DOC
 
 describe "#decode_string" do
+  REGEX = /^*(\d)\[(.*)\]$/
+
+  def decode(count, message)
+    if REGEX.match?(message)
+      x = message[0]
+
+puts [message, x].inspect
+      y, z = message.scan(REGEX)[0]
+      "#{x}#{decode(y.to_i, z)}" * count
+    else
+      message * count
+    end
+  end
+
   def decode_string(message)
-    message
+    x, y = message.scan(REGEX)[0]
+    decode(x.to_i, y)
   end
 
   [
