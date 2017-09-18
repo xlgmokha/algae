@@ -40,14 +40,11 @@ Guaranteed constraints:
 DOC
 
 describe "#decode_string" do
-  REGEX = /^*(\d)\[(.*)\]$/
+  REGEX = /^(\D)?(\d)\[(.*)\]$/
 
   def decode(count, message)
     if REGEX.match?(message)
-      x = message[0]
-
-puts [message, x].inspect
-      y, z = message.scan(REGEX)[0]
+      x, y, z = message.scan(REGEX)[0]
       "#{x}#{decode(y.to_i, z)}" * count
     else
       message * count
@@ -55,7 +52,7 @@ puts [message, x].inspect
   end
 
   def decode_string(message)
-    x, y = message.scan(REGEX)[0]
+    _, x, y = message.scan(REGEX)[0]
     decode(x.to_i, y)
   end
 
