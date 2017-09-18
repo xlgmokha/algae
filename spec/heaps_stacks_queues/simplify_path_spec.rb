@@ -34,19 +34,21 @@ The simplified path.
 DOC
 
 describe "simplify_path" do
-  def simplify_path(path)
-    result = []
-    path.split('/').each do |part|
+  def reduce(path)
+    path.split('/').inject([]) do |stack, part|
       case part
-      when '.'
+      when '.', ''
       when '..'
-        result.pop
-      when ''
+        stack.pop
       else
-        result.push(part)
+        stack.push(part)
       end
+      stack
     end
-    "/" + result.join('/')
+  end
+
+  def simplify_path(path)
+    "/#{reduce(path).join('/')}"
   end
 
   [
